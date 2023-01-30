@@ -44,7 +44,7 @@ namespace TicketManagementSystem
             }
             foreach (User user in Users)
             {
-                if (user.Login == tbLogin.Text && user.Password == tbPassword.Text)
+                if (user.Username == tbLogin.Text && user.Password == tbPassword.Text)
                     CurUser = user;
             }
             if (CurUser is null)

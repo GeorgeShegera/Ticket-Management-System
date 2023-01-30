@@ -15,19 +15,19 @@ namespace ManagementSystemLibrary
     public class User : Human
     {
         public string Email { get; set; }
-        public string Login { get; set; }
+        public string Username { get; set; }
         public string Password { get; set; }
-        public User(string email, string login, string password, string name, string surname, int age)
+        public User(string email, string username, string password, string name, string surname, int age)
             : base(name, surname, age)
         {
             Email = email;
-            Login = login;
+            Username = username;
             Password = password;
         }
-        public User(string login, string password)
+        public User(string username, string password)
             : base()
         {
-            Login = login;
+            Username = username;
             Password = password;
         }
         public override bool Equals(object obj)
@@ -37,15 +37,15 @@ namespace ManagementSystemLibrary
         }
         public override int GetHashCode()
         {            
-            return (Login, Password).GetHashCode();
+            return (Username, Password).GetHashCode();
         }
         public static bool operator ==(User user1, User user2)
         {
-            return user1.Login == user2.Login && user1.Password == user2.Password;
+            return user1.Username == user2.Username && user1.Password == user2.Password;
         }
         public static bool operator !=(User user1, User user2)
         {
-            return user1.Login != user2.Login || user1.Password != user2.Password;
+            return user1.Username != user2.Username || user1.Password != user2.Password;
         }
     }
 }
