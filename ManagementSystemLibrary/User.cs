@@ -1,7 +1,10 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Globalization;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,6 +22,23 @@ namespace ManagementSystemLibrary
             Email = email;
             Login = login;
             Password = password;
+        }
+        public override bool Equals(object obj)
+        {
+            if (obj is User user) return user == this;
+            else return false;            
+        }
+        public override int GetHashCode()
+        {            
+            return (Login, Password).GetHashCode();
+        }
+        public static bool operator ==(User user1, User user2)
+        {
+            return user1.Login == user2.Login && user1.Password == user2.Password;
+        }
+        public static bool operator !=(User user1, User user2)
+        {
+            return user1.Login != user2.Login || user1.Password != user2.Password;
         }
     }
 }

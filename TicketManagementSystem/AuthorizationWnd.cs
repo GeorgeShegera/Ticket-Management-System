@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -29,6 +30,16 @@ namespace TicketManagementSystem
             }
             Users = JsonConvert.DeserializeObject<List<User>>(json);
             InitializeComponent();
+        }
+        public void ErrorMessage(string message) => MessageBox.Show(message, "Error", 
+            MessageBoxButtons.OK, MessageBoxIcon.Error);
+        private void btnSignIn_Click(object sender, EventArgs e)
+        {
+            if(tbLogin.Text == "" || tbPassword.Text == "")
+            {
+                ErrorMessage("You must fill login and password fields");
+                return;
+            }
         }
     }
 }

@@ -34,6 +34,7 @@
             this.lbPassword = new System.Windows.Forms.Label();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.btnSignIn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbWelcome
@@ -93,11 +94,23 @@
             this.linkLabel1.Text = "Don\'t have an account? Sign up!";
             this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnSignIn
+            // 
+            this.btnSignIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSignIn.Location = new System.Drawing.Point(440, 197);
+            this.btnSignIn.Name = "btnSignIn";
+            this.btnSignIn.Size = new System.Drawing.Size(131, 35);
+            this.btnSignIn.TabIndex = 4;
+            this.btnSignIn.Text = "Sign in";
+            this.btnSignIn.UseVisualStyleBackColor = true;
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
+            // 
             // AuthorizationWnd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(583, 244);
+            this.Controls.Add(this.btnSignIn);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.lbPassword);
             this.Controls.Add(this.lbLogin);
@@ -121,6 +134,7 @@
         private System.Windows.Forms.Label lbPassword;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button btnSignIn;
     }
 }
 
