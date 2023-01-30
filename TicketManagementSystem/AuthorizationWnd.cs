@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 using TicketManagementSystem;
 
 namespace TicketManagementSystem
-{    
+{
     public partial class AuthorizationWnd : Form
     {
         public List<User> Users { get; set; }

@@ -1,0 +1,9 @@
+E:\Programming\WinForms Projects\Ticket-Management-System\ManagementSystemLibrary\bin\Debug\ManagementSystemLibrary.dll
+E:\Programming\WinForms Projects\Ticket-Management-System\ManagementSystemLibrary\bin\Debug\ManagementSystemLibrary.pdb
+E:\Programming\WinForms Projects\Ticket-Management-System\ManagementSystemLibrary\bin\Debug\Newtonsoft.Json.dll
+E:\Programming\WinForms Projects\Ticket-Management-System\ManagementSystemLibrary\bin\Debug\Newtonsoft.Json.xml
+E:\Programming\WinForms Projects\Ticket-Management-System\ManagementSystemLibrary\obj\Debug\ManagementSystemLibrary.csproj.AssemblyReference.cache
+E:\Programming\WinForms Projects\Ticket-Management-System\ManagementSystemLibrary\obj\Debug\ManagementSystemLibrary.csproj.CoreCompileInputs.cache
+E:\Programming\WinForms Projects\Ticket-Management-System\ManagementSystemLibrary\obj\Debug\ManagementSystemLibrary.csproj.CopyComplete
+E:\Programming\WinForms Projects\Ticket-Management-System\ManagementSystemLibrary\obj\Debug\ManagementSystemLibrary.dll
+E:\Programming\WinForms Projects\Ticket-Management-System\ManagementSystemLibrary\obj\Debug\ManagementSystemLibrary.pdb

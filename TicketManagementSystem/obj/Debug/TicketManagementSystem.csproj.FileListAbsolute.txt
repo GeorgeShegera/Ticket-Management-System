@@ -1,0 +1,16 @@
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\bin\Debug\TicketManagementSystem.exe.config
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\bin\Debug\TicketManagementSystem.exe
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\bin\Debug\TicketManagementSystem.pdb
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\bin\Debug\ManagementSystemLibrary.dll
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\bin\Debug\Newtonsoft.Json.dll
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\bin\Debug\ManagementSystemLibrary.pdb
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\bin\Debug\Newtonsoft.Json.xml
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.csproj.AssemblyReference.cache
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.csproj.SuggestedBindingRedirects.cache
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.AuthorizationWnd.resources
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.Properties.Resources.resources
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.csproj.GenerateResource.cache
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.csproj.CoreCompileInputs.cache
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.csproj.CopyComplete
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.exe
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.pdb
