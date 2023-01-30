@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Globalization;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,10 +24,16 @@ namespace ManagementSystemLibrary
             Login = login;
             Password = password;
         }
+        public User(string login, string password)
+            : base()
+        {
+            Login = login;
+            Password = password;
+        }
         public override bool Equals(object obj)
         {
             if (obj is User user) return user == this;
-            else return false;            
+            else return false;
         }
         public override int GetHashCode()
         {            

@@ -18,26 +18,38 @@ namespace TicketManagementSystem
     public partial class AuthorizationWnd : Form
     {
         public List<User> Users { get; set; }
+        public User CurUser { get; set; } = null;
         public AuthorizationWnd()
         {
             string json = "";
-            using(FileStream stream = new FileStream("Users.json", FileMode.OpenOrCreate))
+            using (FileStream stream = new FileStream("Users.json", FileMode.OpenOrCreate))
             {
-                using(StreamReader reader = new StreamReader(stream, Encoding.UTF8))
+                using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
                 {
                     while (!reader.EndOfStream) json += reader.ReadLine();
                 }
             }
             Users = JsonConvert.DeserializeObject<List<User>>(json);
+            if (Users is null) Users = new List<User>();
             InitializeComponent();
         }
-        public void ErrorMessage(string message) => MessageBox.Show(message, "Error", 
+        public void ErrorMessage(string message) => MessageBox.Show(message, "Error",
             MessageBoxButtons.OK, MessageBoxIcon.Error);
         private void btnSignIn_Click(object sender, EventArgs e)
         {
-            if(tbLogin.Text == "" || tbPassword.Text == "")
+            if (tbLogin.Text == "" || tbPassword.Text == "")
             {
                 ErrorMessage("You must fill login and password fields");
+                return;
+            }
+            foreach (User user in Users)
+            {
+                if (user.Login == tbLogin.Text && user.Password == tbPassword.Text)
+                    CurUser = user;
+            }
+            if (CurUser is null)
+            {
+                ErrorMessage("Incorrect login or password");
                 return;
             }
         }

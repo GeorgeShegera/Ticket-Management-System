@@ -11,7 +11,7 @@ namespace ManagementSystemLibrary
         public string Name { get; set; }
         public string Surname { get; set; }
         public int Age { get; set; }
-        public Human(string name, string surname, int age)
+        public Human(string name = "", string surname = "", int age = 0)
         {
             Name = name;
             Surname = surname;

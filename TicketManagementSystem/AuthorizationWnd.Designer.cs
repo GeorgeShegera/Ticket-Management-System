@@ -33,7 +33,7 @@
             this.lbLogin = new System.Windows.Forms.Label();
             this.lbPassword = new System.Windows.Forms.Label();
             this.tbPassword = new System.Windows.Forms.TextBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkSignUp = new System.Windows.Forms.LinkLabel();
             this.btnSignIn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -83,16 +83,16 @@
             this.tbPassword.Size = new System.Drawing.Size(309, 31);
             this.tbPassword.TabIndex = 1;
             // 
-            // linkLabel1
+            // linkSignUp
             // 
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.linkLabel1.Location = new System.Drawing.Point(12, 215);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(206, 23);
-            this.linkLabel1.TabIndex = 3;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Don\'t have an account? Sign up!";
-            this.linkLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.linkSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.linkSignUp.Location = new System.Drawing.Point(12, 215);
+            this.linkSignUp.Name = "linkSignUp";
+            this.linkSignUp.Size = new System.Drawing.Size(206, 23);
+            this.linkSignUp.TabIndex = 3;
+            this.linkSignUp.TabStop = true;
+            this.linkSignUp.Text = "Don\'t have an account? Sign up!";
+            this.linkSignUp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnSignIn
             // 
@@ -111,7 +111,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(583, 244);
             this.Controls.Add(this.btnSignIn);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.linkSignUp);
             this.Controls.Add(this.lbPassword);
             this.Controls.Add(this.lbLogin);
             this.Controls.Add(this.tbPassword);
@@ -133,7 +133,7 @@
         private System.Windows.Forms.Label lbLogin;
         private System.Windows.Forms.Label lbPassword;
         private System.Windows.Forms.TextBox tbPassword;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkSignUp;
         private System.Windows.Forms.Button btnSignIn;
     }
 }
