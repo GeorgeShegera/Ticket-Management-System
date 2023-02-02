@@ -17,7 +17,7 @@ namespace TicketManagementSystem
 {
     public partial class AuthorizationWnd : Form
     {
-        public List<User> Users { get; set; }
+        public static List<User> Users { get; set; }
         public User CurUser { get; set; } = null;
         public AuthorizationWnd()
         {
@@ -33,8 +33,17 @@ namespace TicketManagementSystem
             if (Users is null) Users = new List<User>();
             InitializeComponent();
         }
-        public void ErrorMessage(string message) => MessageBox.Show(message, "Error",
+        internal static void ErrorMessage(string message) => MessageBox.Show(message, "Error",
             MessageBoxButtons.OK, MessageBoxIcon.Error);
+        internal void SaveUsers()
+        {
+            string json = JsonConvert.SerializeObject(Users);
+            using (FileStream stream = new FileStream("Users.json", FileMode.Open))
+            {
+                using (StreamWriter writer = new StreamWriter(stream, Encoding.UTF8))
+                    writer.WriteLine(json);
+            }
+        }
         private void btnSignIn_Click(object sender, EventArgs e)
         {
             if (tbLogin.Text == "" || tbPassword.Text == "")
@@ -51,6 +60,17 @@ namespace TicketManagementSystem
             {
                 ErrorMessage("Incorrect login or password");
                 return;
+            }            
+        }
+
+        private void linkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RegistrationWnd registrationWnd = new RegistrationWnd();            
+            registrationWnd.ShowDialog();
+            if (!(registrationWnd.NewUser is null))
+            {
+                Users.Add(registrationWnd.NewUser);
+                SaveUsers();
             }
         }
     }

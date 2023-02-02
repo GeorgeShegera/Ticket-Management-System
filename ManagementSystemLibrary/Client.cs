@@ -8,7 +8,7 @@ namespace ManagementSystemLibrary
 {
     public class Client : User
     {
-        public Client(string email, string login, string passoword, string name, string surname, int age)
-            : base(email, login, passoword, name, surname, age) { }
+        public Client(string email, string username, string passoword, string name, string surname, int age)
+            : base(email, username, passoword, name, surname, age) { }
     }
 }

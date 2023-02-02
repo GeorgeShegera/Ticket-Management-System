@@ -93,6 +93,7 @@
             this.linkSignUp.TabStop = true;
             this.linkSignUp.Text = "Don\'t have an account? Sign up!";
             this.linkSignUp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.linkSignUp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSignUp_LinkClicked);
             // 
             // btnSignIn
             // 

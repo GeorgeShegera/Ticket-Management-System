@@ -14,3 +14,4 @@ E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem
 E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.csproj.CopyComplete
 E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.exe
 E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.pdb
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.RegistrationWnd.resources

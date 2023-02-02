@@ -30,6 +30,7 @@ namespace ManagementSystemLibrary
             Username = username;
             Password = password;
         }
+        public User() : base() { }
         public override bool Equals(object obj)
         {
             if (obj is User user) return user == this;
