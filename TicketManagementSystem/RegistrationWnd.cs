@@ -23,23 +23,30 @@ namespace TicketManagementSystem
 
         private void btnSighUp_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(tbName.Text) ||
-               string.IsNullOrEmpty(tbSurname.Text) ||
-               string.IsNullOrEmpty(tbEmail.Text) ||
-               string.IsNullOrEmpty(tbUsername.Text) ||
-               string.IsNullOrEmpty(tbPassword.Text))
-            {
-                ErrorMessage("You must fill in all fields");
-                return;
-            }
+            errorProvider.Clear();
+            if (SetErrorProv()) return;
             else if (Users.Any(x => x.Username == tbUsername.Text))
             {
                 ErrorMessage("This username is already taken");
                 return;
             }
             NewUser = new User(tbEmail.Text, tbUsername.Text, tbPassword.Text,
-                               tbName.Text, tbSurname.Text, (int)numAge.Value);
+                               tbName.Text, tbSurname.Text, dateTimePicker.Value);
             Close();
+        }
+
+        private bool SetErrorProv()
+        {
+            bool errorSet = false;
+            foreach(Control control in Controls)
+            {
+                if (control is TextBox && string.IsNullOrEmpty(control.Text))
+                {
+                    errorProvider.SetError(control, $"Field {control.Tag} must be filled");
+                    errorSet = true;
+                }
+            }
+            return errorSet;
         }
     }
 }

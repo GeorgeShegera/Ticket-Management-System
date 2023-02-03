@@ -8,7 +8,7 @@ namespace ManagementSystemLibrary
 {
     public class Administrator : User
     {
-        public Administrator(string email, string login, string password, string name, string surname, int age)
-            : base(email, login, password, name, surname, age) { }
+        public Administrator(string email, string login, string password, string name, string surname, DateTime date)
+            : base(email, login, password, name, surname, date) { }
     }
 }

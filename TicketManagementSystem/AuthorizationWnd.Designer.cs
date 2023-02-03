@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbWelcome = new System.Windows.Forms.Label();
             this.tbLogin = new System.Windows.Forms.TextBox();
             this.lbLogin = new System.Windows.Forms.Label();
@@ -35,6 +36,8 @@
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.linkSignUp = new System.Windows.Forms.LinkLabel();
             this.btnSignIn = new System.Windows.Forms.Button();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // lbWelcome
@@ -82,6 +85,7 @@
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(309, 31);
             this.tbPassword.TabIndex = 1;
+            this.tbPassword.UseSystemPasswordChar = true;
             // 
             // linkSignUp
             // 
@@ -106,6 +110,11 @@
             this.btnSignIn.UseVisualStyleBackColor = true;
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider.ContainerControl = this;
+            // 
             // AuthorizationWnd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -122,6 +131,7 @@
             this.Name = "AuthorizationWnd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign in";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,6 +146,7 @@
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.LinkLabel linkSignUp;
         private System.Windows.Forms.Button btnSignIn;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
 

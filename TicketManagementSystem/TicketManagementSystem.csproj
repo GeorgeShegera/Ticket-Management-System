@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminWnd.Designer.cs">
+      <DependentUpon>AdminWnd.cs</DependentUpon>
+    </Compile>
     <Compile Include="AuthorizationWnd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,9 @@
     <Compile Include="RegistrationWnd.Designer.cs">
       <DependentUpon>RegistrationWnd.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminWnd.resx">
+      <DependentUpon>AdminWnd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AuthorizationWnd.resx">
       <DependentUpon>AuthorizationWnd.cs</DependentUpon>
     </EmbeddedResource>

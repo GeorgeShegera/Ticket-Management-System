@@ -10,12 +10,12 @@ namespace ManagementSystemLibrary
     {
         public string Name { get; set; }
         public string Surname { get; set; }
-        public int Age { get; set; }
-        public Human(string name = "", string surname = "", int age = 0)
+        public DateTime? DateBirth { get; set; }
+        public Human(string name = "", string surname = "", DateTime? date = null)
         {
             Name = name;
             Surname = surname;
-            Age = age;
+            DateBirth = date;
         }
     }
 }
