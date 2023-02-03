@@ -37,7 +37,7 @@ namespace ManagementSystemLibrary
             else return false;
         }
         public override int GetHashCode()
-        {            
+        {
             return (Username, Password).GetHashCode();
         }
         public static bool operator ==(User user1, User user2)

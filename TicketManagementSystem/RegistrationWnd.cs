@@ -10,6 +10,7 @@ using System.Windows.Forms.VisualStyles;
 using System.Windows.Forms;
 using static TicketManagementSystem.AuthorizationWnd;
 using ManagementSystemLibrary;
+using System.Text.RegularExpressions;
 
 namespace TicketManagementSystem
 {
@@ -24,7 +25,7 @@ namespace TicketManagementSystem
         private void btnSighUp_Click(object sender, EventArgs e)
         {
             errorProvider.Clear();
-            if (SetErrorProv()) return;
+            if (SetErrorProv()) return;            
             else if (Users.Any(x => x.Username == tbUsername.Text))
             {
                 ErrorMessage("This username is already taken");
@@ -40,13 +41,28 @@ namespace TicketManagementSystem
             bool errorSet = false;
             foreach(Control control in Controls)
             {
-                if (control is TextBox && string.IsNullOrEmpty(control.Text))
+                if (control is TextBox)
                 {
-                    errorProvider.SetError(control, $"Field {control.Tag} must be filled");
-                    errorSet = true;
+                    if (string.IsNullOrEmpty(control.Text))
+                    {
+                        errorProvider.SetError(control, $"Field {control.Tag} must be filled");
+                        errorSet = true;
+                    }
+                    else if (control.Tag.ToString() == "Email" && !ValidEmail(control.Text))
+                    {
+                        errorProvider.SetError(control, "Incorrect email");
+                        errorSet = true;
+                    }
                 }
             }
             return errorSet;
+        }
+        private bool ValidEmail(string email)
+        {
+            string strRegex = @"^(?("")(""[^""]+?""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                              @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9]{2,17}))$";
+            Regex re = new Regex(strRegex, RegexOptions.IgnoreCase);
+            return re.IsMatch(email);
         }
     }
 }
