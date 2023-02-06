@@ -33,7 +33,7 @@ namespace TicketManagementSystem
             }
             NewUser = new User(tbEmail.Text, tbUsername.Text, tbPassword.Text,
                                tbName.Text, tbSurname.Text, dateTimePicker.Value);
-            Close();
+            Close();            
         }
 
         private bool SetErrorProv()

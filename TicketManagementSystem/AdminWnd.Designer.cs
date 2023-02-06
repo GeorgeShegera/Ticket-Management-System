@@ -28,46 +28,305 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbUsername = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminWnd));
+            this.btnOptions = new System.Windows.Forms.Button();
+            this.btnApplicationInfo = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gbUserData = new System.Windows.Forms.GroupBox();
+            this.lbName = new System.Windows.Forms.Label();
+            this.lbSurname = new System.Windows.Forms.Label();
+            this.lbAge = new System.Windows.Forms.Label();
+            this.lbEmail = new System.Windows.Forms.Label();
+            this.lbBalance = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.lbTrips = new System.Windows.Forms.ListBox();
+            this.gbTrips = new System.Windows.Forms.GroupBox();
+            this.btnAddTrip = new System.Windows.Forms.Button();
+            this.btnCancelTrip = new System.Windows.Forms.Button();
+            this.btnEditTrip = new System.Windows.Forms.Button();
+            this.lbUsers = new System.Windows.Forms.ListBox();
+            this.gbUsers = new System.Windows.Forms.GroupBox();
+            this.btnCancelTicket = new System.Windows.Forms.Button();
+            this.btnSellTicket = new System.Windows.Forms.Button();
+            this.btnAddUser = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gbUserData.SuspendLayout();
+            this.gbTrips.SuspendLayout();
+            this.gbUsers.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lbUsername
+            // btnOptions
             // 
-            this.lbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbUsername.Location = new System.Drawing.Point(12, 9);
-            this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(285, 23);
-            this.lbUsername.TabIndex = 0;
-            this.lbUsername.Text = "Welcome back Username";
-            this.lbUsername.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnOptions.Location = new System.Drawing.Point(577, 77);
+            this.btnOptions.Name = "btnOptions";
+            this.btnOptions.Size = new System.Drawing.Size(217, 40);
+            this.btnOptions.TabIndex = 1;
+            this.btnOptions.Text = "Options";
+            this.btnOptions.UseVisualStyleBackColor = true;
+            // 
+            // btnApplicationInfo
+            // 
+            this.btnApplicationInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnApplicationInfo.Location = new System.Drawing.Point(577, 31);
+            this.btnApplicationInfo.Name = "btnApplicationInfo";
+            this.btnApplicationInfo.Size = new System.Drawing.Size(217, 40);
+            this.btnApplicationInfo.TabIndex = 2;
+            this.btnApplicationInfo.Text = "Application Information ";
+            this.btnApplicationInfo.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(234, 223);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // gbUserData
+            // 
+            this.gbUserData.Controls.Add(this.lbBalance);
+            this.gbUserData.Controls.Add(this.lbEmail);
+            this.gbUserData.Controls.Add(this.lbAge);
+            this.gbUserData.Controls.Add(this.lbSurname);
+            this.gbUserData.Controls.Add(this.lbName);
+            this.gbUserData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gbUserData.Location = new System.Drawing.Point(250, 12);
+            this.gbUserData.Name = "gbUserData";
+            this.gbUserData.Size = new System.Drawing.Size(269, 221);
+            this.gbUserData.TabIndex = 4;
+            this.gbUserData.TabStop = false;
+            this.gbUserData.Text = "User Data";
+            // 
+            // lbName
+            // 
+            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbName.Location = new System.Drawing.Point(6, 33);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(245, 26);
+            this.lbName.TabIndex = 0;
+            this.lbName.Text = "Name:";
+            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbSurname
+            // 
+            this.lbSurname.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbSurname.Location = new System.Drawing.Point(6, 68);
+            this.lbSurname.Name = "lbSurname";
+            this.lbSurname.Size = new System.Drawing.Size(245, 26);
+            this.lbSurname.TabIndex = 0;
+            this.lbSurname.Text = "Surname:";
+            this.lbSurname.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbAge
+            // 
+            this.lbAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbAge.Location = new System.Drawing.Point(6, 104);
+            this.lbAge.Name = "lbAge";
+            this.lbAge.Size = new System.Drawing.Size(245, 26);
+            this.lbAge.TabIndex = 0;
+            this.lbAge.Text = "Age:";
+            this.lbAge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbEmail
+            // 
+            this.lbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbEmail.Location = new System.Drawing.Point(6, 141);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(245, 26);
+            this.lbEmail.TabIndex = 0;
+            this.lbEmail.Text = "Email:";
+            this.lbEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbBalance
+            // 
+            this.lbBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbBalance.Location = new System.Drawing.Point(6, 177);
+            this.lbBalance.Name = "lbBalance";
+            this.lbBalance.Size = new System.Drawing.Size(245, 26);
+            this.lbBalance.TabIndex = 0;
+            this.lbBalance.Text = "Balance:";
+            this.lbBalance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(34, 96);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(577, 123);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.Size = new System.Drawing.Size(217, 40);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "View happened trips";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // lbTrips
+            // 
+            this.lbTrips.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbTrips.FormattingEnabled = true;
+            this.lbTrips.ItemHeight = 20;
+            this.lbTrips.Location = new System.Drawing.Point(6, 23);
+            this.lbTrips.Name = "lbTrips";
+            this.lbTrips.Size = new System.Drawing.Size(353, 204);
+            this.lbTrips.TabIndex = 6;
+            // 
+            // gbTrips
+            // 
+            this.gbTrips.Controls.Add(this.btnEditTrip);
+            this.gbTrips.Controls.Add(this.btnCancelTrip);
+            this.gbTrips.Controls.Add(this.btnAddTrip);
+            this.gbTrips.Controls.Add(this.lbTrips);
+            this.gbTrips.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gbTrips.Location = new System.Drawing.Point(12, 271);
+            this.gbTrips.Name = "gbTrips";
+            this.gbTrips.Size = new System.Drawing.Size(365, 276);
+            this.gbTrips.TabIndex = 8;
+            this.gbTrips.TabStop = false;
+            this.gbTrips.Text = "Trips";
+            // 
+            // btnAddTrip
+            // 
+            this.btnAddTrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAddTrip.Location = new System.Drawing.Point(257, 233);
+            this.btnAddTrip.Name = "btnAddTrip";
+            this.btnAddTrip.Size = new System.Drawing.Size(102, 37);
+            this.btnAddTrip.TabIndex = 7;
+            this.btnAddTrip.Text = "Add Trip";
+            this.btnAddTrip.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelTrip
+            // 
+            this.btnCancelTrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnCancelTrip.Location = new System.Drawing.Point(146, 233);
+            this.btnCancelTrip.Name = "btnCancelTrip";
+            this.btnCancelTrip.Size = new System.Drawing.Size(105, 37);
+            this.btnCancelTrip.TabIndex = 7;
+            this.btnCancelTrip.Text = "Cancel Trip";
+            this.btnCancelTrip.UseVisualStyleBackColor = true;
+            // 
+            // btnEditTrip
+            // 
+            this.btnEditTrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnEditTrip.Location = new System.Drawing.Point(6, 233);
+            this.btnEditTrip.Name = "btnEditTrip";
+            this.btnEditTrip.Size = new System.Drawing.Size(102, 37);
+            this.btnEditTrip.TabIndex = 7;
+            this.btnEditTrip.Text = "Edit Trip";
+            this.btnEditTrip.UseVisualStyleBackColor = true;
+            // 
+            // lbUsers
+            // 
+            this.lbUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbUsers.FormattingEnabled = true;
+            this.lbUsers.ItemHeight = 20;
+            this.lbUsers.Location = new System.Drawing.Point(6, 23);
+            this.lbUsers.Name = "lbUsers";
+            this.lbUsers.Size = new System.Drawing.Size(353, 204);
+            this.lbUsers.TabIndex = 9;
+            // 
+            // gbUsers
+            // 
+            this.gbUsers.BackColor = System.Drawing.Color.Transparent;
+            this.gbUsers.Controls.Add(this.btnSellTicket);
+            this.gbUsers.Controls.Add(this.btnCancelTicket);
+            this.gbUsers.Controls.Add(this.btnAddUser);
+            this.gbUsers.Controls.Add(this.lbUsers);
+            this.gbUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gbUsers.Location = new System.Drawing.Point(429, 271);
+            this.gbUsers.Name = "gbUsers";
+            this.gbUsers.Size = new System.Drawing.Size(365, 276);
+            this.gbUsers.TabIndex = 10;
+            this.gbUsers.TabStop = false;
+            this.gbUsers.Text = "Users";
+            // 
+            // btnCancelTicket
+            // 
+            this.btnCancelTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnCancelTicket.Location = new System.Drawing.Point(6, 233);
+            this.btnCancelTicket.Name = "btnCancelTicket";
+            this.btnCancelTicket.Size = new System.Drawing.Size(129, 37);
+            this.btnCancelTicket.TabIndex = 7;
+            this.btnCancelTicket.Text = "Cancel ticket";
+            this.btnCancelTicket.UseVisualStyleBackColor = true;
+            // 
+            // btnSellTicket
+            // 
+            this.btnSellTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSellTicket.Location = new System.Drawing.Point(147, 233);
+            this.btnSellTicket.Name = "btnSellTicket";
+            this.btnSellTicket.Size = new System.Drawing.Size(103, 37);
+            this.btnSellTicket.TabIndex = 7;
+            this.btnSellTicket.Text = "Sell ticket";
+            this.btnSellTicket.UseVisualStyleBackColor = true;
+            // 
+            // btnAddUser
+            // 
+            this.btnAddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAddUser.Location = new System.Drawing.Point(256, 233);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(103, 37);
+            this.btnAddUser.TabIndex = 7;
+            this.btnAddUser.Text = "Add User";
+            this.btnAddUser.UseVisualStyleBackColor = true;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnExit.Location = new System.Drawing.Point(576, 169);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(217, 40);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
             // 
             // AdminWnd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 500);
+            this.ClientSize = new System.Drawing.Size(806, 562);
+            this.Controls.Add(this.gbUsers);
+            this.Controls.Add(this.gbTrips);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.lbUsername);
+            this.Controls.Add(this.gbUserData);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnApplicationInfo);
+            this.Controls.Add(this.btnOptions);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AdminWnd";
             this.Text = "AdminWnd";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gbUserData.ResumeLayout(false);
+            this.gbTrips.ResumeLayout(false);
+            this.gbUsers.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbUsername;
+        private System.Windows.Forms.Button btnOptions;
+        private System.Windows.Forms.Button btnApplicationInfo;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox gbUserData;
+        private System.Windows.Forms.Label lbEmail;
+        private System.Windows.Forms.Label lbAge;
+        private System.Windows.Forms.Label lbSurname;
+        private System.Windows.Forms.Label lbName;
+        private System.Windows.Forms.Label lbBalance;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox lbTrips;
+        private System.Windows.Forms.GroupBox gbTrips;
+        private System.Windows.Forms.Button btnEditTrip;
+        private System.Windows.Forms.Button btnCancelTrip;
+        private System.Windows.Forms.Button btnAddTrip;
+        private System.Windows.Forms.ListBox lbUsers;
+        private System.Windows.Forms.GroupBox gbUsers;
+        private System.Windows.Forms.Button btnSellTicket;
+        private System.Windows.Forms.Button btnCancelTicket;
+        private System.Windows.Forms.Button btnAddUser;
+        private System.Windows.Forms.Button btnExit;
     }
 }
