@@ -28,8 +28,8 @@ namespace TicketManagementSystem
                     while (!reader.EndOfStream) json += reader.ReadLine();
             }
             Users = JsonConvert.DeserializeObject<List<User>>(json);
-            if (Users is null)
-                Users = new List<User> { new Administrator("email", "admin", "admin", "Admin", "Admin", DateTime.Now) };
+            if (Users is null) Users = new List<User> { new Administrator("AdminEmail@gmail.com", "admin", "admin",
+                                                        "Admin", "Admin", DateTime.Now) };
             InitializeComponent();
         }
         internal static void ErrorMessage(string message) => MessageBox.Show(message, "Error",
@@ -67,7 +67,12 @@ namespace TicketManagementSystem
                 ErrorMessage("Incorrect login or password");
                 return;
             }
-            Close();
+            Hide();
+            Form userForm;
+            if (CurUser is Administrator) userForm = new AdminWnd(CurUser);
+            else userForm = new AdminWnd(CurUser);
+            userForm.ShowDialog();
+            Show();
         }
 
         private void linkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -79,6 +84,6 @@ namespace TicketManagementSystem
                 Users.Add(registrationWnd.NewUser);
                 SaveUsers();
             }
-        }        
+        }
     }
 }

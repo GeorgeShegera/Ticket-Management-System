@@ -69,6 +69,13 @@
     <Compile Include="RegistrationWnd.Designer.cs">
       <DependentUpon>RegistrationWnd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Settings\EditState.cs" />
+    <Compile Include="Settings\SettingsWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings\SettingsWnd.Designer.cs">
+      <DependentUpon>SettingsWnd.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminWnd.resx">
       <DependentUpon>AdminWnd.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,9 +90,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RegistrationWnd.resx">
       <DependentUpon>RegistrationWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings\SettingsWnd.resx">
+      <DependentUpon>SettingsWnd.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -106,6 +117,21 @@
       <Project>{41603f44-edc3-4392-8ad1-5e514dc67052}</Project>
       <Name>ManagementSystemLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditImg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CrossImg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VisibleImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HiddenImg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

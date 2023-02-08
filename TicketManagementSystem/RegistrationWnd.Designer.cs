@@ -183,9 +183,10 @@
             // dateTimePicker
             // 
             this.dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker.Location = new System.Drawing.Point(161, 159);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(364, 31);
+            this.dateTimePicker.Size = new System.Drawing.Size(148, 31);
             this.dateTimePicker.TabIndex = 6;
             // 
             // fileSystemWatcher1
@@ -197,7 +198,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 426);
+            this.ClientSize = new System.Drawing.Size(547, 419);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.btnSighUp);
             this.Controls.Add(this.lbUsername);
