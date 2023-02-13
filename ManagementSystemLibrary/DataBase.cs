@@ -29,7 +29,7 @@ namespace ManagementSystemLibrary
                 TypeNameHandling = TypeNameHandling.All
             };
             string json = JsonConvert.SerializeObject(this, settings);
-            using (FileStream stream = new FileStream("DataBase.json", FileMode.Open))
+            using (FileStream stream = new FileStream("DataBase.json", FileMode.Create))
             {
                 using (StreamWriter writer = new StreamWriter(stream, Encoding.UTF8))
                     writer.WriteLine(json);

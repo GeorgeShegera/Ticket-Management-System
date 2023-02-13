@@ -61,6 +61,8 @@ namespace TicketManagementSystem
             }
             userForm.ShowDialog();
             curUser = null;
+            tbUsername.Text = "";
+            tbPassword.Text = "";
             Refresh();
             Show();
         }

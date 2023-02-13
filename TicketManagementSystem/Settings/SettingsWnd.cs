@@ -112,7 +112,7 @@ namespace TicketManagementSystem
                 case "Name":
                     {
                         pictureBox = pbName;
-                        sameData = tbName.Text == user.Username;
+                        sameData = tbName.Text == user.Name;
                     }
                     break;
                 case "Surname":
@@ -170,6 +170,8 @@ namespace TicketManagementSystem
             }
             user.Password = tbNewPass.Text;
             dataBase.SaveUser(user);
+            tbNewPass.Text = "";
+            tbOldPass.Text = "";
         }
     }
 }

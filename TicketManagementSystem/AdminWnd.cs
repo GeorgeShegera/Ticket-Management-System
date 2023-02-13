@@ -35,5 +35,10 @@ namespace TicketManagementSystem
             Show();
             RefreshData();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

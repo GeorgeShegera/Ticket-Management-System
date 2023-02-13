@@ -19,28 +19,28 @@ namespace TicketManagementSystem
     {
         public RegistrationWnd()
         {
-            dateTimePicker.MaxDate = DateTime.Now;
             InitializeComponent();
+            dateTimePicker.MaxDate = DateTime.Now;
         }
 
         private void btnSighUp_Click(object sender, EventArgs e)
         {
             errorProvider.Clear();
-            if (SetErrorProv()) return;            
+            if (SetErrorProv()) return;
             else if (dataBase.IsTakenUsername(tbUsername.Text))
             {
                 ErrorMessage("This username is already taken");
                 return;
-            }            
+            }
             dataBase.AddUser(new User(tbEmail.Text, tbUsername.Text, tbPassword.Text,
-                                      tbName.Text, tbSurname.Text, dateTimePicker.Value));            
+                                      tbName.Text, tbSurname.Text, dateTimePicker.Value));
             Close();
         }
 
         private bool SetErrorProv()
         {
             bool errorSet = false;
-            foreach(Control control in Controls)
+            foreach (Control control in Controls)
             {
                 if (control is TextBox)
                 {
