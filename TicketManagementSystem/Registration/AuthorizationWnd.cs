@@ -50,7 +50,7 @@ namespace TicketManagementSystem
                 ErrorMessage("Wrong login or password");
                 return;
             }
-            //Hide();
+            Hide();
             Form userForm;
             if (curUser is Administrator admin) userForm = new AdminWnd(admin);
             else

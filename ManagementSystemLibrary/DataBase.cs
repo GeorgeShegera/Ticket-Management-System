@@ -10,14 +10,12 @@ using System.Windows.Forms;
 namespace ManagementSystemLibrary
 {
     public class DataBase
-    {
-        public List<Trip> Trips { get; set; }
+    {        
         public List<Train> Trains { get; set; }
         public List<User> Users { get; set; } 
 
         public DataBase() 
-        {
-            Trips = new List<Trip>();
+        {            
             Trains = new List<Train>();
             Users = new List<User>();
         }
@@ -41,7 +39,15 @@ namespace ManagementSystemLibrary
             Users.Add(user);
             Save();
         }
+
+        public void AddTrain(Train train)
+        {
+            Trains.Add(train);
+            Save();
+        }
+
         public bool IsTakenUsername(string username) => Users.Any(x => x.Username == username);
+        public bool IsTakenTrainName(string name) => Trains.Any(x => x.Name == name);
         public void SaveUser(User user)
         {
             for (int i = 0; i < Users.Count; i++)

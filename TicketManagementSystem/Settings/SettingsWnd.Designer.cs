@@ -92,7 +92,6 @@
             this.dtpBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dtpBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpBirth.Location = new System.Drawing.Point(161, 107);
-            this.dtpBirth.MaxDate = new System.DateTime(2023, 2, 13, 12, 22, 37, 0);
             this.dtpBirth.Name = "dtpBirth";
             this.dtpBirth.Size = new System.Drawing.Size(150, 31);
             this.dtpBirth.TabIndex = 7;

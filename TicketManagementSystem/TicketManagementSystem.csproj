@@ -76,6 +76,12 @@
     <Compile Include="Settings\SettingsWnd.Designer.cs">
       <DependentUpon>SettingsWnd.cs</DependentUpon>
     </Compile>
+    <Compile Include="TrainWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrainWnd.Designer.cs">
+      <DependentUpon>TrainWnd.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminWnd.resx">
       <DependentUpon>AdminWnd.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\SettingsWnd.resx">
       <DependentUpon>SettingsWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrainWnd.resx">
+      <DependentUpon>TrainWnd.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -133,5 +142,6 @@
   <ItemGroup>
     <None Include="Resources\HiddenImg.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

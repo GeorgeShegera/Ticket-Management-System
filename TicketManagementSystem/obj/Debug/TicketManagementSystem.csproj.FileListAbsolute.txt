@@ -17,3 +17,4 @@ E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem
 E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.RegistrationWnd.resources
 E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.AdminWnd.resources
 E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.SettingsWnd.resources
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.AddingTrainWnd.resources

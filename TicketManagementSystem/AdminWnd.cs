@@ -39,6 +39,12 @@ namespace TicketManagementSystem
         private void btnExit_Click(object sender, EventArgs e)
         {
             Close();
-        }       
+        }
+
+        private void tbnAddTrain_Click(object sender, EventArgs e)
+        {
+            AddingTrainWnd addingTrainWnd = new AddingTrainWnd();
+            addingTrainWnd.ShowDialog();
+        }
     }
 }
