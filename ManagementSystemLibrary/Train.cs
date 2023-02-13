@@ -10,7 +10,7 @@ namespace ManagementSystemLibrary
 {
     public class Train
     {
-        public int TripId { get; private set; }
+        public List<Trip> Trips { get; set; } = new List<Trip>();
         public string Name { get; set; }
         public string Model { get; set; }
         public int BusinessClassCapacity { get; set; }

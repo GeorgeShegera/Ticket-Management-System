@@ -8,8 +8,7 @@ using System.Threading.Tasks;
 namespace ManagementSystemLibrary
 {
     public class Ticket
-    {
-        public int TripId { get; private set; }
+    {        
         public DateTime DateOfPurchase { get; private set; }
         public TicketType TypeOfTicket { get; private set; }
         public double Price { get; private set; }

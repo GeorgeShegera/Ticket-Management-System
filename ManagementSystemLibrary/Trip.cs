@@ -8,8 +8,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 namespace ManagementSystemLibrary
 {
     public class Trip
-    {
-        public int TripId { get; private set; }
+    {        
         public DateTime DepartureDate { get; set; }
         public string DeparturePlace { get; set; }
         public DateTime ArrivalDate { get; set; }
