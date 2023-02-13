@@ -32,7 +32,10 @@
             this.lbSettings = new System.Windows.Forms.Label();
             this.gbPersonalData = new System.Windows.Forms.GroupBox();
             this.dtpBirth = new System.Windows.Forms.DateTimePicker();
+            this.pbBirthDate = new System.Windows.Forms.PictureBox();
             this.tbName = new System.Windows.Forms.TextBox();
+            this.pbSurname = new System.Windows.Forms.PictureBox();
+            this.pbName = new System.Windows.Forms.PictureBox();
             this.tbSurname = new System.Windows.Forms.TextBox();
             this.lbBirth = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,21 +43,18 @@
             this.gbAccountData = new System.Windows.Forms.GroupBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.tbNewPass = new System.Windows.Forms.TextBox();
+            this.pbNewPass = new System.Windows.Forms.PictureBox();
             this.tbOldPass = new System.Windows.Forms.TextBox();
             this.lbNewPassword = new System.Windows.Forms.Label();
-            this.lbOldPassword = new System.Windows.Forms.Label();
-            this.pbNewPass = new System.Windows.Forms.PictureBox();
             this.pbOldPass = new System.Windows.Forms.PictureBox();
-            this.pbBirthDate = new System.Windows.Forms.PictureBox();
-            this.pbSurname = new System.Windows.Forms.PictureBox();
-            this.pbName = new System.Windows.Forms.PictureBox();
+            this.lbOldPassword = new System.Windows.Forms.Label();
             this.gbPersonalData.SuspendLayout();
-            this.gbAccountData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbNewPass)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbOldPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBirthDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbSurname)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbName)).BeginInit();
+            this.gbAccountData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNewPass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOldPass)).BeginInit();
             this.SuspendLayout();
             // 
             // lbSettings
@@ -92,11 +92,27 @@
             this.dtpBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dtpBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpBirth.Location = new System.Drawing.Point(161, 107);
+            this.dtpBirth.MaxDate = new System.DateTime(2023, 2, 13, 12, 22, 37, 0);
             this.dtpBirth.Name = "dtpBirth";
             this.dtpBirth.Size = new System.Drawing.Size(150, 31);
             this.dtpBirth.TabIndex = 7;
             this.dtpBirth.Tag = "BirthDate";
+            this.dtpBirth.Value = new System.DateTime(2023, 2, 13, 0, 0, 0, 0);
             this.dtpBirth.ValueChanged += new System.EventHandler(this.AccountData_Changed);
+            // 
+            // pbBirthDate
+            // 
+            this.pbBirthDate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbBirthDate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbBirthDate.Image = ((System.Drawing.Image)(resources.GetObject("pbBirthDate.Image")));
+            this.pbBirthDate.Location = new System.Drawing.Point(317, 107);
+            this.pbBirthDate.Name = "pbBirthDate";
+            this.pbBirthDate.Size = new System.Drawing.Size(34, 31);
+            this.pbBirthDate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbBirthDate.TabIndex = 4;
+            this.pbBirthDate.TabStop = false;
+            this.pbBirthDate.Tag = "BirthDate";
+            this.pbBirthDate.Click += new System.EventHandler(this.Edit_Changed);
             // 
             // tbName
             // 
@@ -108,6 +124,35 @@
             this.tbName.TabIndex = 1;
             this.tbName.Tag = "Name";
             this.tbName.TextChanged += new System.EventHandler(this.AccountData_Changed);
+            // 
+            // pbSurname
+            // 
+            this.pbSurname.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbSurname.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbSurname.Image = ((System.Drawing.Image)(resources.GetObject("pbSurname.Image")));
+            this.pbSurname.Location = new System.Drawing.Point(481, 70);
+            this.pbSurname.Name = "pbSurname";
+            this.pbSurname.Size = new System.Drawing.Size(34, 31);
+            this.pbSurname.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSurname.TabIndex = 4;
+            this.pbSurname.TabStop = false;
+            this.pbSurname.Tag = "Surname";
+            this.pbSurname.Click += new System.EventHandler(this.Edit_Changed);
+            // 
+            // pbName
+            // 
+            this.pbName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbName.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbName.ErrorImage = null;
+            this.pbName.Image = ((System.Drawing.Image)(resources.GetObject("pbName.Image")));
+            this.pbName.Location = new System.Drawing.Point(481, 33);
+            this.pbName.Name = "pbName";
+            this.pbName.Size = new System.Drawing.Size(34, 31);
+            this.pbName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbName.TabIndex = 4;
+            this.pbName.TabStop = false;
+            this.pbName.Tag = "Name";
+            this.pbName.Click += new System.EventHandler(this.Edit_Changed);
             // 
             // tbSurname
             // 
@@ -189,6 +234,20 @@
             this.tbNewPass.Tag = "NewPass";
             this.tbNewPass.UseSystemPasswordChar = true;
             // 
+            // pbNewPass
+            // 
+            this.pbNewPass.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbNewPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbNewPass.Image = ((System.Drawing.Image)(resources.GetObject("pbNewPass.Image")));
+            this.pbNewPass.Location = new System.Drawing.Point(481, 74);
+            this.pbNewPass.Name = "pbNewPass";
+            this.pbNewPass.Size = new System.Drawing.Size(34, 31);
+            this.pbNewPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbNewPass.TabIndex = 5;
+            this.pbNewPass.TabStop = false;
+            this.pbNewPass.Tag = "NewPass";
+            this.pbNewPass.Click += new System.EventHandler(this.Visible_Click);
+            // 
             // tbOldPass
             // 
             this.tbOldPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -210,31 +269,6 @@
             this.lbNewPassword.Text = "Input new password:";
             this.lbNewPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lbOldPassword
-            // 
-            this.lbOldPassword.BackColor = System.Drawing.SystemColors.Control;
-            this.lbOldPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbOldPassword.Location = new System.Drawing.Point(11, 37);
-            this.lbOldPassword.Name = "lbOldPassword";
-            this.lbOldPassword.Size = new System.Drawing.Size(209, 31);
-            this.lbOldPassword.TabIndex = 0;
-            this.lbOldPassword.Text = "Input old password:";
-            this.lbOldPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pbNewPass
-            // 
-            this.pbNewPass.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbNewPass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbNewPass.Image = ((System.Drawing.Image)(resources.GetObject("pbNewPass.Image")));
-            this.pbNewPass.Location = new System.Drawing.Point(481, 74);
-            this.pbNewPass.Name = "pbNewPass";
-            this.pbNewPass.Size = new System.Drawing.Size(34, 31);
-            this.pbNewPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbNewPass.TabIndex = 5;
-            this.pbNewPass.TabStop = false;
-            this.pbNewPass.Tag = "NewPass";
-            this.pbNewPass.Click += new System.EventHandler(this.Visible_Click);
-            // 
             // pbOldPass
             // 
             this.pbOldPass.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -249,54 +283,22 @@
             this.pbOldPass.Tag = "OldPass";
             this.pbOldPass.Click += new System.EventHandler(this.Visible_Click);
             // 
-            // pbBirthDate
+            // lbOldPassword
             // 
-            this.pbBirthDate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbBirthDate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbBirthDate.Image = ((System.Drawing.Image)(resources.GetObject("pbBirthDate.Image")));
-            this.pbBirthDate.Location = new System.Drawing.Point(317, 107);
-            this.pbBirthDate.Name = "pbBirthDate";
-            this.pbBirthDate.Size = new System.Drawing.Size(34, 31);
-            this.pbBirthDate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbBirthDate.TabIndex = 4;
-            this.pbBirthDate.TabStop = false;
-            this.pbBirthDate.Tag = "BirthDate";
-            this.pbBirthDate.Click += new System.EventHandler(this.Edit_Changed);
-            // 
-            // pbSurname
-            // 
-            this.pbSurname.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbSurname.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbSurname.Image = ((System.Drawing.Image)(resources.GetObject("pbSurname.Image")));
-            this.pbSurname.Location = new System.Drawing.Point(481, 70);
-            this.pbSurname.Name = "pbSurname";
-            this.pbSurname.Size = new System.Drawing.Size(34, 31);
-            this.pbSurname.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbSurname.TabIndex = 4;
-            this.pbSurname.TabStop = false;
-            this.pbSurname.Tag = "Surname";
-            this.pbSurname.Click += new System.EventHandler(this.Edit_Changed);
-            // 
-            // pbName
-            // 
-            this.pbName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbName.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbName.ErrorImage = null;
-            this.pbName.Image = ((System.Drawing.Image)(resources.GetObject("pbName.Image")));
-            this.pbName.Location = new System.Drawing.Point(481, 33);
-            this.pbName.Name = "pbName";
-            this.pbName.Size = new System.Drawing.Size(34, 31);
-            this.pbName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbName.TabIndex = 4;
-            this.pbName.TabStop = false;
-            this.pbName.Tag = "Name";
-            this.pbName.Click += new System.EventHandler(this.Edit_Changed);
+            this.lbOldPassword.BackColor = System.Drawing.SystemColors.Control;
+            this.lbOldPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbOldPassword.Location = new System.Drawing.Point(11, 37);
+            this.lbOldPassword.Name = "lbOldPassword";
+            this.lbOldPassword.Size = new System.Drawing.Size(209, 31);
+            this.lbOldPassword.TabIndex = 0;
+            this.lbOldPassword.Text = "Input old password:";
+            this.lbOldPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // SettingsWnd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(556, 396);
+            this.ClientSize = new System.Drawing.Size(547, 396);
             this.Controls.Add(this.gbAccountData);
             this.Controls.Add(this.gbPersonalData);
             this.Controls.Add(this.lbSettings);
@@ -306,13 +308,13 @@
             this.Text = "Settings";
             this.gbPersonalData.ResumeLayout(false);
             this.gbPersonalData.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBirthDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSurname)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbName)).EndInit();
             this.gbAccountData.ResumeLayout(false);
             this.gbAccountData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNewPass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOldPass)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbBirthDate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbSurname)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbName)).EndInit();
             this.ResumeLayout(false);
 
         }

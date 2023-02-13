@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManagementSystemLibrary;
 using TicketManagementSystem.Settings;
+using static TicketManagementSystem.Program;
 using TextBox = System.Windows.Forms.TextBox;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static TicketManagementSystem.AuthorizationWnd;
+
 namespace TicketManagementSystem
 {
     public partial class SettingsWnd : Form
@@ -36,6 +36,7 @@ namespace TicketManagementSystem
             pbName.Image = Properties.Resources.EditImg;
             pbSurname.Image = Properties.Resources.EditImg;
             pbBirthDate.Image = Properties.Resources.EditImg;
+            dtpBirth.MaxDate = DateTime.Now;
         }
 
         private int GetStateIndex(string tag)
@@ -89,10 +90,11 @@ namespace TicketManagementSystem
                             case "Surname":
                                 user.Surname = control.Text;
                                 break;
-                            case "BirthData":
+                            case "BirthDate":
                                 user.DateBirth = (control as DateTimePicker).Value;
                                 break;
                         }
+                        dataBase.SaveUser(user);
                     }
                     break;
             }
@@ -102,22 +104,40 @@ namespace TicketManagementSystem
         {
             string tag = (string)(sender as Control).Tag;
             int index = GetStateIndex(tag);
-            if (EditStates[index] != EditState.Cancel) return;
+            if (EditStates[index] == EditState.Edit) return;
             PictureBox pictureBox = null;
+            bool sameData = false;
             switch (tag)
             {
                 case "Name":
-                    pictureBox = pbName;
+                    {
+                        pictureBox = pbName;
+                        sameData = tbName.Text == user.Username;
+                    }
                     break;
                 case "Surname":
-                    pictureBox = pbSurname;
+                    {
+                        pictureBox = pbSurname;
+                        sameData = tbSurname.Text == user.Surname;
+                    }
                     break;
                 case "BirthDate":
-                    pictureBox = pbBirthDate;
+                    {                        
+                        pictureBox = pbBirthDate;
+                        sameData = dtpBirth.Value == user.DateBirth;
+                    }
                     break;
             }
-            EditStates[index] = EditState.Save;  
-            pictureBox.Image = Properties.Resources.SaveImg;
+            if (sameData)
+            {
+                EditStates[index] = EditState.Cancel;
+                pictureBox.Image = Properties.Resources.CancelImg;
+            }
+            else
+            {
+                EditStates[index] = EditState.Save;
+                pictureBox.Image = Properties.Resources.SaveImg;
+            }
         }
 
         private void Visible_Click(object sender, EventArgs e)
@@ -148,6 +168,8 @@ namespace TicketManagementSystem
                 ErrorMessage("New password must differ");
                 return;
             }
+            user.Password = tbNewPass.Text;
+            dataBase.SaveUser(user);
         }
     }
 }

@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.lbWelcome = new System.Windows.Forms.Label();
-            this.tbLogin = new System.Windows.Forms.TextBox();
+            this.tbUsername = new System.Windows.Forms.TextBox();
             this.lbLogin = new System.Windows.Forms.Label();
             this.lbPassword = new System.Windows.Forms.Label();
             this.tbPassword = new System.Windows.Forms.TextBox();
@@ -52,11 +52,11 @@
             // 
             // tbLogin
             // 
-            this.tbLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbLogin.Location = new System.Drawing.Point(176, 92);
-            this.tbLogin.Name = "tbLogin";
-            this.tbLogin.Size = new System.Drawing.Size(309, 31);
-            this.tbLogin.TabIndex = 1;
+            this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbUsername.Location = new System.Drawing.Point(176, 92);
+            this.tbUsername.Name = "tbLogin";
+            this.tbUsername.Size = new System.Drawing.Size(309, 31);
+            this.tbUsername.TabIndex = 1;
             // 
             // lbLogin
             // 
@@ -125,7 +125,7 @@
             this.Controls.Add(this.lbPassword);
             this.Controls.Add(this.lbLogin);
             this.Controls.Add(this.tbPassword);
-            this.Controls.Add(this.tbLogin);
+            this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.lbWelcome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AuthorizationWnd";
@@ -140,7 +140,7 @@
         #endregion
 
         private System.Windows.Forms.Label lbWelcome;
-        private System.Windows.Forms.TextBox tbLogin;
+        private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.Label lbLogin;
         private System.Windows.Forms.Label lbPassword;
         private System.Windows.Forms.TextBox tbPassword;

@@ -8,17 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms.VisualStyles;
 using System.Windows.Forms;
-using static TicketManagementSystem.AuthorizationWnd;
 using ManagementSystemLibrary;
 using System.Text.RegularExpressions;
+using static TicketManagementSystem.Program;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace TicketManagementSystem
 {
     public partial class RegistrationWnd : Form
     {
-        internal User NewUser { get; set; } = null;
         public RegistrationWnd()
         {
+            dateTimePicker.MaxDate = DateTime.Now;
             InitializeComponent();
         }
 
@@ -26,14 +27,14 @@ namespace TicketManagementSystem
         {
             errorProvider.Clear();
             if (SetErrorProv()) return;            
-            else if (Users.Any(x => x.Username == tbUsername.Text))
+            else if (dataBase.IsTakenUsername(tbUsername.Text))
             {
                 ErrorMessage("This username is already taken");
                 return;
-            }
-            NewUser = new User(tbEmail.Text, tbUsername.Text, tbPassword.Text,
-                               tbName.Text, tbSurname.Text, dateTimePicker.Value);
-            Close();            
+            }            
+            dataBase.AddUser(new User(tbEmail.Text, tbUsername.Text, tbPassword.Text,
+                                      tbName.Text, tbSurname.Text, dateTimePicker.Value));            
+            Close();
         }
 
         private bool SetErrorProv()

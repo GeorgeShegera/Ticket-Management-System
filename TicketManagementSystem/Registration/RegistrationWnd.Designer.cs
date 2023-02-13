@@ -188,6 +188,7 @@
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(148, 31);
             this.dateTimePicker.TabIndex = 6;
+            this.dateTimePicker.Tag = "BirthDate";
             // 
             // fileSystemWatcher1
             // 

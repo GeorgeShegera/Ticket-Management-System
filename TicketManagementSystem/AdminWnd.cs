@@ -13,22 +13,27 @@ namespace TicketManagementSystem
 {
     public partial class AdminWnd : Form
     {
-        private User Admin { get; set; }
-        public AdminWnd(User admin)
+        private Administrator Admin { get; set; }
+        public AdminWnd(Administrator admin)
         {
             Admin = admin;
             InitializeComponent();
-            lbName.Text = $"Name: {admin.Name}";
-            lbSurname.Text = $"Surname: {admin.Surname}";
-            lbBirthDate.Text = $"Date of Birth: {admin.DateBirth}";
-            lbEmail.Text = $"Email: {admin.Email}";
+            RefreshData();
         }
-
+        private void RefreshData()
+        {
+            lbName.Text = $"Name: {Admin.Name}";
+            lbSurname.Text = $"Surname: {Admin.Surname}";
+            lbBirthDate.Text = $"Date of Birth: {Admin.DateBirth?.ToString("d")}";
+            lbEmail.Text = $"Email: {Admin.Email}";
+        }
         private void btnOptions_Click(object sender, EventArgs e)
         {
+            Hide();
             SettingsWnd settingsWnd = new SettingsWnd(Admin);
             settingsWnd.ShowDialog();
-            Admin = settingsWnd.user;
+            Show();
+            RefreshData();
         }
     }
 }
