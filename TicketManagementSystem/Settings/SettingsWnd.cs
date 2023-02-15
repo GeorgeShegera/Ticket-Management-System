@@ -17,7 +17,7 @@ namespace TicketManagementSystem
 {
     public partial class SettingsWnd : Form
     {
-        internal User user;
+        private User user;
         private List<EditState> EditStates { get; set; }
 
         public SettingsWnd(User user)

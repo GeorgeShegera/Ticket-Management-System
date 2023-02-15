@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManagementSystemLibrary;
+using static TicketManagementSystem.Program;
 
 namespace TicketManagementSystem
 {
@@ -19,6 +20,7 @@ namespace TicketManagementSystem
             Admin = admin;
             InitializeComponent();
             RefreshData();
+            RefreshTrains();
         }
         private void RefreshData()
         {
@@ -35,16 +37,20 @@ namespace TicketManagementSystem
             Show();
             RefreshData();
         }
-
-        private void btnExit_Click(object sender, EventArgs e)
+        private void RefreshTrains()
         {
-            Close();
+            lbTrains.Items.Clear();
+            lbTrains.Items.AddRange(dataBase.Trains.Select(x => x.Name).ToArray());
         }
+
+        private void btnExit_Click(object sender, EventArgs e) => Close();
 
         private void tbnAddTrain_Click(object sender, EventArgs e)
         {
             AddingTrainWnd addingTrainWnd = new AddingTrainWnd();
             addingTrainWnd.ShowDialog();
+            lbTrains.Items.AddRange(dataBase.Trains.Select(x => x.Name).ToArray());
+            RefreshTrains();
         }
     }
 }

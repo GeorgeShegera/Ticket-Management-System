@@ -11,11 +11,11 @@ namespace ManagementSystemLibrary
     public class Train
     {
         public List<Trip> Trips { get; set; } = new List<Trip>();
-        public string Name { get; set; }
-        public string Model { get; set; }
-        public int BusinessClassCapacity { get; set; }
-        public int MiddleClassCapacity { get; set; }
-        public int EconomyClassCapacity { get; set; }
+        public string Name { get; }
+        public string Model { get; }
+        public int BusinessClassCapacity { get; }
+        public int MiddleClassCapacity { get; }
+        public int EconomyClassCapacity { get; }
 
         public Train(string name = "", string model = "", int busCapacity = 0, int middleCapacity = 0, int economyCapacity = 0)
         {
