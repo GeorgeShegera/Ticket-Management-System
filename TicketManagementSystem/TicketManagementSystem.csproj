@@ -76,11 +76,23 @@
     <Compile Include="Settings\SettingsWnd.Designer.cs">
       <DependentUpon>SettingsWnd.cs</DependentUpon>
     </Compile>
-    <Compile Include="TrainWnd.cs">
+    <Compile Include="Train\TrainCreatingWnd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TrainWnd.Designer.cs">
+    <Compile Include="Train\TrainCreatingWnd.Designer.cs">
+      <DependentUpon>TrainCreatingWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Train\TrainWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Train\TrainWnd.Designer.cs">
       <DependentUpon>TrainWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TripCreatingWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TripCreatingWnd.Designer.cs">
+      <DependentUpon>TripCreatingWnd.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminWnd.resx">
       <DependentUpon>AdminWnd.cs</DependentUpon>
@@ -104,8 +116,14 @@
     <EmbeddedResource Include="Settings\SettingsWnd.resx">
       <DependentUpon>SettingsWnd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TrainWnd.resx">
+    <EmbeddedResource Include="Train\TrainCreatingWnd.resx">
+      <DependentUpon>TrainCreatingWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Train\TrainWnd.resx">
       <DependentUpon>TrainWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TripCreatingWnd.resx">
+      <DependentUpon>TripCreatingWnd.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -142,6 +160,11 @@
   <ItemGroup>
     <None Include="Resources\HiddenImg.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\trainIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trip.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

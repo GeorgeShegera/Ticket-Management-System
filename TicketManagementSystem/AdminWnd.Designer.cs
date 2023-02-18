@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminWnd));
             this.btnOptions = new System.Windows.Forms.Button();
             this.btnApplicationInfo = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbUserData = new System.Windows.Forms.GroupBox();
             this.lbEmail = new System.Windows.Forms.Label();
             this.lbBirthDate = new System.Windows.Forms.Label();
@@ -47,16 +46,11 @@
             this.btnEditTrain = new System.Windows.Forms.Button();
             this.tbnAddTrain = new System.Windows.Forms.Button();
             this.lbTrains = new System.Windows.Forms.ListBox();
-            this.lbTrips = new System.Windows.Forms.ListBox();
-            this.btnAddTrip = new System.Windows.Forms.Button();
-            this.btnCancelTrip = new System.Windows.Forms.Button();
-            this.btnEditTrip = new System.Windows.Forms.Button();
-            this.gbTrips = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbUserData.SuspendLayout();
             this.gbUsers.SuspendLayout();
             this.gbTrains.SuspendLayout();
-            this.gbTrips.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnOptions
@@ -79,17 +73,6 @@
             this.btnApplicationInfo.TabIndex = 2;
             this.btnApplicationInfo.Text = "Application Information ";
             this.btnApplicationInfo.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(234, 223);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // gbUserData
             // 
@@ -162,7 +145,7 @@
             this.lbUsers.ItemHeight = 21;
             this.lbUsers.Location = new System.Drawing.Point(6, 23);
             this.lbUsers.Name = "lbUsers";
-            this.lbUsers.Size = new System.Drawing.Size(219, 193);
+            this.lbUsers.Size = new System.Drawing.Size(297, 193);
             this.lbUsers.TabIndex = 9;
             // 
             // gbUsers
@@ -172,9 +155,9 @@
             this.gbUsers.Controls.Add(this.btnAddUser);
             this.gbUsers.Controls.Add(this.lbUsers);
             this.gbUsers.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbUsers.Location = new System.Drawing.Point(563, 271);
+            this.gbUsers.Location = new System.Drawing.Point(484, 266);
             this.gbUsers.Name = "gbUsers";
-            this.gbUsers.Size = new System.Drawing.Size(230, 265);
+            this.gbUsers.Size = new System.Drawing.Size(309, 265);
             this.gbUsers.TabIndex = 10;
             this.gbUsers.TabStop = false;
             this.gbUsers.Text = "Users";
@@ -184,7 +167,7 @@
             this.btnEditUser.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditUser.Location = new System.Drawing.Point(6, 222);
             this.btnEditUser.Name = "btnEditUser";
-            this.btnEditUser.Size = new System.Drawing.Size(76, 37);
+            this.btnEditUser.Size = new System.Drawing.Size(102, 37);
             this.btnEditUser.TabIndex = 7;
             this.btnEditUser.Text = "Edit";
             this.btnEditUser.UseVisualStyleBackColor = true;
@@ -192,9 +175,9 @@
             // btnAddUser
             // 
             this.btnAddUser.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddUser.Location = new System.Drawing.Point(152, 222);
+            this.btnAddUser.Location = new System.Drawing.Point(201, 222);
             this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(76, 37);
+            this.btnAddUser.Size = new System.Drawing.Size(102, 37);
             this.btnAddUser.TabIndex = 7;
             this.btnAddUser.Text = "Add";
             this.btnAddUser.UseVisualStyleBackColor = true;
@@ -217,9 +200,9 @@
             this.gbTrains.Controls.Add(this.tbnAddTrain);
             this.gbTrains.Controls.Add(this.lbTrains);
             this.gbTrains.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbTrains.Location = new System.Drawing.Point(10, 271);
+            this.gbTrains.Location = new System.Drawing.Point(10, 266);
             this.gbTrains.Name = "gbTrains";
-            this.gbTrains.Size = new System.Drawing.Size(237, 265);
+            this.gbTrains.Size = new System.Drawing.Size(309, 265);
             this.gbTrains.TabIndex = 10;
             this.gbTrains.TabStop = false;
             this.gbTrains.Text = "Trains";
@@ -229,17 +212,18 @@
             this.btnEditTrain.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditTrain.Location = new System.Drawing.Point(7, 222);
             this.btnEditTrain.Name = "btnEditTrain";
-            this.btnEditTrain.Size = new System.Drawing.Size(76, 37);
+            this.btnEditTrain.Size = new System.Drawing.Size(102, 37);
             this.btnEditTrain.TabIndex = 7;
             this.btnEditTrain.Text = "Edit";
             this.btnEditTrain.UseVisualStyleBackColor = true;
+            this.btnEditTrain.Click += new System.EventHandler(this.btnEditTrain_Click);
             // 
             // tbnAddTrain
             // 
             this.tbnAddTrain.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbnAddTrain.Location = new System.Drawing.Point(155, 222);
+            this.tbnAddTrain.Location = new System.Drawing.Point(201, 222);
             this.tbnAddTrain.Name = "tbnAddTrain";
-            this.tbnAddTrain.Size = new System.Drawing.Size(76, 37);
+            this.tbnAddTrain.Size = new System.Drawing.Size(102, 37);
             this.tbnAddTrain.TabIndex = 7;
             this.tbnAddTrain.Text = "Add";
             this.tbnAddTrain.UseVisualStyleBackColor = true;
@@ -252,71 +236,27 @@
             this.lbTrains.ItemHeight = 21;
             this.lbTrains.Location = new System.Drawing.Point(6, 23);
             this.lbTrains.Name = "lbTrains";
-            this.lbTrains.Size = new System.Drawing.Size(225, 193);
+            this.lbTrains.Size = new System.Drawing.Size(297, 193);
             this.lbTrains.TabIndex = 9;
             // 
-            // lbTrips
+            // pictureBox1
             // 
-            this.lbTrips.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTrips.FormattingEnabled = true;
-            this.lbTrips.ItemHeight = 21;
-            this.lbTrips.Location = new System.Drawing.Point(6, 23);
-            this.lbTrips.Name = "lbTrips";
-            this.lbTrips.Size = new System.Drawing.Size(292, 193);
-            this.lbTrips.TabIndex = 6;
-            // 
-            // btnAddTrip
-            // 
-            this.btnAddTrip.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddTrip.Location = new System.Drawing.Point(222, 222);
-            this.btnAddTrip.Name = "btnAddTrip";
-            this.btnAddTrip.Size = new System.Drawing.Size(76, 37);
-            this.btnAddTrip.TabIndex = 7;
-            this.btnAddTrip.Text = "Add ";
-            this.btnAddTrip.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelTrip
-            // 
-            this.btnCancelTrip.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelTrip.Location = new System.Drawing.Point(88, 222);
-            this.btnCancelTrip.Name = "btnCancelTrip";
-            this.btnCancelTrip.Size = new System.Drawing.Size(76, 37);
-            this.btnCancelTrip.TabIndex = 7;
-            this.btnCancelTrip.Text = "Cancel ";
-            this.btnCancelTrip.UseVisualStyleBackColor = true;
-            // 
-            // btnEditTrip
-            // 
-            this.btnEditTrip.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditTrip.Location = new System.Drawing.Point(6, 222);
-            this.btnEditTrip.Name = "btnEditTrip";
-            this.btnEditTrip.Size = new System.Drawing.Size(76, 37);
-            this.btnEditTrip.TabIndex = 7;
-            this.btnEditTrip.Text = "Edit";
-            this.btnEditTrip.UseVisualStyleBackColor = true;
-            // 
-            // gbTrips
-            // 
-            this.gbTrips.Controls.Add(this.btnEditTrip);
-            this.gbTrips.Controls.Add(this.btnCancelTrip);
-            this.gbTrips.Controls.Add(this.btnAddTrip);
-            this.gbTrips.Controls.Add(this.lbTrips);
-            this.gbTrips.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbTrips.Location = new System.Drawing.Point(253, 271);
-            this.gbTrips.Name = "gbTrips";
-            this.gbTrips.Size = new System.Drawing.Size(304, 265);
-            this.gbTrips.TabIndex = 8;
-            this.gbTrips.TabStop = false;
-            this.gbTrips.Text = "Trips";
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(10, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(234, 223);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // AdminWnd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 544);
+            this.ClientSize = new System.Drawing.Size(802, 537);
             this.Controls.Add(this.gbTrains);
             this.Controls.Add(this.gbUsers);
-            this.Controls.Add(this.gbTrips);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.gbUserData);
@@ -327,11 +267,10 @@
             this.Name = "AdminWnd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Administatior";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbUserData.ResumeLayout(false);
             this.gbUsers.ResumeLayout(false);
             this.gbTrains.ResumeLayout(false);
-            this.gbTrips.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -355,10 +294,5 @@
         private System.Windows.Forms.Button btnEditTrain;
         private System.Windows.Forms.Button tbnAddTrain;
         private System.Windows.Forms.ListBox lbTrains;
-        private System.Windows.Forms.ListBox lbTrips;
-        private System.Windows.Forms.Button btnAddTrip;
-        private System.Windows.Forms.Button btnCancelTrip;
-        private System.Windows.Forms.Button btnEditTrip;
-        private System.Windows.Forms.GroupBox gbTrips;
     }
 }

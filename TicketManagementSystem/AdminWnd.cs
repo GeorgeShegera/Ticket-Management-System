@@ -46,11 +46,19 @@ namespace TicketManagementSystem
         private void btnExit_Click(object sender, EventArgs e) => Close();
 
         private void tbnAddTrain_Click(object sender, EventArgs e)
-        {
+        {            
             AddingTrainWnd addingTrainWnd = new AddingTrainWnd();
             addingTrainWnd.ShowDialog();
             lbTrains.Items.AddRange(dataBase.Trains.Select(x => x.Name).ToArray());
             RefreshTrains();
+        }
+
+        private void btnEditTrain_Click(object sender, EventArgs e)
+        {
+            if (lbTrains.SelectedIndex == -1) return;
+            TrainWnd trainWnd = new TrainWnd(dataBase.Trains[lbTrains.SelectedIndex]);
+            trainWnd.ShowDialog();
+            lbTrains.SelectedIndex = -1;
         }
     }
 }

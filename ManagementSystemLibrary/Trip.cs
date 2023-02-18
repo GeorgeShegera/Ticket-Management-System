@@ -9,6 +9,7 @@ namespace ManagementSystemLibrary
 {
     public class Trip
     {        
+        public string Name { get; set; }
         public DateTime DepartureDate { get; set; }
         public string DeparturePlace { get; set; }
         public DateTime ArrivalDate { get; set; }
@@ -17,5 +18,6 @@ namespace ManagementSystemLibrary
         public double MiddlePrice { get; set; }
         public double BusinessPrice { get; set; }
         public List<Ticket> Tickets { get; set; }
+        public bool Occured { get => ArrivalDate <= DateTime.Now; }
     }
 }

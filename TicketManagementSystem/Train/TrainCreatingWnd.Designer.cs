@@ -69,7 +69,7 @@
             this.lbTitle.Name = "lbTitle";
             this.lbTitle.Size = new System.Drawing.Size(439, 34);
             this.lbTitle.TabIndex = 1;
-            this.lbTitle.Text = "Train Adding";
+            this.lbTitle.Text = "Train Creating";
             this.lbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tbName
@@ -213,7 +213,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AddingTrainWnd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Train Adding";
+            this.Text = "Train Creating";
             this.gbCapacity.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numBusinessTick)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMiddleTick)).EndInit();
