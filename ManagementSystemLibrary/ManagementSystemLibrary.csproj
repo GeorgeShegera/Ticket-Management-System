@@ -47,10 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBase.cs" />
-    <Compile Include="Ticket.cs" />
-    <Compile Include="TicketType.cs" />
+    <Compile Include="Ticket\Ticket.cs" />
+    <Compile Include="Ticket\TicketType.cs" />
     <Compile Include="Train.cs" />
-    <Compile Include="Trip.cs" />
+    <Compile Include="TrainState.cs" />
+    <Compile Include="Trip\TripState.cs" />
+    <Compile Include="Trip\Trip.cs" />
     <Compile Include="User\Administrator.cs" />
     <Compile Include="User\Client.cs" />
     <Compile Include="User\Human.cs" />

@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TrainWnd));
             this.gbTrain = new System.Windows.Forms.GroupBox();
-            this.lbName = new System.Windows.Forms.Label();
-            this.lbModel = new System.Windows.Forms.Label();
-            this.lbBusinessSeats = new System.Windows.Forms.Label();
-            this.lbMiddleSeats = new System.Windows.Forms.Label();
             this.lbEconomySeats = new System.Windows.Forms.Label();
+            this.lbMiddleSeats = new System.Windows.Forms.Label();
+            this.lbBusinessSeats = new System.Windows.Forms.Label();
+            this.lbModel = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
             this.lbTrips = new System.Windows.Forms.ListBox();
             this.btnAddTrip = new System.Windows.Forms.Button();
             this.btnCancelTrip = new System.Windows.Forms.Button();
             this.btnEditTrip = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.pbTrain = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.gbTrain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTrain)).BeginInit();
             this.SuspendLayout();
@@ -54,43 +54,23 @@
             this.gbTrain.Controls.Add(this.lbName);
             this.gbTrain.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTrain.Location = new System.Drawing.Point(283, 13);
-            this.gbTrain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbTrain.Margin = new System.Windows.Forms.Padding(4);
             this.gbTrain.Name = "gbTrain";
-            this.gbTrain.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbTrain.Padding = new System.Windows.Forms.Padding(4);
             this.gbTrain.Size = new System.Drawing.Size(264, 231);
             this.gbTrain.TabIndex = 10;
             this.gbTrain.TabStop = false;
             this.gbTrain.Text = "Train Data";
             // 
-            // lbName
+            // lbEconomySeats
             // 
-            this.lbName.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(7, 39);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(250, 25);
-            this.lbName.TabIndex = 0;
-            this.lbName.Text = "Name:";
-            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbModel
-            // 
-            this.lbModel.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbModel.Location = new System.Drawing.Point(7, 73);
-            this.lbModel.Name = "lbModel";
-            this.lbModel.Size = new System.Drawing.Size(250, 25);
-            this.lbModel.TabIndex = 0;
-            this.lbModel.Text = "Model:";
-            this.lbModel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbBusinessSeats
-            // 
-            this.lbBusinessSeats.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBusinessSeats.Location = new System.Drawing.Point(7, 108);
-            this.lbBusinessSeats.Name = "lbBusinessSeats";
-            this.lbBusinessSeats.Size = new System.Drawing.Size(250, 25);
-            this.lbBusinessSeats.TabIndex = 0;
-            this.lbBusinessSeats.Text = "Business class seats:";
-            this.lbBusinessSeats.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbEconomySeats.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEconomySeats.Location = new System.Drawing.Point(7, 178);
+            this.lbEconomySeats.Name = "lbEconomySeats";
+            this.lbEconomySeats.Size = new System.Drawing.Size(250, 25);
+            this.lbEconomySeats.TabIndex = 0;
+            this.lbEconomySeats.Text = "Economy class seats:";
+            this.lbEconomySeats.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbMiddleSeats
             // 
@@ -102,15 +82,35 @@
             this.lbMiddleSeats.Text = "Middle class seats:";
             this.lbMiddleSeats.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lbEconomySeats
+            // lbBusinessSeats
             // 
-            this.lbEconomySeats.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEconomySeats.Location = new System.Drawing.Point(7, 178);
-            this.lbEconomySeats.Name = "lbEconomySeats";
-            this.lbEconomySeats.Size = new System.Drawing.Size(250, 25);
-            this.lbEconomySeats.TabIndex = 0;
-            this.lbEconomySeats.Text = "Economy class seats:";
-            this.lbEconomySeats.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbBusinessSeats.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBusinessSeats.Location = new System.Drawing.Point(7, 108);
+            this.lbBusinessSeats.Name = "lbBusinessSeats";
+            this.lbBusinessSeats.Size = new System.Drawing.Size(250, 25);
+            this.lbBusinessSeats.TabIndex = 0;
+            this.lbBusinessSeats.Text = "Business class seats:";
+            this.lbBusinessSeats.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbModel
+            // 
+            this.lbModel.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbModel.Location = new System.Drawing.Point(7, 74);
+            this.lbModel.Name = "lbModel";
+            this.lbModel.Size = new System.Drawing.Size(250, 25);
+            this.lbModel.TabIndex = 0;
+            this.lbModel.Text = "Model:";
+            this.lbModel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbName
+            // 
+            this.lbName.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Location = new System.Drawing.Point(7, 39);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(250, 25);
+            this.lbName.TabIndex = 0;
+            this.lbName.Text = "Name:";
+            this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbTrips
             // 
@@ -132,7 +132,7 @@
             this.btnAddTrip.Size = new System.Drawing.Size(167, 38);
             this.btnAddTrip.TabIndex = 7;
             this.btnAddTrip.Text = "Add Trip";
-            this.btnAddTrip.UseVisualStyleBackColor = true;
+            this.btnAddTrip.UseVisualStyleBackColor = true;            
             // 
             // btnCancelTrip
             // 
@@ -156,16 +156,6 @@
             this.btnEditTrip.Text = "Edit Trip";
             this.btnEditTrip.UseVisualStyleBackColor = true;
             // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 274);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(359, 27);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "List of upcoming trips";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pbTrain
             // 
             this.pbTrain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -178,6 +168,16 @@
             this.pbTrain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbTrain.TabIndex = 0;
             this.pbTrain.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(13, 274);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(359, 27);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "List of trips";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TrainWnd
             // 
@@ -193,7 +193,7 @@
             this.Controls.Add(this.lbTrips);
             this.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TrainWnd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Train";

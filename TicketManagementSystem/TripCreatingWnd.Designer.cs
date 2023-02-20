@@ -33,7 +33,7 @@
             this.lbName = new System.Windows.Forms.Label();
             this.lbTitle = new System.Windows.Forms.Label();
             this.gbTripData = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numBusinessPrice = new System.Windows.Forms.NumericUpDown();
             this.numMiddlePrice = new System.Windows.Forms.NumericUpDown();
             this.numEconomyPrice = new System.Windows.Forms.NumericUpDown();
             this.lbBusinessPrice = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbTripData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numBusinessPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMiddlePrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEconomyPrice)).BeginInit();
             this.gbDepartureData.SuspendLayout();
@@ -90,7 +90,7 @@
             // 
             // gbTripData
             // 
-            this.gbTripData.Controls.Add(this.numericUpDown1);
+            this.gbTripData.Controls.Add(this.numBusinessPrice);
             this.gbTripData.Controls.Add(this.numMiddlePrice);
             this.gbTripData.Controls.Add(this.numEconomyPrice);
             this.gbTripData.Controls.Add(this.lbBusinessPrice);
@@ -101,23 +101,33 @@
             this.gbTripData.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTripData.Location = new System.Drawing.Point(12, 45);
             this.gbTripData.Name = "gbTripData";
-            this.gbTripData.Size = new System.Drawing.Size(481, 204);
+            this.gbTripData.Size = new System.Drawing.Size(499, 204);
             this.gbTripData.TabIndex = 2;
             this.gbTripData.TabStop = false;
             this.gbTripData.Text = "Trip Data";
             // 
-            // numericUpDown1
+            // numBusinessPrice
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(199, 162);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numBusinessPrice.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numBusinessPrice.Location = new System.Drawing.Point(199, 162);
+            this.numBusinessPrice.Maximum = new decimal(new int[] {
             4000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(61, 32);
-            this.numericUpDown1.TabIndex = 2;
+            this.numBusinessPrice.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numBusinessPrice.Name = "numBusinessPrice";
+            this.numBusinessPrice.Size = new System.Drawing.Size(61, 32);
+            this.numBusinessPrice.TabIndex = 2;
+            this.numBusinessPrice.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // numMiddlePrice
             // 
@@ -184,14 +194,14 @@
             this.gbDepartureData.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDepartureData.Location = new System.Drawing.Point(12, 255);
             this.gbDepartureData.Name = "gbDepartureData";
-            this.gbDepartureData.Size = new System.Drawing.Size(481, 124);
+            this.gbDepartureData.Size = new System.Drawing.Size(499, 124);
             this.gbDepartureData.TabIndex = 3;
             this.gbDepartureData.TabStop = false;
             this.gbDepartureData.Text = "Departure Data";
             // 
             // dtpDepatureTime
             // 
-            this.dtpDepatureTime.CustomFormat = "hh:mm, dd.MM.yyyy";
+            this.dtpDepatureTime.CustomFormat = "HH:mm, dd.MM.yyyy";
             this.dtpDepatureTime.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDepatureTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDepatureTime.Location = new System.Drawing.Point(199, 80);
@@ -236,14 +246,14 @@
             this.gbArrivalData.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbArrivalData.Location = new System.Drawing.Point(12, 385);
             this.gbArrivalData.Name = "gbArrivalData";
-            this.gbArrivalData.Size = new System.Drawing.Size(481, 124);
+            this.gbArrivalData.Size = new System.Drawing.Size(499, 124);
             this.gbArrivalData.TabIndex = 3;
             this.gbArrivalData.TabStop = false;
             this.gbArrivalData.Text = "Arrival Data";
             // 
             // dtpArrivalDate
             // 
-            this.dtpArrivalDate.CustomFormat = "hh:mm, dd.MM.yyyy";
+            this.dtpArrivalDate.CustomFormat = "HH:mm, dd.MM.yyyy";
             this.dtpArrivalDate.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpArrivalDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpArrivalDate.Location = new System.Drawing.Point(199, 80);
@@ -282,7 +292,7 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(342, 515);
+            this.btnAdd.Location = new System.Drawing.Point(360, 515);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(151, 43);
             this.btnAdd.TabIndex = 4;
@@ -298,7 +308,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(506, 565);
+            this.ClientSize = new System.Drawing.Size(524, 565);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.gbArrivalData);
             this.Controls.Add(this.gbDepartureData);
@@ -307,10 +317,11 @@
             this.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "TripCreatingWnd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Trip Creating";
             this.gbTripData.ResumeLayout(false);
             this.gbTripData.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numBusinessPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMiddlePrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numEconomyPrice)).EndInit();
             this.gbDepartureData.ResumeLayout(false);
@@ -331,7 +342,7 @@
         private System.Windows.Forms.Label lbEconomyPrice;
         private System.Windows.Forms.NumericUpDown numEconomyPrice;
         private System.Windows.Forms.Label lbMiddlePrice;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numBusinessPrice;
         private System.Windows.Forms.NumericUpDown numMiddlePrice;
         private System.Windows.Forms.Label lbBusinessPrice;
         private System.Windows.Forms.GroupBox gbDepartureData;

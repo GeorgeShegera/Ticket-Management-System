@@ -93,8 +93,8 @@ namespace TicketManagementSystem
                             case "BirthDate":
                                 user.DateBirth = (control as DateTimePicker).Value;
                                 break;
-                        }
-                        dataBase.SaveUser(user);
+                        }                        
+                        dataBase.Save();
                     }
                     break;
             }
@@ -169,7 +169,7 @@ namespace TicketManagementSystem
                 return;
             }
             user.Password = tbNewPass.Text;
-            dataBase.SaveUser(user);
+            dataBase.Save();
             tbNewPass.Text = "";
             tbOldPass.Text = "";
         }
