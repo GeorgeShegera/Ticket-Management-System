@@ -41,12 +41,15 @@
             this.btnEditTrip = new System.Windows.Forms.Button();
             this.pbTrain = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.lbState = new System.Windows.Forms.Label();
+            this.btnTrainSettings = new System.Windows.Forms.Button();
             this.gbTrain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTrain)).BeginInit();
             this.SuspendLayout();
             // 
             // gbTrain
             // 
+            this.gbTrain.Controls.Add(this.lbState);
             this.gbTrain.Controls.Add(this.lbEconomySeats);
             this.gbTrain.Controls.Add(this.lbMiddleSeats);
             this.gbTrain.Controls.Add(this.lbBusinessSeats);
@@ -57,7 +60,7 @@
             this.gbTrain.Margin = new System.Windows.Forms.Padding(4);
             this.gbTrain.Name = "gbTrain";
             this.gbTrain.Padding = new System.Windows.Forms.Padding(4);
-            this.gbTrain.Size = new System.Drawing.Size(264, 231);
+            this.gbTrain.Size = new System.Drawing.Size(264, 242);
             this.gbTrain.TabIndex = 10;
             this.gbTrain.TabStop = false;
             this.gbTrain.Text = "Train Data";
@@ -125,33 +128,33 @@
             // 
             // btnAddTrip
             // 
-            this.btnAddTrip.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddTrip.Location = new System.Drawing.Point(380, 305);
+            this.btnAddTrip.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTrip.Location = new System.Drawing.Point(376, 341);
             this.btnAddTrip.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddTrip.Name = "btnAddTrip";
-            this.btnAddTrip.Size = new System.Drawing.Size(167, 38);
+            this.btnAddTrip.Size = new System.Drawing.Size(167, 26);
             this.btnAddTrip.TabIndex = 7;
             this.btnAddTrip.Text = "Add Trip";
-            this.btnAddTrip.UseVisualStyleBackColor = true;            
+            this.btnAddTrip.UseVisualStyleBackColor = true;
             // 
             // btnCancelTrip
             // 
-            this.btnCancelTrip.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelTrip.Location = new System.Drawing.Point(380, 351);
+            this.btnCancelTrip.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelTrip.Location = new System.Drawing.Point(376, 375);
             this.btnCancelTrip.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelTrip.Name = "btnCancelTrip";
-            this.btnCancelTrip.Size = new System.Drawing.Size(167, 38);
+            this.btnCancelTrip.Size = new System.Drawing.Size(167, 26);
             this.btnCancelTrip.TabIndex = 7;
             this.btnCancelTrip.Text = "Cancel Trip";
             this.btnCancelTrip.UseVisualStyleBackColor = true;
             // 
             // btnEditTrip
             // 
-            this.btnEditTrip.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditTrip.Location = new System.Drawing.Point(380, 397);
+            this.btnEditTrip.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditTrip.Location = new System.Drawing.Point(376, 409);
             this.btnEditTrip.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditTrip.Name = "btnEditTrip";
-            this.btnEditTrip.Size = new System.Drawing.Size(167, 38);
+            this.btnEditTrip.Size = new System.Drawing.Size(167, 26);
             this.btnEditTrip.TabIndex = 7;
             this.btnEditTrip.Text = "Edit Trip";
             this.btnEditTrip.UseVisualStyleBackColor = true;
@@ -164,7 +167,7 @@
             this.pbTrain.Location = new System.Drawing.Point(13, 13);
             this.pbTrain.Margin = new System.Windows.Forms.Padding(4);
             this.pbTrain.Name = "pbTrain";
-            this.pbTrain.Size = new System.Drawing.Size(262, 231);
+            this.pbTrain.Size = new System.Drawing.Size(262, 237);
             this.pbTrain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbTrain.TabIndex = 0;
             this.pbTrain.TabStop = false;
@@ -179,12 +182,35 @@
             this.label4.Text = "List of trips";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lbState
+            // 
+            this.lbState.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbState.Location = new System.Drawing.Point(7, 212);
+            this.lbState.Name = "lbState";
+            this.lbState.Size = new System.Drawing.Size(250, 25);
+            this.lbState.TabIndex = 0;
+            this.lbState.Text = "Status:";
+            this.lbState.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnTrainSettings
+            // 
+            this.btnTrainSettings.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrainSettings.Location = new System.Drawing.Point(376, 307);
+            this.btnTrainSettings.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTrainSettings.Name = "btnTrainSettings";
+            this.btnTrainSettings.Size = new System.Drawing.Size(167, 26);
+            this.btnTrainSettings.TabIndex = 7;
+            this.btnTrainSettings.Text = "Train Settings";
+            this.btnTrainSettings.UseVisualStyleBackColor = true;
+            this.btnTrainSettings.Click += new System.EventHandler(this.btnTrainSettings_Click);
+            // 
             // TrainWnd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 444);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnTrainSettings);
             this.Controls.Add(this.btnAddTrip);
             this.Controls.Add(this.btnCancelTrip);
             this.Controls.Add(this.btnEditTrip);
@@ -217,5 +243,7 @@
         private System.Windows.Forms.Button btnCancelTrip;
         private System.Windows.Forms.Button btnEditTrip;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbState;
+        private System.Windows.Forms.Button btnTrainSettings;
     }
 }

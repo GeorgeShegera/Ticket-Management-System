@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManagementSystemLibrary;
+using static System.Windows.Forms.AxHost;
+
 namespace TicketManagementSystem
 {
     public partial class TrainWnd : Form
@@ -17,12 +19,18 @@ namespace TicketManagementSystem
         {
             this.train = train;
             InitializeComponent();
-            lbName.Text = $"Name: {train.Name}";
-            lbModel.Text = $"Model: {train.Model}";
+            RefreshData();
             lbBusinessSeats.Text = $"Business class seats: {train.BusCapacity}";
             lbMiddleSeats.Text = $"Middle class seats: {train.MidCapacity}";
             lbEconomySeats.Text = $"Economy class seats: {train.EconCapacity}";
             RefreshTrips();
+        }
+
+        public void RefreshData()
+        {
+            lbName.Text = $"Name: {train.Name}";
+            lbModel.Text = $"Model: {train.Model}";
+            lbState.Text = $"Status: {train.GetState()}";
         }
 
         public void RefreshTrips()
@@ -36,6 +44,13 @@ namespace TicketManagementSystem
             TripCreatingWnd tripCreatingWnd = new TripCreatingWnd(train);
             tripCreatingWnd.ShowDialog();
             RefreshTrips();
+        }
+
+        private void btnTrainSettings_Click(object sender, EventArgs e)
+        {
+            TrainSettingsWnd settings = new TrainSettingsWnd(train);
+            settings.ShowDialog();
+            RefreshData();
         }
     }
 }

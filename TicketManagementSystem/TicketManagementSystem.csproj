@@ -76,6 +76,12 @@
     <Compile Include="Settings\SettingsWnd.Designer.cs">
       <DependentUpon>SettingsWnd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Train\TrainSettingsWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Train\TrainSettingsWnd.Designer.cs">
+      <DependentUpon>TrainSettingsWnd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Train\TrainCreatingWnd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings\SettingsWnd.resx">
       <DependentUpon>SettingsWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Train\TrainSettingsWnd.resx">
+      <DependentUpon>TrainSettingsWnd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Train\TrainCreatingWnd.resx">
       <DependentUpon>TrainCreatingWnd.cs</DependentUpon>

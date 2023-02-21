@@ -12,28 +12,17 @@ namespace ManagementSystemLibrary
     public class Train
     {
         public List<Trip> Trips { get; set; } = new List<Trip>();
-        public string Name { get; }
-        public string Model { get; }
+        public string Name { get; set; }
+        public string Model { get; set; }
         public int BusCapacity { get; }
         public int MidCapacity { get; }
         public int EconCapacity { get; }
-        public bool Active { get; set; } = true;
         public TrainState State { get; set; } = TrainState.Available;
         public string Signature
         {
             get
-            {
-                string status = "";
-                switch (State)
-                {
-                    case TrainState.Available:
-                        status = "(Available)";
-                        break;
-                    case TrainState.Unavailable:
-                        status = "(Unavailable)";
-                        break;
-                }
-                return $"{Name} {status}";
+            {                
+                return $"{Name} ({GetState()})";
             }
         }
 
@@ -46,6 +35,14 @@ namespace ManagementSystemLibrary
             EconCapacity = economyCapacity;
         }
 
-
+        public string GetState()
+        {
+            switch (State)
+            {
+                case TrainState.Available: return "Available";
+                case TrainState.Unavailable: return "Unavailable";
+                default: return "";
+            }
+        }
     }
 }

@@ -20,3 +20,4 @@ E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem
 E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.AddingTrainWnd.resources
 E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.TrainWnd.resources
 E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.TripCreatingWnd.resources
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.TrainSettingsWnd.resources

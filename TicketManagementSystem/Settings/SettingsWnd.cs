@@ -48,7 +48,8 @@ namespace TicketManagementSystem
                 case "BirthDate": return 2;
                 default: return -1;
             }
-        }
+        }        
+
         private void Edit_Changed(object sender, EventArgs e)
         {
             if (!(sender is PictureBox pictureBox)) return;
