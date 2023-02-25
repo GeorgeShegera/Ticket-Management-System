@@ -94,10 +94,22 @@
     <Compile Include="Train\TrainWnd.Designer.cs">
       <DependentUpon>TrainWnd.cs</DependentUpon>
     </Compile>
-    <Compile Include="TripCreatingWnd.cs">
+    <Compile Include="Trip\TripSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TripCreatingWnd.Designer.cs">
+    <Compile Include="Trip\TripSettings.Designer.cs">
+      <DependentUpon>TripSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trip\TripWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trip\TripWnd.Designer.cs">
+      <DependentUpon>TripWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trip\TripCreatingWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trip\TripCreatingWnd.Designer.cs">
       <DependentUpon>TripCreatingWnd.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminWnd.resx">
@@ -131,8 +143,14 @@
     <EmbeddedResource Include="Train\TrainWnd.resx">
       <DependentUpon>TrainWnd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TripCreatingWnd.resx">
+    <EmbeddedResource Include="Trip\TripSettings.resx">
+      <DependentUpon>TripSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trip\TripCreatingWnd.resx">
       <DependentUpon>TripCreatingWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trip\TripWnd.resx">
+      <DependentUpon>TripWnd.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

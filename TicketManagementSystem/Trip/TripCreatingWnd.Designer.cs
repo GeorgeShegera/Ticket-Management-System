@@ -40,7 +40,7 @@
             this.lbMiddlePrice = new System.Windows.Forms.Label();
             this.lbEconomyPrice = new System.Windows.Forms.Label();
             this.gbDepartureData = new System.Windows.Forms.GroupBox();
-            this.dtpDepatureTime = new System.Windows.Forms.DateTimePicker();
+            this.dtpDepartureTime = new System.Windows.Forms.DateTimePicker();
             this.tbDepaturePlace = new System.Windows.Forms.TextBox();
             this.lbTime = new System.Windows.Forms.Label();
             this.lbDeparturePlace = new System.Windows.Forms.Label();
@@ -138,9 +138,19 @@
             0,
             0,
             0});
+            this.numMiddlePrice.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numMiddlePrice.Name = "numMiddlePrice";
             this.numMiddlePrice.Size = new System.Drawing.Size(61, 32);
             this.numMiddlePrice.TabIndex = 2;
+            this.numMiddlePrice.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // numEconomyPrice
             // 
@@ -151,9 +161,19 @@
             0,
             0,
             0});
+            this.numEconomyPrice.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numEconomyPrice.Name = "numEconomyPrice";
             this.numEconomyPrice.Size = new System.Drawing.Size(61, 32);
             this.numEconomyPrice.TabIndex = 2;
+            this.numEconomyPrice.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // lbBusinessPrice
             // 
@@ -187,7 +207,7 @@
             // 
             // gbDepartureData
             // 
-            this.gbDepartureData.Controls.Add(this.dtpDepatureTime);
+            this.gbDepartureData.Controls.Add(this.dtpDepartureTime);
             this.gbDepartureData.Controls.Add(this.tbDepaturePlace);
             this.gbDepartureData.Controls.Add(this.lbTime);
             this.gbDepartureData.Controls.Add(this.lbDeparturePlace);
@@ -201,13 +221,13 @@
             // 
             // dtpDepatureTime
             // 
-            this.dtpDepatureTime.CustomFormat = "HH:mm, dd.MM.yyyy";
-            this.dtpDepatureTime.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDepatureTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDepatureTime.Location = new System.Drawing.Point(199, 80);
-            this.dtpDepatureTime.Name = "dtpDepatureTime";
-            this.dtpDepatureTime.Size = new System.Drawing.Size(188, 32);
-            this.dtpDepatureTime.TabIndex = 2;
+            this.dtpDepartureTime.CustomFormat = "HH:mm, dd.MM.yyyy";
+            this.dtpDepartureTime.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDepartureTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDepartureTime.Location = new System.Drawing.Point(199, 80);
+            this.dtpDepartureTime.Name = "dtpDepatureTime";
+            this.dtpDepartureTime.Size = new System.Drawing.Size(188, 32);
+            this.dtpDepartureTime.TabIndex = 2;
             // 
             // tbDepaturePlace
             // 
@@ -348,7 +368,7 @@
         private System.Windows.Forms.GroupBox gbDepartureData;
         private System.Windows.Forms.TextBox tbDepaturePlace;
         private System.Windows.Forms.Label lbDeparturePlace;
-        private System.Windows.Forms.DateTimePicker dtpDepatureTime;
+        private System.Windows.Forms.DateTimePicker dtpDepartureTime;
         private System.Windows.Forms.Label lbTime;
         private System.Windows.Forms.GroupBox gbArrivalData;
         private System.Windows.Forms.DateTimePicker dtpArrivalDate;

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace ManagementSystemLibrary
@@ -20,25 +21,20 @@ namespace ManagementSystemLibrary
         public double BusinessPrice { get; set; }
         public List<Ticket> Tickets { get; set; }
         public TripState State { get; set; } = TripState.Upcoming;
-        public string Signature 
+        public string Signature
         {
-            get
+            get => $"{Name} ({GetState()})";
+        }
+
+        public string GetState()
+        {
+            switch (State)
             {
-                string status = "";
-                switch (State)
-                {
-                    case TripState.Upcoming:
-                        status = "(Upcoming)";
-                        break;
-                    case TripState.Canceled:
-                        status = "(Canceled";
-                        break;
-                    case TripState.Happened:
-                        status = "(Happened)";
-                        break;
-                }
-                return $"{Name} {status}";
-            } 
+                case TripState.Upcoming: return "Upcoming";
+                case TripState.Canceled: return "Canceled";
+                case TripState.Happened: return "Happened";
+                default: return "";
+            }
         }
 
         public Trip(string name, DateTime departureDate, string departurePlace,
@@ -53,8 +49,15 @@ namespace ManagementSystemLibrary
             EconomyPrice = economyPrice;
             MiddlePrice = middlePrice;
             BusinessPrice = businessPrice;
-            Tickets = tickets;            
+            Tickets = tickets;
         }
         public Trip() : this("", DateTime.Now, "", DateTime.Now, "", 0, 0, 0, new List<Ticket>()) { }
+
+        public void Cancel()
+        {
+            State = TripState.Canceled;
+            foreach (Ticket ticket in Tickets)
+                ticket.CancelTrip();
+        }
     }
 }

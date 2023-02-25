@@ -20,12 +20,25 @@ namespace TicketManagementSystem
         {
             InitializeComponent();
             this.train = train;
+            dtpArrivalDate.MinDate = DateTime.Now;
+            dtpDepartureTime.MinDate = DateTime.Now;
             textBoxes = new List<TextBox>
             {
                 tbName,
                 tbArrivalPlace,
                 tbDepaturePlace
             };
+        }
+
+        private double GetPrice(TicketType type)
+        {
+            switch (type)
+            {
+                case TicketType.Economy: return (double)numEconomyPrice.Value;
+                case TicketType.Middle: return (double)numMiddlePrice.Value;
+                case TicketType.Business: return (double)numBusinessPrice.Value;
+                default: return 0;
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -41,9 +54,9 @@ namespace TicketManagementSystem
                 errorProvider.SetError(numMiddlePrice, "Middle price must less than Business price");
                 return;
             }
-            else if (dtpDepatureTime.Value > dtpArrivalDate.Value)
+            else if (dtpDepartureTime.Value > dtpArrivalDate.Value)
             {
-                errorProvider.SetError(dtpDepatureTime, "Depature time must be less than arrival");
+                errorProvider.SetError(dtpDepartureTime, "Departure time must be less than arrival");
                 return;
             }
             bool error = false;
@@ -67,10 +80,10 @@ namespace TicketManagementSystem
             {
                 if (i >= train.EconCapacity) ticketType = TicketType.Middle;
                 else if (i >= train.EconCapacity + train.EconCapacity) ticketType = TicketType.Business;
-                tickets.Add(new Ticket(ticketType, dtpDepatureTime.Value));
+                tickets.Add(new Ticket(ticketType, GetPrice(ticketType)));
             }
-            Trip trip = new Trip(tbName.Text, dtpDepatureTime.Value, tbDepaturePlace.Text,
-                                dtpDepatureTime.Value, tbArrivalPlace.Text, (double)numEconomyPrice.Value,
+            Trip trip = new Trip(tbName.Text, dtpDepartureTime.Value, tbDepaturePlace.Text,
+                                dtpArrivalDate.Value, tbArrivalPlace.Text, (double)numEconomyPrice.Value,
                                 (double)numMiddlePrice.Value, (double)numBusinessPrice.Value, tickets);
             train.Trips.Add(trip);
             dataBase.Save();

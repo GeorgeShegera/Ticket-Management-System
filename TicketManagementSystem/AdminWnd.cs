@@ -60,8 +60,10 @@ namespace TicketManagementSystem
                 ErrorMessage("You must select the train");
                 return;
             }
+            Hide();
             TrainWnd trainWnd = new TrainWnd(dataBase.Trains[lbTrains.SelectedIndex]);
             trainWnd.ShowDialog();
+            Show();
             lbTrains.SelectedIndex = -1;
             RefreshTrains();
         }

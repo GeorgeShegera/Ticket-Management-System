@@ -21,7 +21,7 @@ namespace ManagementSystemLibrary
         public string Signature
         {
             get
-            {                
+            {
                 return $"{Name} ({GetState()})";
             }
         }
@@ -43,6 +43,11 @@ namespace ManagementSystemLibrary
                 case TrainState.Unavailable: return "Unavailable";
                 default: return "";
             }
+        }
+
+        public void CancelTrips()
+        {
+            foreach (Trip trip in Trips) trip.Cancel();
         }
     }
 }

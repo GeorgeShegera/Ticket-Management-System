@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ManagementSystemLibrary;
-using static System.Windows.Forms.AxHost;
+using static TicketManagementSystem.Program;
 
 namespace TicketManagementSystem
 {
@@ -50,7 +50,20 @@ namespace TicketManagementSystem
         {
             TrainSettingsWnd settings = new TrainSettingsWnd(train);
             settings.ShowDialog();
+            RefreshTrips();
             RefreshData();
+        }
+
+        private void btnEditTrip_Click(object sender, EventArgs e)
+        {
+            int index = lbTrips.SelectedIndex;
+            if (index == -1)
+            {
+                ErrorMessage("You must select a trip");
+                return;
+            }
+            TripWnd tripWnd = new TripWnd(dataBase.GetTrips(train.Name)[index]);
+            tripWnd.ShowDialog();
         }
     }
 }

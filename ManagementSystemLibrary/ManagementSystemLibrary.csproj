@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBase.cs" />
+    <Compile Include="Ticket\TicketState.cs" />
     <Compile Include="Ticket\Ticket.cs" />
     <Compile Include="Ticket\TicketType.cs" />
     <Compile Include="Train.cs" />

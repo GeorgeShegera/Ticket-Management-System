@@ -60,7 +60,7 @@ namespace TicketManagementSystem
             foreach (NumericUpDown numeric in numericUpDowns) tickets += (int)numeric.Value;            
             if(tickets == 0)
             {
-                ErrorMessage("There must be at least one ticket");
+                ErrorMessage("There must be at least one seat");
                 return;
             }
             dataBase.AddTrain(new Train(tbName.Text, tbModel.Text, (int)numBusinessTick.Value,
