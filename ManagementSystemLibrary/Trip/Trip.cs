@@ -42,7 +42,7 @@ namespace ManagementSystemLibrary
             {
                 case TripState.Upcoming: return "Upcoming";
                 case TripState.Canceled: return "Canceled";
-                case TripState.Complete: return "Happened";
+                case TripState.Complete: return "Complete";
                 default: return "";
             }
         }

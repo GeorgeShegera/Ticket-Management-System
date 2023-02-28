@@ -12,8 +12,8 @@ namespace ManagementSystemLibrary
         public DateTime? DateOfPurchase { get; private set; }
         public TicketType TypeOfTicket { get; private set; }
         public double Price { get; private set; }
-        public string Owner { get; set; } = null;        
-        public TicketState State { get; private set; } = TicketState.New;
+        public string Owner { get; set; } = null;
+        public TicketState State { get; set; } = TicketState.New;
         public string Signature
         {
             get => $"Ticket ({GetState()})";
@@ -26,12 +26,12 @@ namespace ManagementSystemLibrary
                 case TripState.Canceled: State = TicketState.Canceled; break;
                 case TripState.Complete: State = TicketState.Closed; break;
                 default: State = TicketState.New; break;
-            }            
+            }
         }
 
         public string GetState()
         {
-            switch(State)
+            switch (State)
             {
                 case TicketState.New: return "New";
                 case TicketState.Purchased: return "Purchased";
@@ -45,7 +45,7 @@ namespace ManagementSystemLibrary
             TypeOfTicket = ticketType;
             DateOfPurchase = null;
             Price = price;
-            Owner = null;            
+            Owner = null;
         }
     }
 }

@@ -93,6 +93,16 @@ namespace TicketManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap railwayStation {
+            get {
+                object obj = ResourceManager.GetObject("railwayStation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SaveImg {
             get {
                 object obj = ResourceManager.GetObject("SaveImg", resourceCulture);

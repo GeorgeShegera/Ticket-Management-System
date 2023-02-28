@@ -18,7 +18,7 @@ namespace ManagementSystemLibrary
         public int BusCapacity { get; }
         public int MidCapacity { get; }
         public int EconCapacity { get; }
-        public TrainState State { get; private set; } = TrainState.Available;
+        public TrainState State { get; set; } = TrainState.Available;
         public string Signature
         {
             get

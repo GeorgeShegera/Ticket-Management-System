@@ -36,7 +36,7 @@
             this.lbBirthDate = new System.Windows.Forms.Label();
             this.lbSurname = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnViewCompletedTrips = new System.Windows.Forms.Button();
             this.lbUsers = new System.Windows.Forms.ListBox();
             this.gbUsers = new System.Windows.Forms.GroupBox();
             this.btnEditUser = new System.Windows.Forms.Button();
@@ -73,6 +73,7 @@
             this.btnApplicationInfo.TabIndex = 2;
             this.btnApplicationInfo.Text = "Application Information ";
             this.btnApplicationInfo.UseVisualStyleBackColor = true;
+            this.btnApplicationInfo.Click += new System.EventHandler(this.btnApplicationInfo_Click);
             // 
             // gbUserData
             // 
@@ -83,7 +84,7 @@
             this.gbUserData.Font = new System.Drawing.Font("Microsoft New Tai Lue", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbUserData.Location = new System.Drawing.Point(250, 10);
             this.gbUserData.Name = "gbUserData";
-            this.gbUserData.Size = new System.Drawing.Size(285, 223);
+            this.gbUserData.Size = new System.Drawing.Size(307, 223);
             this.gbUserData.TabIndex = 4;
             this.gbUserData.TabStop = false;
             this.gbUserData.Text = "User Data";
@@ -93,7 +94,7 @@
             this.lbEmail.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEmail.Location = new System.Drawing.Point(6, 153);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(274, 26);
+            this.lbEmail.Size = new System.Drawing.Size(295, 26);
             this.lbEmail.TabIndex = 0;
             this.lbEmail.Text = "Email: ";
             this.lbEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -103,7 +104,7 @@
             this.lbBirthDate.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBirthDate.Location = new System.Drawing.Point(6, 117);
             this.lbBirthDate.Name = "lbBirthDate";
-            this.lbBirthDate.Size = new System.Drawing.Size(274, 26);
+            this.lbBirthDate.Size = new System.Drawing.Size(295, 26);
             this.lbBirthDate.TabIndex = 0;
             this.lbBirthDate.Text = "Date of Birth:";
             this.lbBirthDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -113,7 +114,7 @@
             this.lbSurname.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSurname.Location = new System.Drawing.Point(6, 81);
             this.lbSurname.Name = "lbSurname";
-            this.lbSurname.Size = new System.Drawing.Size(274, 26);
+            this.lbSurname.Size = new System.Drawing.Size(295, 26);
             this.lbSurname.TabIndex = 0;
             this.lbSurname.Text = "Surname:";
             this.lbSurname.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -123,20 +124,21 @@
             this.lbName.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.Location = new System.Drawing.Point(6, 46);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(274, 26);
+            this.lbName.Size = new System.Drawing.Size(295, 26);
             this.lbName.TabIndex = 0;
             this.lbName.Text = "Name:";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button1
+            // btnViewCompletedTrips
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(563, 123);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(231, 40);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "View Completed Trips";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnViewCompletedTrips.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewCompletedTrips.Location = new System.Drawing.Point(563, 123);
+            this.btnViewCompletedTrips.Name = "btnViewCompletedTrips";
+            this.btnViewCompletedTrips.Size = new System.Drawing.Size(231, 40);
+            this.btnViewCompletedTrips.TabIndex = 5;
+            this.btnViewCompletedTrips.Text = "View Completed Trips";
+            this.btnViewCompletedTrips.UseVisualStyleBackColor = true;
+            this.btnViewCompletedTrips.Click += new System.EventHandler(this.btnViewCompletedTrips_Click);
             // 
             // lbUsers
             // 
@@ -258,7 +260,7 @@
             this.Controls.Add(this.gbTrains);
             this.Controls.Add(this.gbUsers);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnViewCompletedTrips);
             this.Controls.Add(this.gbUserData);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnApplicationInfo);
@@ -284,7 +286,7 @@
         private System.Windows.Forms.Label lbBirthDate;
         private System.Windows.Forms.Label lbSurname;
         private System.Windows.Forms.Label lbName;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnViewCompletedTrips;
         private System.Windows.Forms.ListBox lbUsers;
         private System.Windows.Forms.GroupBox gbUsers;
         private System.Windows.Forms.Button btnAddUser;

@@ -90,7 +90,8 @@ namespace TicketManagementSystem
                         {
                             train.ChangeState(GetState());
                         }
-                        dataBase.Save();
+                        train.ChangeState(TrainState.Unavailable);
+                        dataBase.Save();                        
                     }
                     break;
             }

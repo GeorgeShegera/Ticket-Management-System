@@ -49,11 +49,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminWnd.cs">
+    <Compile Include="Admin\AdminWnd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminWnd.Designer.cs">
+    <Compile Include="Admin\AdminWnd.Designer.cs">
       <DependentUpon>AdminWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonWindows\ApplicationInfoWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonWindows\ApplicationInfoWnd.Designer.cs">
+      <DependentUpon>ApplicationInfoWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CompletedTripsWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\CompletedTripsWnd.Designer.cs">
+      <DependentUpon>CompletedTripsWnd.cs</DependentUpon>
     </Compile>
     <Compile Include="Registration\AuthorizationWnd.cs">
       <SubType>Form</SubType>
@@ -69,11 +81,11 @@
     <Compile Include="Registration\RegistrationWnd.Designer.cs">
       <DependentUpon>RegistrationWnd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Settings\EditState.cs" />
-    <Compile Include="Settings\SettingsWnd.cs">
+    <Compile Include="CommonWindows\EditState.cs" />
+    <Compile Include="CommonWindows\SettingsWnd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Settings\SettingsWnd.Designer.cs">
+    <Compile Include="CommonWindows\SettingsWnd.Designer.cs">
       <DependentUpon>SettingsWnd.cs</DependentUpon>
     </Compile>
     <Compile Include="Train\TrainSettingsWnd.cs">
@@ -112,8 +124,14 @@
     <Compile Include="Trip\TripCreatingWnd.Designer.cs">
       <DependentUpon>TripCreatingWnd.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminWnd.resx">
+    <EmbeddedResource Include="Admin\AdminWnd.resx">
       <DependentUpon>AdminWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonWindows\ApplicationInfoWnd.resx">
+      <DependentUpon>ApplicationInfoWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\CompletedTripsWnd.resx">
+      <DependentUpon>CompletedTripsWnd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registration\AuthorizationWnd.resx">
       <DependentUpon>AuthorizationWnd.cs</DependentUpon>
@@ -131,7 +149,7 @@
     <EmbeddedResource Include="Registration\RegistrationWnd.resx">
       <DependentUpon>RegistrationWnd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Settings\SettingsWnd.resx">
+    <EmbeddedResource Include="CommonWindows\SettingsWnd.resx">
       <DependentUpon>SettingsWnd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Train\TrainSettingsWnd.resx">
@@ -192,6 +210,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Trip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\railwayStation.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

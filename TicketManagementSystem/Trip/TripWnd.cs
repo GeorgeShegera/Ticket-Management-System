@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using ManagementSystemLibrary;
 
 namespace TicketManagementSystem
-{    
+{
     public partial class TripWnd : Form
     {
         private readonly Trip trip;
@@ -18,11 +18,12 @@ namespace TicketManagementSystem
         {
             this.trip = trip;
             InitializeComponent();
-            btnTripSettings.Visible = trip.State == TripState.Upcoming;            
+
             RefreshData();
         }
         private void RefreshData()
         {
+            btnTripSettings.Visible = trip.State == TripState.Upcoming;
             lbName.Text = $"Name: {trip.Name}";
             lbState.Text = $"Status: {trip.GetState()}";
             lbDepartureTime.Text = $"Departure Time: {trip.DepartureDate:HH:mm, dd.MM.yyyy}";
@@ -32,6 +33,7 @@ namespace TicketManagementSystem
             lbEconomyPrice.Text = $"Economy class price: {trip.EconomyPrice}";
             lbMiddlePrice.Text = $"Middle class price: {trip.MiddlePrice}";
             lbBusinessPrice.Text = $"Business class price:  {trip.BusinessPrice}";
+            lbTickets.Items.Clear();
             lbTickets.Items.AddRange(trip.Tickets.Select(x => x.Signature).ToArray());
         }
         private void btnTripSettings_Click(object sender, EventArgs e)

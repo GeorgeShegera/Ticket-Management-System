@@ -117,29 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CancelImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CrossImg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lbText.Text" xml:space="preserve">
+    <value>Ukraine has a developed railway network, its total working mileage amounts to over 24 000 kilometers. Two third of Ukrainian railway lines are heavy worked, equipped with modern management facilities, dispatcher's centralization and automatic block system.</value>
   </data>
-  <data name="EditImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EditImg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Ukrainian railway directly borders and cooperates with railways of Russia, Byelorussia, Moldova, Poland, Romania, Slovakia, Hungary and ensures the work with 40 international railway cross-walks, and also serves 18 Ukrainian seaports of the Black Sea and Sea of Azov basin.</value>
   </data>
-  <data name="HiddenImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HiddenImg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="railwayStation" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\railwayStation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SaveImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CheckImg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="trainIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trainIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Trip" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Trip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="VisibleImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\VisibleImg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="label2.Text" xml:space="preserve">
+    <value>The administration of public railway transport is The State Administration of Railway Transport of Ukraine "Ukrzaliznytsia", which was established in december 1991. The management sphere of Ukrzaliznytsia covers the railways of Donetsk, Lviv, Odessa, Pivdenna (Southern), Pivdenno-Zakhidna (Southwestern) and Pridniprovska Railways, and also other enterprises and organizations of integrated industrial-engineering complex, that enables freight and passengers transportation.</value>
   </data>
 </root>

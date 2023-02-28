@@ -32,14 +32,14 @@
             this.lbName = new System.Windows.Forms.Label();
             this.lbSettings = new System.Windows.Forms.Label();
             this.gbTrainData = new System.Windows.Forms.GroupBox();
+            this.pbState = new System.Windows.Forms.PictureBox();
+            this.pbModel = new System.Windows.Forms.PictureBox();
+            this.pbName = new System.Windows.Forms.PictureBox();
             this.cmState = new System.Windows.Forms.ComboBox();
             this.tbModel = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
             this.lbState = new System.Windows.Forms.Label();
             this.lbModel = new System.Windows.Forms.Label();
-            this.pbState = new System.Windows.Forms.PictureBox();
-            this.pbModel = new System.Windows.Forms.PictureBox();
-            this.pbName = new System.Windows.Forms.PictureBox();
             this.gbTrainData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbState)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbModel)).BeginInit();
@@ -86,6 +86,48 @@
             this.gbTrainData.TabIndex = 1;
             this.gbTrainData.TabStop = false;
             this.gbTrainData.Text = "Train Data";
+            // 
+            // pbState
+            // 
+            this.pbState.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbState.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbState.Image = ((System.Drawing.Image)(resources.GetObject("pbState.Image")));
+            this.pbState.Location = new System.Drawing.Point(241, 145);
+            this.pbState.Name = "pbState";
+            this.pbState.Size = new System.Drawing.Size(32, 31);
+            this.pbState.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbState.TabIndex = 3;
+            this.pbState.TabStop = false;
+            this.pbState.Tag = "State";
+            this.pbState.Click += new System.EventHandler(this.Edit_Click);
+            // 
+            // pbModel
+            // 
+            this.pbModel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbModel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbModel.Image = ((System.Drawing.Image)(resources.GetObject("pbModel.Image")));
+            this.pbModel.Location = new System.Drawing.Point(346, 99);
+            this.pbModel.Name = "pbModel";
+            this.pbModel.Size = new System.Drawing.Size(32, 32);
+            this.pbModel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbModel.TabIndex = 3;
+            this.pbModel.TabStop = false;
+            this.pbModel.Tag = "Model";
+            this.pbModel.Click += new System.EventHandler(this.Edit_Click);
+            // 
+            // pbName
+            // 
+            this.pbName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbName.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbName.Image = ((System.Drawing.Image)(resources.GetObject("pbName.Image")));
+            this.pbName.Location = new System.Drawing.Point(346, 52);
+            this.pbName.Name = "pbName";
+            this.pbName.Size = new System.Drawing.Size(32, 32);
+            this.pbName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbName.TabIndex = 3;
+            this.pbName.TabStop = false;
+            this.pbName.Tag = "Name";
+            this.pbName.Click += new System.EventHandler(this.Edit_Click);
             // 
             // cmState
             // 
@@ -142,48 +184,6 @@
             this.lbModel.TabIndex = 0;
             this.lbModel.Text = "Model:";
             this.lbModel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pbState
-            // 
-            this.pbState.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbState.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbState.Image = ((System.Drawing.Image)(resources.GetObject("pbState.Image")));
-            this.pbState.Location = new System.Drawing.Point(241, 145);
-            this.pbState.Name = "pbState";
-            this.pbState.Size = new System.Drawing.Size(32, 31);
-            this.pbState.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbState.TabIndex = 3;
-            this.pbState.TabStop = false;
-            this.pbState.Tag = "State";
-            this.pbState.Click += new System.EventHandler(this.Edit_Click);
-            // 
-            // pbModel
-            // 
-            this.pbModel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbModel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbModel.Image = ((System.Drawing.Image)(resources.GetObject("pbModel.Image")));
-            this.pbModel.Location = new System.Drawing.Point(346, 99);
-            this.pbModel.Name = "pbModel";
-            this.pbModel.Size = new System.Drawing.Size(32, 32);
-            this.pbModel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbModel.TabIndex = 3;
-            this.pbModel.TabStop = false;
-            this.pbModel.Tag = "Model";
-            this.pbModel.Click += new System.EventHandler(this.Edit_Click);
-            // 
-            // pbName
-            // 
-            this.pbName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbName.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbName.Image = ((System.Drawing.Image)(resources.GetObject("pbName.Image")));
-            this.pbName.Location = new System.Drawing.Point(346, 52);
-            this.pbName.Name = "pbName";
-            this.pbName.Size = new System.Drawing.Size(32, 32);
-            this.pbName.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbName.TabIndex = 3;
-            this.pbName.TabStop = false;
-            this.pbName.Tag = "Name";
-            this.pbName.Click += new System.EventHandler(this.Edit_Click);
             // 
             // TrainSettingsWnd
             // 

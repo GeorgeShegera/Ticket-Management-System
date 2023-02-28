@@ -50,8 +50,8 @@
     <Compile Include="Ticket\TicketState.cs" />
     <Compile Include="Ticket\Ticket.cs" />
     <Compile Include="Ticket\TicketType.cs" />
-    <Compile Include="Train.cs" />
-    <Compile Include="TrainState.cs" />
+    <Compile Include="Train\Train.cs" />
+    <Compile Include="Train\TrainState.cs" />
     <Compile Include="Trip\TripState.cs" />
     <Compile Include="Trip\Trip.cs" />
     <Compile Include="User\Administrator.cs" />

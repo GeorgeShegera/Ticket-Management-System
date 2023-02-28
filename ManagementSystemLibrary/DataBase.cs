@@ -46,15 +46,23 @@ namespace ManagementSystemLibrary
             Save();
         }
 
-        public List<Trip> GetTrips(string trainName) 
+        public List<Trip> GetTrips(string trainName)
             => Trains.Where(x => x.Name == trainName).FirstOrDefault().Trips;
         public List<Trip> GetTrips()
         {
             List<Trip> trips = new List<Trip>();
-            foreach(Train train in Trains)
+            foreach (Train train in Trains)
             {
                 trips.AddRange(train.Trips);
             }
+            return trips;
+        }
+
+        public List<Trip> GetCompletedTrips()
+        {
+            List<Trip> trips = new List<Trip>();
+            foreach (Train train in Trains)
+                trips.AddRange(train.Trips.Where(x => x.State != TripState.Upcoming).ToList());
             return trips;
         }
 

@@ -67,5 +67,19 @@ namespace TicketManagementSystem
             lbTrains.SelectedIndex = -1;
             RefreshTrains();
         }
+
+        private void btnViewCompletedTrips_Click(object sender, EventArgs e)
+        {
+            CompletedTripsWnd completedTripsWnd = new CompletedTripsWnd();
+            Hide();
+            completedTripsWnd.ShowDialog();
+            Show();
+        }
+
+        private void btnApplicationInfo_Click(object sender, EventArgs e)
+        {
+            ApplicationInfoWnd infoWnd = new ApplicationInfoWnd();
+            infoWnd.ShowDialog();
+        }
     }
 }
