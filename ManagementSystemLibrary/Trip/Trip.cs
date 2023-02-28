@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.AxHost;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
@@ -21,6 +23,14 @@ namespace ManagementSystemLibrary
         public double BusinessPrice { get; set; }
         public List<Ticket> Tickets { get; set; }
         public TripState State { get; set; } = TripState.Upcoming;
+
+        public void ChangeState(TripState state)
+        {
+            State = state;
+            foreach (Ticket ticket in Tickets)
+                ticket.ChangeState(state);
+        }
+
         public string Signature
         {
             get => $"{Name} ({GetState()})";
@@ -32,7 +42,7 @@ namespace ManagementSystemLibrary
             {
                 case TripState.Upcoming: return "Upcoming";
                 case TripState.Canceled: return "Canceled";
-                case TripState.Happened: return "Happened";
+                case TripState.Complete: return "Happened";
                 default: return "";
             }
         }
@@ -41,7 +51,7 @@ namespace ManagementSystemLibrary
                 DateTime arrivalDate, string arrivalPlace, double economyPrice,
                 double middlePrice, double businessPrice, List<Ticket> tickets)
         {
-            Name = name;
+            Name = name;            
             DepartureDate = departureDate;
             DeparturePlace = departurePlace;
             ArrivalDate = arrivalDate;
@@ -52,12 +62,5 @@ namespace ManagementSystemLibrary
             Tickets = tickets;
         }
         public Trip() : this("", DateTime.Now, "", DateTime.Now, "", 0, 0, 0, new List<Ticket>()) { }
-
-        public void Cancel()
-        {
-            State = TripState.Canceled;
-            foreach (Ticket ticket in Tickets)
-                ticket.CancelTrip();
-        }
     }
 }

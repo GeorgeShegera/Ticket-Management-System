@@ -19,7 +19,15 @@ namespace ManagementSystemLibrary
             get => $"Ticket ({GetState()})";
         }
 
-        public void CancelTrip() => State = TicketState.Canceled;
+        public void ChangeState(TripState tripState)
+        {
+            switch (tripState)
+            {
+                case TripState.Canceled: State = TicketState.Canceled; break;
+                case TripState.Complete: State = TicketState.Closed; break;
+                default: State = TicketState.New; break;
+            }            
+        }
 
         public string GetState()
         {

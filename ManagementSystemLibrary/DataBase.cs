@@ -48,8 +48,18 @@ namespace ManagementSystemLibrary
 
         public List<Trip> GetTrips(string trainName) 
             => Trains.Where(x => x.Name == trainName).FirstOrDefault().Trips;
+        public List<Trip> GetTrips()
+        {
+            List<Trip> trips = new List<Trip>();
+            foreach(Train train in Trains)
+            {
+                trips.AddRange(train.Trips);
+            }
+            return trips;
+        }
 
         public bool IsTakenUsername(string username) => Users.Any(x => x.Username == username);
         public bool IsTakenTrainName(string name) => Trains.Any(x => x.Name == name);
+        public bool IsTakenTripName(string name) => GetTrips().Any(x => x.Name == name);
     }
 }

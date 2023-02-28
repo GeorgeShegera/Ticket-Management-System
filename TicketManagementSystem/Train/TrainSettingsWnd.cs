@@ -40,7 +40,7 @@ namespace TicketManagementSystem
         private TrainState GetState()
             => cmState.SelectedIndex == 0 ? TrainState.Available : TrainState.Unavailable;
 
-        private (int, Control) GetStateIndex(object tag)
+        private (int, Control) GetControl(object tag)
         {
             if (tag == tbName.Tag) return (0, tbName);
             else if (tag == tbModel.Tag) return (1, tbModel);
@@ -51,12 +51,11 @@ namespace TicketManagementSystem
         private void Edit_Click(object sender, EventArgs e)
         {
             if (!(sender is PictureBox pictureBox)) return;
-            (int index, Control control) = GetStateIndex(pictureBox.Tag);
+            (int index, Control control) = GetControl(pictureBox.Tag);
             EditState state = EditStates[index];
             EditStates[index] = EditState.Edit;
             bool enabled = false;
             Image image = Properties.Resources.EditImg;
-
             switch (state)
             {
                 case EditState.Edit:
@@ -89,8 +88,7 @@ namespace TicketManagementSystem
                         else if (pictureBox.Tag == tbModel.Tag) train.Model = control.Text;
                         else
                         {
-                            train.State = GetState();
-                            if (train.State == TrainState.Unavailable) train.CancelTrips();
+                            train.ChangeState(GetState());
                         }
                         dataBase.Save();
                     }
@@ -103,7 +101,7 @@ namespace TicketManagementSystem
         private void Data_Changed(object sender, EventArgs e)
         {
             if (!(sender is Control control)) return;
-            (int index, _) = GetStateIndex(control.Tag);
+            (int index, _) = GetControl(control.Tag);
             if (EditStates[index] == EditState.Edit) return;
             PictureBox pictureBox = null;
             bool sameData = false;

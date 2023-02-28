@@ -45,7 +45,7 @@
             this.lbBusinessPrice = new System.Windows.Forms.Label();
             this.lbMiddlePrice = new System.Windows.Forms.Label();
             this.lbEconomyPrice = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnTripSettings = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.gbTripData.SuspendLayout();
             this.gbDepartureData.SuspendLayout();
@@ -225,22 +225,23 @@
             this.lbEconomyPrice.Text = "Economy class price:";
             this.lbEconomyPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button1
+            // btnTripSettings
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(358, 323);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(290, 34);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Trip Settings";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnTripSettings.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTripSettings.Location = new System.Drawing.Point(358, 323);
+            this.btnTripSettings.Name = "btnTripSettings";
+            this.btnTripSettings.Size = new System.Drawing.Size(290, 34);
+            this.btnTripSettings.TabIndex = 4;
+            this.btnTripSettings.Text = "Trip Settings";
+            this.btnTripSettings.UseVisualStyleBackColor = true;
+            this.btnTripSettings.Click += new System.EventHandler(this.btnTripSettings_Click);
             // 
             // TripWnd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 505);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnTripSettings);
             this.Controls.Add(this.gbPrices);
             this.Controls.Add(this.lTickets);
             this.Controls.Add(this.lbTickets);
@@ -277,7 +278,7 @@
         private System.Windows.Forms.Label lbBusinessPrice;
         private System.Windows.Forms.Label lbMiddlePrice;
         private System.Windows.Forms.Label lbEconomyPrice;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnTripSettings;
         private System.Windows.Forms.Label lbState;
     }
 }

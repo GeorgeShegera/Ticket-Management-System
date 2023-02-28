@@ -54,7 +54,7 @@ namespace TicketManagementSystem
             RefreshData();
         }
 
-        private void btnEditTrip_Click(object sender, EventArgs e)
+        private void btnViewTrip_Click(object sender, EventArgs e)
         {
             int index = lbTrips.SelectedIndex;
             if (index == -1)
@@ -63,7 +63,10 @@ namespace TicketManagementSystem
                 return;
             }
             TripWnd tripWnd = new TripWnd(dataBase.GetTrips(train.Name)[index]);
+            Hide();
             tripWnd.ShowDialog();
+            RefreshTrips();
+            Show();
         }
     }
 }

@@ -10,6 +10,6 @@ namespace ManagementSystemLibrary
     {
         Upcoming,
         Canceled,
-        Happened
+        Complete
     }
 }

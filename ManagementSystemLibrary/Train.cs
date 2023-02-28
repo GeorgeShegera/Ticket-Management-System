@@ -6,6 +6,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace ManagementSystemLibrary
 {
@@ -17,7 +18,7 @@ namespace ManagementSystemLibrary
         public int BusCapacity { get; }
         public int MidCapacity { get; }
         public int EconCapacity { get; }
-        public TrainState State { get; set; } = TrainState.Available;
+        public TrainState State { get; private set; } = TrainState.Available;
         public string Signature
         {
             get
@@ -45,9 +46,11 @@ namespace ManagementSystemLibrary
             }
         }
 
-        public void CancelTrips()
+        public void ChangeState(TrainState state)
         {
-            foreach (Trip trip in Trips) trip.Cancel();
+            State = state;
+            foreach (Trip trip in Trips)
+                trip.ChangeState(State == TrainState.Unavailable ? TripState.Canceled : TripState.Upcoming);
         }
     }
 }

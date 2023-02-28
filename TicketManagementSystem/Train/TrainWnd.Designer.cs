@@ -38,7 +38,7 @@
             this.lbName = new System.Windows.Forms.Label();
             this.lbTrips = new System.Windows.Forms.ListBox();
             this.btnAddTrip = new System.Windows.Forms.Button();
-            this.btnEditTrip = new System.Windows.Forms.Button();
+            this.btnViewTrip = new System.Windows.Forms.Button();
             this.pbTrain = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnTrainSettings = new System.Windows.Forms.Button();
@@ -147,17 +147,17 @@
             this.btnAddTrip.UseVisualStyleBackColor = true;
             this.btnAddTrip.Click += new System.EventHandler(this.btnAddTrip_Click);
             // 
-            // btnEditTrip
+            // btnViewTrip
             // 
-            this.btnEditTrip.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditTrip.Location = new System.Drawing.Point(360, 411);
-            this.btnEditTrip.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEditTrip.Name = "btnEditTrip";
-            this.btnEditTrip.Size = new System.Drawing.Size(217, 38);
-            this.btnEditTrip.TabIndex = 7;
-            this.btnEditTrip.Text = "Edit Trip";
-            this.btnEditTrip.UseVisualStyleBackColor = true;
-            this.btnEditTrip.Click += new System.EventHandler(this.btnEditTrip_Click);
+            this.btnViewTrip.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewTrip.Location = new System.Drawing.Point(360, 411);
+            this.btnViewTrip.Margin = new System.Windows.Forms.Padding(4);
+            this.btnViewTrip.Name = "btnViewTrip";
+            this.btnViewTrip.Size = new System.Drawing.Size(217, 38);
+            this.btnViewTrip.TabIndex = 7;
+            this.btnViewTrip.Text = "View Trip";
+            this.btnViewTrip.UseVisualStyleBackColor = true;
+            this.btnViewTrip.Click += new System.EventHandler(this.btnViewTrip_Click);
             // 
             // pbTrain
             // 
@@ -202,7 +202,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnTrainSettings);
             this.Controls.Add(this.btnAddTrip);
-            this.Controls.Add(this.btnEditTrip);
+            this.Controls.Add(this.btnViewTrip);
             this.Controls.Add(this.gbTrain);
             this.Controls.Add(this.pbTrain);
             this.Controls.Add(this.lbTrips);
@@ -229,7 +229,7 @@
         private System.Windows.Forms.Label lbBusinessSeats;
         private System.Windows.Forms.ListBox lbTrips;
         private System.Windows.Forms.Button btnAddTrip;
-        private System.Windows.Forms.Button btnEditTrip;
+        private System.Windows.Forms.Button btnViewTrip;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbState;
         private System.Windows.Forms.Button btnTrainSettings;
