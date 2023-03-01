@@ -9,7 +9,7 @@ namespace ManagementSystemLibrary
 {
     public class Client : User
     {
-        public double Sum { get; set; } = 0;        
+        public double Balance { get; set; } = 0;
         public Client(string email, string username, string passoword, string name, string surname, DateTime date)
             : base(email, username, passoword, name, surname, date) { }
     }

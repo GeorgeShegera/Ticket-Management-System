@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,6 +24,7 @@ namespace TicketManagementSystem
             RefreshTrains();
             RefreshClients();
         }
+
         private void RefreshData()
         {
             lbName.Text = $"Name: {Admin.Name}";
@@ -30,6 +32,7 @@ namespace TicketManagementSystem
             lbBirthDate.Text = $"Date of Birth: {Admin.DateBirth?.ToString("d")}";
             lbEmail.Text = $"Email: {Admin.Email}";
         }
+
         private void btnOptions_Click(object sender, EventArgs e)
         {
             Hide();
@@ -38,6 +41,7 @@ namespace TicketManagementSystem
             Show();
             RefreshData();
         }
+
         private void RefreshTrains()
         {
             lbTrains.Items.Clear();
@@ -53,7 +57,7 @@ namespace TicketManagementSystem
         private void btnExit_Click(object sender, EventArgs e) => Close();
 
         private void tbnAddTrain_Click(object sender, EventArgs e)
-        {            
+        {
             AddingTrainWnd addingTrainWnd = new AddingTrainWnd();
             addingTrainWnd.ShowDialog();
             lbTrains.Items.AddRange(dataBase.Trains.Select(x => x.Name).ToArray());
@@ -94,6 +98,21 @@ namespace TicketManagementSystem
             RegistrationWnd registration = new RegistrationWnd();
             registration.ShowDialog();
             RefreshClients();
+        }
+
+        private void btnEditClient_Click(object sender, EventArgs e)
+        {
+            int index = lbClients.SelectedIndex;
+            if (index == -1)
+            {
+                ErrorMessage("You must select a clint");
+                return;
+            }
+            string username = lbClients.SelectedItem.ToString();
+            ClientViewWnd clientViewWnd = new ClientViewWnd((Client)dataBase.GetUser(username));
+            Hide();
+            clientViewWnd.ShowDialog();
+            Show();
         }
     }
 }

@@ -34,6 +34,9 @@ namespace ManagementSystemLibrary
             }
         }
 
+        public User GetUser(string username)
+            => Users.Where(x => x.Username == username).FirstOrDefault();
+
         public void AddUser(User user)
         {
             Users.Add(user);
@@ -48,6 +51,7 @@ namespace ManagementSystemLibrary
 
         public List<Trip> GetTrips(string trainName)
             => Trains.Where(x => x.Name == trainName).FirstOrDefault().Trips;
+
         public List<Trip> GetTrips()
         {
             List<Trip> trips = new List<Trip>();
@@ -64,6 +68,15 @@ namespace ManagementSystemLibrary
             foreach (Train train in Trains)
                 trips.AddRange(train.Trips.Where(x => x.State != TripState.Upcoming).ToList());
             return trips;
+        }
+
+        public List<Ticket> GetTickets(string username)
+        {
+            List<Ticket> tickets = new List<Ticket>();
+            List<Trip> trips = GetTrips();
+            foreach (Trip trip in trips)
+                tickets.AddRange(trip.Tickets.Where(x => x.CheckOwner(username)));
+            return tickets;
         }
 
         public bool IsTakenUsername(string username) => Users.Any(x => x.Username == username);

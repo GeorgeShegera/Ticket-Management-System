@@ -12,7 +12,7 @@ namespace ManagementSystemLibrary
         public DateTime? DateOfPurchase { get; private set; }
         public TicketType TypeOfTicket { get; private set; }
         public double Price { get; private set; }
-        public string Owner { get; set; } = null;
+        public string OwnerName { get; set; } = null;
         public TicketState State { get; set; } = TicketState.New;
         public string Signature
         {
@@ -45,7 +45,12 @@ namespace ManagementSystemLibrary
             TypeOfTicket = ticketType;
             DateOfPurchase = null;
             Price = price;
-            Owner = null;
+            OwnerName = null;
+        }
+        public bool CheckOwner(string ownerName)
+        {
+            if (OwnerName != null) return ownerName == OwnerName;
+            else return false;
         }
     }
 }

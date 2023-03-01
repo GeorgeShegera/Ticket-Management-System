@@ -162,7 +162,7 @@
             this.gbClients.Size = new System.Drawing.Size(384, 265);
             this.gbClients.TabIndex = 10;
             this.gbClients.TabStop = false;
-            this.gbClients.Text = "Users";
+            this.gbClients.Text = "Clients";
             // 
             // btnEditClient
             // 
@@ -173,6 +173,7 @@
             this.btnEditClient.TabIndex = 7;
             this.btnEditClient.Text = "Edit";
             this.btnEditClient.UseVisualStyleBackColor = true;
+            this.btnEditClient.Click += new System.EventHandler(this.btnEditClient_Click);
             // 
             // btnAddClient
             // 

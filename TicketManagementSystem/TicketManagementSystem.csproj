@@ -55,6 +55,12 @@
     <Compile Include="Admin\AdminWnd.Designer.cs">
       <DependentUpon>AdminWnd.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientViewWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientViewWnd.Designer.cs">
+      <DependentUpon>ClientViewWnd.cs</DependentUpon>
+    </Compile>
     <Compile Include="CommonWindows\ApplicationInfoWnd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </Compile>
     <EmbeddedResource Include="Admin\AdminWnd.resx">
       <DependentUpon>AdminWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientViewWnd.resx">
+      <DependentUpon>ClientViewWnd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CommonWindows\ApplicationInfoWnd.resx">
       <DependentUpon>ApplicationInfoWnd.cs</DependentUpon>
@@ -213,6 +222,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\railwayStation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Client.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
