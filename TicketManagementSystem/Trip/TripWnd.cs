@@ -14,16 +14,15 @@ namespace TicketManagementSystem
     public partial class TripWnd : Form
     {
         private readonly Trip trip;
-        public TripWnd(Trip trip)
+        public TripWnd(Trip trip, bool viewOnly = false)
         {
             this.trip = trip;
             InitializeComponent();
-
+            btnTripSettings.Visible = trip.State == TripState.Upcoming && !viewOnly;
             RefreshData();
         }
         private void RefreshData()
         {
-            btnTripSettings.Visible = trip.State == TripState.Upcoming;
             lbName.Text = $"Name: {trip.Name}";
             lbState.Text = $"Status: {trip.GetState()}";
             lbDepartureTime.Text = $"Departure Time: {trip.DepartureDate:HH:mm, dd.MM.yyyy}";

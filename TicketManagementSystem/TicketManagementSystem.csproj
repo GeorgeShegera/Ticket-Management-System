@@ -55,11 +55,17 @@
     <Compile Include="Admin\AdminWnd.Designer.cs">
       <DependentUpon>AdminWnd.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClientViewWnd.cs">
+    <Compile Include="Admin\ClientViewWnd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientViewWnd.Designer.cs">
+    <Compile Include="Admin\ClientViewWnd.Designer.cs">
       <DependentUpon>ClientViewWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseTripWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseTripWnd.Designer.cs">
+      <DependentUpon>ChooseTripWnd.cs</DependentUpon>
     </Compile>
     <Compile Include="CommonWindows\ApplicationInfoWnd.cs">
       <SubType>Form</SubType>
@@ -133,8 +139,11 @@
     <EmbeddedResource Include="Admin\AdminWnd.resx">
       <DependentUpon>AdminWnd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientViewWnd.resx">
+    <EmbeddedResource Include="Admin\ClientViewWnd.resx">
       <DependentUpon>ClientViewWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseTripWnd.resx">
+      <DependentUpon>ChooseTripWnd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CommonWindows\ApplicationInfoWnd.resx">
       <DependentUpon>ApplicationInfoWnd.cs</DependentUpon>

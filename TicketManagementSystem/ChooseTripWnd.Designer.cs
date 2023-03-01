@@ -30,14 +30,14 @@
         {
             this.lbTrips = new System.Windows.Forms.ListBox();
             this.gbTripFilters = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.gbArrivalFilters = new System.Windows.Forms.GroupBox();
+            this.tbArrivalPlace = new System.Windows.Forms.TextBox();
             this.ArrivalPlace = new System.Windows.Forms.Label();
             this.dtpArrivalDate = new System.Windows.Forms.DateTimePicker();
             this.lArrivalDate = new System.Windows.Forms.Label();
             this.cbArrivalFilters = new System.Windows.Forms.CheckBox();
             this.gbDepartureFilters = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbDeparturePlace = new System.Windows.Forms.TextBox();
             this.lbDeparturePlace = new System.Windows.Forms.Label();
             this.dtpDepartureDate = new System.Windows.Forms.DateTimePicker();
             this.lDepartureDate = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             this.btnView = new System.Windows.Forms.Button();
             this.btnBuyTicket = new System.Windows.Forms.Button();
             this.gbTripFilters.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbArrivalFilters.SuspendLayout();
             this.gbDepartureFilters.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +63,7 @@
             // 
             // gbTripFilters
             // 
-            this.gbTripFilters.Controls.Add(this.groupBox1);
+            this.gbTripFilters.Controls.Add(this.gbArrivalFilters);
             this.gbTripFilters.Controls.Add(this.cbArrivalFilters);
             this.gbTripFilters.Controls.Add(this.gbDepartureFilters);
             this.gbTripFilters.Controls.Add(this.cbDepartureFilters);
@@ -76,27 +76,27 @@
             this.gbTripFilters.TabStop = false;
             this.gbTripFilters.Text = "Trips\' filters";
             // 
-            // groupBox1
+            // gbArrivalFilters
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.ArrivalPlace);
-            this.groupBox1.Controls.Add(this.dtpArrivalDate);
-            this.groupBox1.Controls.Add(this.lArrivalDate);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(5, 197);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(364, 102);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Arrival Filters";
-            this.groupBox1.Visible = false;
+            this.gbArrivalFilters.Controls.Add(this.tbArrivalPlace);
+            this.gbArrivalFilters.Controls.Add(this.ArrivalPlace);
+            this.gbArrivalFilters.Controls.Add(this.dtpArrivalDate);
+            this.gbArrivalFilters.Controls.Add(this.lArrivalDate);
+            this.gbArrivalFilters.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbArrivalFilters.Location = new System.Drawing.Point(5, 197);
+            this.gbArrivalFilters.Name = "gbArrivalFilters";
+            this.gbArrivalFilters.Size = new System.Drawing.Size(364, 102);
+            this.gbArrivalFilters.TabIndex = 5;
+            this.gbArrivalFilters.TabStop = false;
+            this.gbArrivalFilters.Text = "Arrival Filters";
+            this.gbArrivalFilters.Visible = false;
             // 
-            // textBox2
+            // tbArrivalPlace
             // 
-            this.textBox2.Location = new System.Drawing.Point(168, 27);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(190, 28);
-            this.textBox2.TabIndex = 1;
+            this.tbArrivalPlace.Location = new System.Drawing.Point(168, 27);
+            this.tbArrivalPlace.Name = "tbArrivalPlace";
+            this.tbArrivalPlace.Size = new System.Drawing.Size(190, 28);
+            this.tbArrivalPlace.TabIndex = 1;
             // 
             // ArrivalPlace
             // 
@@ -136,12 +136,14 @@
             this.cbArrivalFilters.Name = "cbArrivalFilters";
             this.cbArrivalFilters.Size = new System.Drawing.Size(121, 25);
             this.cbArrivalFilters.TabIndex = 4;
+            this.cbArrivalFilters.Tag = "Arrival";
             this.cbArrivalFilters.Text = "Arrival Filters";
             this.cbArrivalFilters.UseVisualStyleBackColor = true;
+            this.cbArrivalFilters.CheckedChanged += new System.EventHandler(this.cbDepartureFilters_CheckedChanged);
             // 
             // gbDepartureFilters
             // 
-            this.gbDepartureFilters.Controls.Add(this.textBox1);
+            this.gbDepartureFilters.Controls.Add(this.tbDeparturePlace);
             this.gbDepartureFilters.Controls.Add(this.lbDeparturePlace);
             this.gbDepartureFilters.Controls.Add(this.dtpDepartureDate);
             this.gbDepartureFilters.Controls.Add(this.lDepartureDate);
@@ -154,12 +156,12 @@
             this.gbDepartureFilters.Text = "Departure Filters";
             this.gbDepartureFilters.Visible = false;
             // 
-            // textBox1
+            // tbDeparturePlace
             // 
-            this.textBox1.Location = new System.Drawing.Point(168, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(190, 28);
-            this.textBox1.TabIndex = 1;
+            this.tbDeparturePlace.Location = new System.Drawing.Point(168, 27);
+            this.tbDeparturePlace.Name = "tbDeparturePlace";
+            this.tbDeparturePlace.Size = new System.Drawing.Size(190, 28);
+            this.tbDeparturePlace.TabIndex = 1;
             // 
             // lbDeparturePlace
             // 
@@ -199,8 +201,10 @@
             this.cbDepartureFilters.Name = "cbDepartureFilters";
             this.cbDepartureFilters.Size = new System.Drawing.Size(145, 25);
             this.cbDepartureFilters.TabIndex = 4;
+            this.cbDepartureFilters.Tag = "Departure";
             this.cbDepartureFilters.Text = "Departure Filters";
             this.cbDepartureFilters.UseVisualStyleBackColor = true;
+            this.cbDepartureFilters.CheckedChanged += new System.EventHandler(this.cbDepartureFilters_CheckedChanged);
             // 
             // btnApply
             // 
@@ -210,6 +214,7 @@
             this.btnApply.TabIndex = 3;
             this.btnApply.Text = "Apply";
             this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Visible = false;
             // 
             // lTrips
             // 
@@ -230,6 +235,7 @@
             this.btnView.TabIndex = 3;
             this.btnView.Text = "View";
             this.btnView.UseVisualStyleBackColor = true;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // btnBuyTicket
             // 
@@ -258,8 +264,8 @@
             this.Text = "Choice of trip";
             this.gbTripFilters.ResumeLayout(false);
             this.gbTripFilters.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbArrivalFilters.ResumeLayout(false);
+            this.gbArrivalFilters.PerformLayout();
             this.gbDepartureFilters.ResumeLayout(false);
             this.gbDepartureFilters.PerformLayout();
             this.ResumeLayout(false);
@@ -270,12 +276,12 @@
 
         private System.Windows.Forms.ListBox lbTrips;
         private System.Windows.Forms.GroupBox gbTripFilters;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbDeparturePlace;
         private System.Windows.Forms.Label lbDeparturePlace;
         private System.Windows.Forms.DateTimePicker dtpDepartureDate;
         private System.Windows.Forms.Label lDepartureDate;
         private System.Windows.Forms.DateTimePicker dtpArrivalDate;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbArrivalPlace;
         private System.Windows.Forms.Label lArrivalDate;
         private System.Windows.Forms.Label ArrivalPlace;
         private System.Windows.Forms.Label lTrips;
@@ -283,7 +289,7 @@
         private System.Windows.Forms.GroupBox gbDepartureFilters;
         private System.Windows.Forms.CheckBox cbArrivalFilters;
         private System.Windows.Forms.CheckBox cbDepartureFilters;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbArrivalFilters;
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Button btnBuyTicket;
     }

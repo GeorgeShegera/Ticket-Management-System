@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.gbClientData = new System.Windows.Forms.GroupBox();
+            this.lbBalance = new System.Windows.Forms.Label();
+            this.lbEmail = new System.Windows.Forms.Label();
+            this.lbBirthDate = new System.Windows.Forms.Label();
+            this.lbSurname = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.pbClient = new System.Windows.Forms.PictureBox();
-            this.lbSurname = new System.Windows.Forms.Label();
-            this.lbBirthDate = new System.Windows.Forms.Label();
-            this.lbEmail = new System.Windows.Forms.Label();
-            this.lbBalance = new System.Windows.Forms.Label();
             this.lbTickets = new System.Windows.Forms.ListBox();
             this.lTickets = new System.Windows.Forms.Label();
             this.btnViewTicket = new System.Windows.Forms.Button();
@@ -59,6 +59,46 @@
             this.gbClientData.TabStop = false;
             this.gbClientData.Text = "Client Data";
             // 
+            // lbBalance
+            // 
+            this.lbBalance.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBalance.Location = new System.Drawing.Point(6, 174);
+            this.lbBalance.Name = "lbBalance";
+            this.lbBalance.Size = new System.Drawing.Size(352, 25);
+            this.lbBalance.TabIndex = 2;
+            this.lbBalance.Text = "Balance:";
+            this.lbBalance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbEmail
+            // 
+            this.lbEmail.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmail.Location = new System.Drawing.Point(6, 139);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(352, 25);
+            this.lbEmail.TabIndex = 2;
+            this.lbEmail.Text = "Email:";
+            this.lbEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbBirthDate
+            // 
+            this.lbBirthDate.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBirthDate.Location = new System.Drawing.Point(6, 104);
+            this.lbBirthDate.Name = "lbBirthDate";
+            this.lbBirthDate.Size = new System.Drawing.Size(352, 25);
+            this.lbBirthDate.TabIndex = 2;
+            this.lbBirthDate.Text = "Birth Date:";
+            this.lbBirthDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbSurname
+            // 
+            this.lbSurname.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSurname.Location = new System.Drawing.Point(6, 69);
+            this.lbSurname.Name = "lbSurname";
+            this.lbSurname.Size = new System.Drawing.Size(352, 25);
+            this.lbSurname.TabIndex = 2;
+            this.lbSurname.Text = "Surname:";
+            this.lbSurname.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // lbName
             // 
             this.lbName.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -79,46 +119,6 @@
             this.pbClient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbClient.TabIndex = 0;
             this.pbClient.TabStop = false;
-            // 
-            // lbSurname
-            // 
-            this.lbSurname.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSurname.Location = new System.Drawing.Point(6, 69);
-            this.lbSurname.Name = "lbSurname";
-            this.lbSurname.Size = new System.Drawing.Size(352, 25);
-            this.lbSurname.TabIndex = 2;
-            this.lbSurname.Text = "Surname:";
-            this.lbSurname.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbBirthDate
-            // 
-            this.lbBirthDate.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBirthDate.Location = new System.Drawing.Point(6, 104);
-            this.lbBirthDate.Name = "lbBirthDate";
-            this.lbBirthDate.Size = new System.Drawing.Size(352, 25);
-            this.lbBirthDate.TabIndex = 2;
-            this.lbBirthDate.Text = "Birth Date:";
-            this.lbBirthDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbEmail
-            // 
-            this.lbEmail.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmail.Location = new System.Drawing.Point(6, 139);
-            this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(352, 25);
-            this.lbEmail.TabIndex = 2;
-            this.lbEmail.Text = "Email:";
-            this.lbEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbBalance
-            // 
-            this.lbBalance.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbBalance.Location = new System.Drawing.Point(6, 174);
-            this.lbBalance.Name = "lbBalance";
-            this.lbBalance.Size = new System.Drawing.Size(352, 25);
-            this.lbBalance.TabIndex = 2;
-            this.lbBalance.Text = "Balance:";
-            this.lbBalance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbTickets
             // 
@@ -159,6 +159,7 @@
             this.btnSellTicket.TabIndex = 3;
             this.btnSellTicket.Text = "Sell new ticket";
             this.btnSellTicket.UseVisualStyleBackColor = true;
+            this.btnSellTicket.Click += new System.EventHandler(this.btnSellTicket_Click);
             // 
             // btnCancelTcket
             // 

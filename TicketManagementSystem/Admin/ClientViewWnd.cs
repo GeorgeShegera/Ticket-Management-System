@@ -28,5 +28,11 @@ namespace TicketManagementSystem
             Tickets = dataBase.GetTickets(client.Username);
             lbTickets.Items.AddRange(Tickets.Select(x => x.Signature).ToArray());
         }
+
+        private void btnSellTicket_Click(object sender, EventArgs e)
+        {
+            ChooseTripWnd chooseTrip = new ChooseTripWnd(client);
+            chooseTrip.ShowDialog();
+        }
     }
 }
