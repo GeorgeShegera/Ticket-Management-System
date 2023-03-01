@@ -49,8 +49,9 @@ namespace ManagementSystemLibrary
         public void ChangeState(TrainState state)
         {
             State = state;
+            if (State == TrainState.Available) return;
             foreach (Trip trip in Trips)
-                trip.ChangeState(State == TrainState.Unavailable ? TripState.Canceled : TripState.Upcoming);
+                trip.ChangeState(TripState.Canceled);
         }
     }
 }

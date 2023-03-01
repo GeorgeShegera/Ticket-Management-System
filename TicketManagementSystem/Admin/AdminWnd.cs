@@ -21,6 +21,7 @@ namespace TicketManagementSystem
             InitializeComponent();
             RefreshData();
             RefreshTrains();
+            RefreshClients();
         }
         private void RefreshData()
         {
@@ -41,6 +42,12 @@ namespace TicketManagementSystem
         {
             lbTrains.Items.Clear();
             lbTrains.Items.AddRange(dataBase.Trains.Select(x => x.Signature).ToArray());
+        }
+
+        private void RefreshClients()
+        {
+            lbClients.Items.Clear();
+            lbClients.Items.AddRange(dataBase.Users.Where(x => x is Client).Select(x => x.Username).ToArray());
         }
 
         private void btnExit_Click(object sender, EventArgs e) => Close();
@@ -80,6 +87,13 @@ namespace TicketManagementSystem
         {
             ApplicationInfoWnd infoWnd = new ApplicationInfoWnd();
             infoWnd.ShowDialog();
+        }
+
+        private void btnAddClient_Click(object sender, EventArgs e)
+        {
+            RegistrationWnd registration = new RegistrationWnd();
+            registration.ShowDialog();
+            RefreshClients();
         }
     }
 }

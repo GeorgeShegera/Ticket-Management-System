@@ -37,10 +37,10 @@
             this.lbSurname = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.btnViewCompletedTrips = new System.Windows.Forms.Button();
-            this.lbUsers = new System.Windows.Forms.ListBox();
-            this.gbUsers = new System.Windows.Forms.GroupBox();
-            this.btnEditUser = new System.Windows.Forms.Button();
-            this.btnAddUser = new System.Windows.Forms.Button();
+            this.lbClients = new System.Windows.Forms.ListBox();
+            this.gbClients = new System.Windows.Forms.GroupBox();
+            this.btnEditClient = new System.Windows.Forms.Button();
+            this.btnAddClient = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.gbTrains = new System.Windows.Forms.GroupBox();
             this.btnEditTrain = new System.Windows.Forms.Button();
@@ -48,7 +48,7 @@
             this.lbTrains = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbUserData.SuspendLayout();
-            this.gbUsers.SuspendLayout();
+            this.gbClients.SuspendLayout();
             this.gbTrains.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,9 +56,9 @@
             // btnOptions
             // 
             this.btnOptions.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOptions.Location = new System.Drawing.Point(563, 77);
+            this.btnOptions.Location = new System.Drawing.Point(564, 70);
             this.btnOptions.Name = "btnOptions";
-            this.btnOptions.Size = new System.Drawing.Size(231, 40);
+            this.btnOptions.Size = new System.Drawing.Size(230, 43);
             this.btnOptions.TabIndex = 1;
             this.btnOptions.Text = "Settings";
             this.btnOptions.UseVisualStyleBackColor = true;
@@ -67,9 +67,9 @@
             // btnApplicationInfo
             // 
             this.btnApplicationInfo.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApplicationInfo.Location = new System.Drawing.Point(563, 31);
+            this.btnApplicationInfo.Location = new System.Drawing.Point(564, 21);
             this.btnApplicationInfo.Name = "btnApplicationInfo";
-            this.btnApplicationInfo.Size = new System.Drawing.Size(231, 40);
+            this.btnApplicationInfo.Size = new System.Drawing.Size(230, 43);
             this.btnApplicationInfo.TabIndex = 2;
             this.btnApplicationInfo.Text = "Application Information ";
             this.btnApplicationInfo.UseVisualStyleBackColor = true;
@@ -132,64 +132,65 @@
             // btnViewCompletedTrips
             // 
             this.btnViewCompletedTrips.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewCompletedTrips.Location = new System.Drawing.Point(563, 123);
+            this.btnViewCompletedTrips.Location = new System.Drawing.Point(564, 119);
             this.btnViewCompletedTrips.Name = "btnViewCompletedTrips";
-            this.btnViewCompletedTrips.Size = new System.Drawing.Size(231, 40);
+            this.btnViewCompletedTrips.Size = new System.Drawing.Size(230, 43);
             this.btnViewCompletedTrips.TabIndex = 5;
             this.btnViewCompletedTrips.Text = "View Completed Trips";
             this.btnViewCompletedTrips.UseVisualStyleBackColor = true;
             this.btnViewCompletedTrips.Click += new System.EventHandler(this.btnViewCompletedTrips_Click);
             // 
-            // lbUsers
+            // lbClients
             // 
-            this.lbUsers.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUsers.FormattingEnabled = true;
-            this.lbUsers.ItemHeight = 21;
-            this.lbUsers.Location = new System.Drawing.Point(6, 23);
-            this.lbUsers.Name = "lbUsers";
-            this.lbUsers.Size = new System.Drawing.Size(297, 193);
-            this.lbUsers.TabIndex = 9;
+            this.lbClients.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbClients.FormattingEnabled = true;
+            this.lbClients.ItemHeight = 21;
+            this.lbClients.Location = new System.Drawing.Point(6, 23);
+            this.lbClients.Name = "lbClients";
+            this.lbClients.Size = new System.Drawing.Size(372, 193);
+            this.lbClients.TabIndex = 9;
             // 
-            // gbUsers
+            // gbClients
             // 
-            this.gbUsers.BackColor = System.Drawing.Color.Transparent;
-            this.gbUsers.Controls.Add(this.btnEditUser);
-            this.gbUsers.Controls.Add(this.btnAddUser);
-            this.gbUsers.Controls.Add(this.lbUsers);
-            this.gbUsers.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbUsers.Location = new System.Drawing.Point(484, 266);
-            this.gbUsers.Name = "gbUsers";
-            this.gbUsers.Size = new System.Drawing.Size(309, 265);
-            this.gbUsers.TabIndex = 10;
-            this.gbUsers.TabStop = false;
-            this.gbUsers.Text = "Users";
+            this.gbClients.BackColor = System.Drawing.Color.Transparent;
+            this.gbClients.Controls.Add(this.btnEditClient);
+            this.gbClients.Controls.Add(this.btnAddClient);
+            this.gbClients.Controls.Add(this.lbClients);
+            this.gbClients.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbClients.Location = new System.Drawing.Point(410, 266);
+            this.gbClients.Name = "gbClients";
+            this.gbClients.Size = new System.Drawing.Size(384, 265);
+            this.gbClients.TabIndex = 10;
+            this.gbClients.TabStop = false;
+            this.gbClients.Text = "Users";
             // 
-            // btnEditUser
+            // btnEditClient
             // 
-            this.btnEditUser.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditUser.Location = new System.Drawing.Point(6, 222);
-            this.btnEditUser.Name = "btnEditUser";
-            this.btnEditUser.Size = new System.Drawing.Size(102, 37);
-            this.btnEditUser.TabIndex = 7;
-            this.btnEditUser.Text = "Edit";
-            this.btnEditUser.UseVisualStyleBackColor = true;
+            this.btnEditClient.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditClient.Location = new System.Drawing.Point(6, 222);
+            this.btnEditClient.Name = "btnEditClient";
+            this.btnEditClient.Size = new System.Drawing.Size(102, 37);
+            this.btnEditClient.TabIndex = 7;
+            this.btnEditClient.Text = "Edit";
+            this.btnEditClient.UseVisualStyleBackColor = true;
             // 
-            // btnAddUser
+            // btnAddClient
             // 
-            this.btnAddUser.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddUser.Location = new System.Drawing.Point(201, 222);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(102, 37);
-            this.btnAddUser.TabIndex = 7;
-            this.btnAddUser.Text = "Add";
-            this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnAddClient.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddClient.Location = new System.Drawing.Point(276, 222);
+            this.btnAddClient.Name = "btnAddClient";
+            this.btnAddClient.Size = new System.Drawing.Size(102, 37);
+            this.btnAddClient.TabIndex = 7;
+            this.btnAddClient.Text = "Add";
+            this.btnAddClient.UseVisualStyleBackColor = true;
+            this.btnAddClient.Click += new System.EventHandler(this.btnAddClient_Click);
             // 
             // btnExit
             // 
             this.btnExit.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(563, 169);
+            this.btnExit.Location = new System.Drawing.Point(564, 168);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(230, 40);
+            this.btnExit.Size = new System.Drawing.Size(230, 43);
             this.btnExit.TabIndex = 5;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -204,7 +205,7 @@
             this.gbTrains.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTrains.Location = new System.Drawing.Point(10, 266);
             this.gbTrains.Name = "gbTrains";
-            this.gbTrains.Size = new System.Drawing.Size(309, 265);
+            this.gbTrains.Size = new System.Drawing.Size(384, 265);
             this.gbTrains.TabIndex = 10;
             this.gbTrains.TabStop = false;
             this.gbTrains.Text = "Trains";
@@ -223,7 +224,7 @@
             // tbnAddTrain
             // 
             this.tbnAddTrain.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbnAddTrain.Location = new System.Drawing.Point(201, 222);
+            this.tbnAddTrain.Location = new System.Drawing.Point(276, 222);
             this.tbnAddTrain.Name = "tbnAddTrain";
             this.tbnAddTrain.Size = new System.Drawing.Size(102, 37);
             this.tbnAddTrain.TabIndex = 7;
@@ -238,7 +239,7 @@
             this.lbTrains.ItemHeight = 21;
             this.lbTrains.Location = new System.Drawing.Point(6, 23);
             this.lbTrains.Name = "lbTrains";
-            this.lbTrains.Size = new System.Drawing.Size(297, 193);
+            this.lbTrains.Size = new System.Drawing.Size(372, 193);
             this.lbTrains.TabIndex = 9;
             // 
             // pictureBox1
@@ -258,7 +259,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(802, 537);
             this.Controls.Add(this.gbTrains);
-            this.Controls.Add(this.gbUsers);
+            this.Controls.Add(this.gbClients);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnViewCompletedTrips);
             this.Controls.Add(this.gbUserData);
@@ -270,7 +271,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Administatior";
             this.gbUserData.ResumeLayout(false);
-            this.gbUsers.ResumeLayout(false);
+            this.gbClients.ResumeLayout(false);
             this.gbTrains.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -287,11 +288,11 @@
         private System.Windows.Forms.Label lbSurname;
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Button btnViewCompletedTrips;
-        private System.Windows.Forms.ListBox lbUsers;
-        private System.Windows.Forms.GroupBox gbUsers;
-        private System.Windows.Forms.Button btnAddUser;
+        private System.Windows.Forms.ListBox lbClients;
+        private System.Windows.Forms.GroupBox gbClients;
+        private System.Windows.Forms.Button btnAddClient;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnEditUser;
+        private System.Windows.Forms.Button btnEditClient;
         private System.Windows.Forms.GroupBox gbTrains;
         private System.Windows.Forms.Button btnEditTrain;
         private System.Windows.Forms.Button tbnAddTrain;

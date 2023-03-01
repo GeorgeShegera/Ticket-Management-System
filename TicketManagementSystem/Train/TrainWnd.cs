@@ -36,7 +36,7 @@ namespace TicketManagementSystem
         public void RefreshTrips()
         {
             lbTrips.Items.Clear();
-            lbTrips.Items.AddRange(train.Trips.Select(x => x.Signature).ToArray());
+            lbTrips.Items.AddRange(train.Trips.Where(x => x.State == TripState.Upcoming).Select(x => x.Signature).ToArray());
         }
 
         private void btnAddTrip_Click(object sender, EventArgs e)
