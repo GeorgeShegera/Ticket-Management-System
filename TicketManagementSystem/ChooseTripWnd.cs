@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,14 +17,22 @@ namespace TicketManagementSystem
     {
         private Client client;
         private List<Trip> UpcommingTrips { get; set; }
+        private List<Trip> FilteredTrips { get; set; } = new List<Trip>();
         public ChooseTripWnd(Client client)
         {
             InitializeComponent();
             dtpDepartureDate.MinDate = DateTime.Now;
-            dtpArrivalDate.MinDate = DateTime.Now;
+            dtpDepartureDate.CustomFormat = " ";
             this.client = client;
             UpcommingTrips = dataBase.GetTrips().Where(x => x.State == TripState.Upcoming).ToList();
-            lbTrips.Items.AddRange(UpcommingTrips.Select(x => x.Name).ToArray());
+            FilteredTrips.AddRange(UpcommingTrips);
+            RefreshTrips();
+        }
+
+        private void RefreshTrips()
+        {
+            lbTrips.Items.Clear();
+            lbTrips.Items.AddRange(FilteredTrips.Select(x => x.Name).ToArray());
         }
 
         private Trip GetTrip()
@@ -33,34 +42,53 @@ namespace TicketManagementSystem
             else return UpcommingTrips[index];
         }
 
-        private void cbDepartureFilters_CheckedChanged(object sender, EventArgs e)
+        private void RemoveFilters()
         {
-            if (!(sender is CheckBox checkBox)) return;
-            if (checkBox.Tag.ToString() == "Departure")
-            {
-                gbDepartureFilters.Visible = checkBox.Checked;
-                tbDeparturePlace.Text = "";
-                dtpDepartureDate.Value = DateTime.Now;
-            }
-            else
-            {
-                gbArrivalFilters.Visible = checkBox.Checked;
-                tbArrivalPlace.Text = "";
-                dtpArrivalDate.Value = DateTime.Now;
-            }
-            btnApply.Visible = cbArrivalFilters.Checked || cbDepartureFilters.Checked;
+            FilteredTrips.Clear();
+            FilteredTrips.AddRange(UpcommingTrips);
         }
 
         private void btnView_Click(object sender, EventArgs e)
         {
             Trip trip = GetTrip();
-            if(trip is null)
+            if (trip is null)
             {
                 ErrorMessage("You must select a trip");
                 return;
             }
             TripWnd tripWnd = new TripWnd(trip, true);
             tripWnd.ShowDialog();
+        }
+
+        private void FilterTrips()
+        {
+            RemoveFilters();
+            if (!string.IsNullOrEmpty(tbDeparturePlace.Text))
+                FilteredTrips = FilteredTrips.Where(x => x.DeparturePlace == tbDeparturePlace.Text).ToList();
+            if (!string.IsNullOrEmpty(tbArrivalPlace.Text))
+                FilteredTrips = FilteredTrips.Where(x => x.ArrivalPlace == tbArrivalPlace.Text).ToList();
+            if (dtpDepartureDate.CustomFormat != " ")
+                FilteredTrips = FilteredTrips.Where(x => x.DepartureDate.Date == dtpDepartureDate.Value.Date).ToList();
+            RefreshTrips();
+        }
+
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            FilterTrips();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            dtpDepartureDate.CustomFormat = " ";
+            tbArrivalPlace.Text = "";
+            tbDeparturePlace.Text = "";
+            RemoveFilters();
+            RefreshTrips();
+        }
+
+        private void dtpDepartureDate_ValueChanged(object sender, EventArgs e)
+        {
+            dtpDepartureDate.CustomFormat = "dd.MM.yyyy";
         }
     }
 }

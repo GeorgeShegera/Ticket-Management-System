@@ -30,25 +30,18 @@
         {
             this.lbTrips = new System.Windows.Forms.ListBox();
             this.gbTripFilters = new System.Windows.Forms.GroupBox();
-            this.gbArrivalFilters = new System.Windows.Forms.GroupBox();
             this.tbArrivalPlace = new System.Windows.Forms.TextBox();
             this.ArrivalPlace = new System.Windows.Forms.Label();
-            this.dtpArrivalDate = new System.Windows.Forms.DateTimePicker();
-            this.lArrivalDate = new System.Windows.Forms.Label();
-            this.cbArrivalFilters = new System.Windows.Forms.CheckBox();
-            this.gbDepartureFilters = new System.Windows.Forms.GroupBox();
             this.tbDeparturePlace = new System.Windows.Forms.TextBox();
             this.lbDeparturePlace = new System.Windows.Forms.Label();
             this.dtpDepartureDate = new System.Windows.Forms.DateTimePicker();
             this.lDepartureDate = new System.Windows.Forms.Label();
-            this.cbDepartureFilters = new System.Windows.Forms.CheckBox();
             this.btnApply = new System.Windows.Forms.Button();
             this.lTrips = new System.Windows.Forms.Label();
             this.btnView = new System.Windows.Forms.Button();
             this.btnBuyTicket = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.gbTripFilters.SuspendLayout();
-            this.gbArrivalFilters.SuspendLayout();
-            this.gbDepartureFilters.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbTrips
@@ -56,44 +49,32 @@
             this.lbTrips.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTrips.FormattingEnabled = true;
             this.lbTrips.ItemHeight = 21;
-            this.lbTrips.Location = new System.Drawing.Point(392, 47);
+            this.lbTrips.Location = new System.Drawing.Point(386, 37);
             this.lbTrips.Name = "lbTrips";
-            this.lbTrips.Size = new System.Drawing.Size(230, 298);
+            this.lbTrips.Size = new System.Drawing.Size(243, 193);
             this.lbTrips.TabIndex = 0;
             // 
             // gbTripFilters
             // 
-            this.gbTripFilters.Controls.Add(this.gbArrivalFilters);
-            this.gbTripFilters.Controls.Add(this.cbArrivalFilters);
-            this.gbTripFilters.Controls.Add(this.gbDepartureFilters);
-            this.gbTripFilters.Controls.Add(this.cbDepartureFilters);
+            this.gbTripFilters.Controls.Add(this.tbArrivalPlace);
+            this.gbTripFilters.Controls.Add(this.ArrivalPlace);
+            this.gbTripFilters.Controls.Add(this.lbDeparturePlace);
+            this.gbTripFilters.Controls.Add(this.dtpDepartureDate);
+            this.gbTripFilters.Controls.Add(this.tbDeparturePlace);
+            this.gbTripFilters.Controls.Add(this.lDepartureDate);
+            this.gbTripFilters.Controls.Add(this.btnClear);
             this.gbTripFilters.Controls.Add(this.btnApply);
             this.gbTripFilters.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTripFilters.Location = new System.Drawing.Point(11, 37);
             this.gbTripFilters.Name = "gbTripFilters";
-            this.gbTripFilters.Size = new System.Drawing.Size(375, 348);
+            this.gbTripFilters.Size = new System.Drawing.Size(369, 235);
             this.gbTripFilters.TabIndex = 2;
             this.gbTripFilters.TabStop = false;
             this.gbTripFilters.Text = "Trips\' filters";
             // 
-            // gbArrivalFilters
-            // 
-            this.gbArrivalFilters.Controls.Add(this.tbArrivalPlace);
-            this.gbArrivalFilters.Controls.Add(this.ArrivalPlace);
-            this.gbArrivalFilters.Controls.Add(this.dtpArrivalDate);
-            this.gbArrivalFilters.Controls.Add(this.lArrivalDate);
-            this.gbArrivalFilters.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbArrivalFilters.Location = new System.Drawing.Point(5, 197);
-            this.gbArrivalFilters.Name = "gbArrivalFilters";
-            this.gbArrivalFilters.Size = new System.Drawing.Size(364, 102);
-            this.gbArrivalFilters.TabIndex = 5;
-            this.gbArrivalFilters.TabStop = false;
-            this.gbArrivalFilters.Text = "Arrival Filters";
-            this.gbArrivalFilters.Visible = false;
-            // 
             // tbArrivalPlace
             // 
-            this.tbArrivalPlace.Location = new System.Drawing.Point(168, 27);
+            this.tbArrivalPlace.Location = new System.Drawing.Point(170, 72);
             this.tbArrivalPlace.Name = "tbArrivalPlace";
             this.tbArrivalPlace.Size = new System.Drawing.Size(190, 28);
             this.tbArrivalPlace.TabIndex = 1;
@@ -101,64 +82,16 @@
             // ArrivalPlace
             // 
             this.ArrivalPlace.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ArrivalPlace.Location = new System.Drawing.Point(10, 27);
+            this.ArrivalPlace.Location = new System.Drawing.Point(6, 72);
             this.ArrivalPlace.Name = "ArrivalPlace";
-            this.ArrivalPlace.Size = new System.Drawing.Size(152, 28);
+            this.ArrivalPlace.Size = new System.Drawing.Size(158, 28);
             this.ArrivalPlace.TabIndex = 0;
             this.ArrivalPlace.Text = "Arrival Place:";
             this.ArrivalPlace.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // dtpArrivalDate
-            // 
-            this.dtpArrivalDate.CustomFormat = "HH:mm, dd.MM.yyyy";
-            this.dtpArrivalDate.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpArrivalDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpArrivalDate.Location = new System.Drawing.Point(168, 61);
-            this.dtpArrivalDate.Name = "dtpArrivalDate";
-            this.dtpArrivalDate.Size = new System.Drawing.Size(190, 32);
-            this.dtpArrivalDate.TabIndex = 2;
-            // 
-            // lArrivalDate
-            // 
-            this.lArrivalDate.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lArrivalDate.Location = new System.Drawing.Point(10, 61);
-            this.lArrivalDate.Name = "lArrivalDate";
-            this.lArrivalDate.Size = new System.Drawing.Size(152, 32);
-            this.lArrivalDate.TabIndex = 0;
-            this.lArrivalDate.Text = "Arrival Date:";
-            this.lArrivalDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cbArrivalFilters
-            // 
-            this.cbArrivalFilters.AutoSize = true;
-            this.cbArrivalFilters.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbArrivalFilters.Location = new System.Drawing.Point(19, 58);
-            this.cbArrivalFilters.Name = "cbArrivalFilters";
-            this.cbArrivalFilters.Size = new System.Drawing.Size(121, 25);
-            this.cbArrivalFilters.TabIndex = 4;
-            this.cbArrivalFilters.Tag = "Arrival";
-            this.cbArrivalFilters.Text = "Arrival Filters";
-            this.cbArrivalFilters.UseVisualStyleBackColor = true;
-            this.cbArrivalFilters.CheckedChanged += new System.EventHandler(this.cbDepartureFilters_CheckedChanged);
-            // 
-            // gbDepartureFilters
-            // 
-            this.gbDepartureFilters.Controls.Add(this.tbDeparturePlace);
-            this.gbDepartureFilters.Controls.Add(this.lbDeparturePlace);
-            this.gbDepartureFilters.Controls.Add(this.dtpDepartureDate);
-            this.gbDepartureFilters.Controls.Add(this.lDepartureDate);
-            this.gbDepartureFilters.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDepartureFilters.Location = new System.Drawing.Point(5, 89);
-            this.gbDepartureFilters.Name = "gbDepartureFilters";
-            this.gbDepartureFilters.Size = new System.Drawing.Size(364, 102);
-            this.gbDepartureFilters.TabIndex = 3;
-            this.gbDepartureFilters.TabStop = false;
-            this.gbDepartureFilters.Text = "Departure Filters";
-            this.gbDepartureFilters.Visible = false;
-            // 
             // tbDeparturePlace
             // 
-            this.tbDeparturePlace.Location = new System.Drawing.Point(168, 27);
+            this.tbDeparturePlace.Location = new System.Drawing.Point(170, 28);
             this.tbDeparturePlace.Name = "tbDeparturePlace";
             this.tbDeparturePlace.Size = new System.Drawing.Size(190, 28);
             this.tbDeparturePlace.TabIndex = 1;
@@ -166,55 +99,44 @@
             // lbDeparturePlace
             // 
             this.lbDeparturePlace.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDeparturePlace.Location = new System.Drawing.Point(10, 27);
+            this.lbDeparturePlace.Location = new System.Drawing.Point(6, 28);
             this.lbDeparturePlace.Name = "lbDeparturePlace";
-            this.lbDeparturePlace.Size = new System.Drawing.Size(152, 28);
+            this.lbDeparturePlace.Size = new System.Drawing.Size(158, 28);
             this.lbDeparturePlace.TabIndex = 0;
             this.lbDeparturePlace.Text = "Departure Place:";
             this.lbDeparturePlace.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dtpDepartureDate
             // 
-            this.dtpDepartureDate.CustomFormat = "HH:mm, dd.MM.yyyy";
+            this.dtpDepartureDate.CustomFormat = "dd.MM.yyyy";
             this.dtpDepartureDate.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDepartureDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpDepartureDate.Location = new System.Drawing.Point(168, 61);
+            this.dtpDepartureDate.Location = new System.Drawing.Point(170, 116);
             this.dtpDepartureDate.Name = "dtpDepartureDate";
             this.dtpDepartureDate.Size = new System.Drawing.Size(190, 32);
             this.dtpDepartureDate.TabIndex = 2;
+            this.dtpDepartureDate.ValueChanged += new System.EventHandler(this.dtpDepartureDate_ValueChanged);
             // 
             // lDepartureDate
             // 
             this.lDepartureDate.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDepartureDate.Location = new System.Drawing.Point(10, 61);
+            this.lDepartureDate.Location = new System.Drawing.Point(6, 116);
             this.lDepartureDate.Name = "lDepartureDate";
-            this.lDepartureDate.Size = new System.Drawing.Size(152, 32);
+            this.lDepartureDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lDepartureDate.Size = new System.Drawing.Size(158, 32);
             this.lDepartureDate.TabIndex = 0;
             this.lDepartureDate.Text = "Departure Date:";
             this.lDepartureDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cbDepartureFilters
-            // 
-            this.cbDepartureFilters.AutoSize = true;
-            this.cbDepartureFilters.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbDepartureFilters.Location = new System.Drawing.Point(19, 27);
-            this.cbDepartureFilters.Name = "cbDepartureFilters";
-            this.cbDepartureFilters.Size = new System.Drawing.Size(145, 25);
-            this.cbDepartureFilters.TabIndex = 4;
-            this.cbDepartureFilters.Tag = "Departure";
-            this.cbDepartureFilters.Text = "Departure Filters";
-            this.cbDepartureFilters.UseVisualStyleBackColor = true;
-            this.cbDepartureFilters.CheckedChanged += new System.EventHandler(this.cbDepartureFilters_CheckedChanged);
-            // 
             // btnApply
             // 
-            this.btnApply.Location = new System.Drawing.Point(280, 305);
+            this.btnApply.Location = new System.Drawing.Point(274, 195);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(89, 34);
             this.btnApply.TabIndex = 3;
             this.btnApply.Text = "Apply";
             this.btnApply.UseVisualStyleBackColor = true;
-            this.btnApply.Visible = false;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // lTrips
             // 
@@ -229,7 +151,7 @@
             // btnView
             // 
             this.btnView.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnView.Location = new System.Drawing.Point(418, 351);
+            this.btnView.Location = new System.Drawing.Point(386, 238);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(99, 34);
             this.btnView.TabIndex = 3;
@@ -240,18 +162,28 @@
             // btnBuyTicket
             // 
             this.btnBuyTicket.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuyTicket.Location = new System.Drawing.Point(523, 351);
+            this.btnBuyTicket.Location = new System.Drawing.Point(530, 238);
             this.btnBuyTicket.Name = "btnBuyTicket";
             this.btnBuyTicket.Size = new System.Drawing.Size(99, 34);
             this.btnBuyTicket.TabIndex = 3;
             this.btnBuyTicket.Text = "Buy ticket";
             this.btnBuyTicket.UseVisualStyleBackColor = true;
             // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(6, 195);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(89, 34);
+            this.btnClear.TabIndex = 3;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // ChooseTripWnd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 392);
+            this.ClientSize = new System.Drawing.Size(636, 282);
             this.Controls.Add(this.gbTripFilters);
             this.Controls.Add(this.lTrips);
             this.Controls.Add(this.lbTrips);
@@ -264,10 +196,6 @@
             this.Text = "Choice of trip";
             this.gbTripFilters.ResumeLayout(false);
             this.gbTripFilters.PerformLayout();
-            this.gbArrivalFilters.ResumeLayout(false);
-            this.gbArrivalFilters.PerformLayout();
-            this.gbDepartureFilters.ResumeLayout(false);
-            this.gbDepartureFilters.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -280,17 +208,12 @@
         private System.Windows.Forms.Label lbDeparturePlace;
         private System.Windows.Forms.DateTimePicker dtpDepartureDate;
         private System.Windows.Forms.Label lDepartureDate;
-        private System.Windows.Forms.DateTimePicker dtpArrivalDate;
         private System.Windows.Forms.TextBox tbArrivalPlace;
-        private System.Windows.Forms.Label lArrivalDate;
         private System.Windows.Forms.Label ArrivalPlace;
         private System.Windows.Forms.Label lTrips;
         private System.Windows.Forms.Button btnApply;
-        private System.Windows.Forms.GroupBox gbDepartureFilters;
-        private System.Windows.Forms.CheckBox cbArrivalFilters;
-        private System.Windows.Forms.CheckBox cbDepartureFilters;
-        private System.Windows.Forms.GroupBox gbArrivalFilters;
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Button btnBuyTicket;
+        private System.Windows.Forms.Button btnClear;
     }
 }
