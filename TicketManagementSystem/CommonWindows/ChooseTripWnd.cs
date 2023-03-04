@@ -38,8 +38,13 @@ namespace TicketManagementSystem
         private Trip GetTrip()
         {
             int index = lbTrips.SelectedIndex;
-            if (index == -1) return null;
-            else return UpcommingTrips[index];
+            if (index == -1)
+            {
+                ErrorMessage("You must select a trip");
+                return null;
+            }
+            string tripName = lbTrips.Items[index].ToString();
+            return UpcommingTrips.FirstOrDefault(x => x.Name == tripName);
         }
 
         private void RemoveFilters()
@@ -51,11 +56,7 @@ namespace TicketManagementSystem
         private void btnView_Click(object sender, EventArgs e)
         {
             Trip trip = GetTrip();
-            if (trip is null)
-            {
-                ErrorMessage("You must select a trip");
-                return;
-            }
+            if (trip is null) return;
             TripWnd tripWnd = new TripWnd(trip, true);
             tripWnd.ShowDialog();
         }
@@ -73,9 +74,7 @@ namespace TicketManagementSystem
         }
 
         private void btnApply_Click(object sender, EventArgs e)
-        {
-            FilterTrips();
-        }
+            => FilterTrips();
 
         private void btnClear_Click(object sender, EventArgs e)
         {
@@ -87,8 +86,15 @@ namespace TicketManagementSystem
         }
 
         private void dtpDepartureDate_ValueChanged(object sender, EventArgs e)
+            => dtpDepartureDate.CustomFormat = "dd.MM.yyyy";
+
+        private void btnBuyTicket_Click(object sender, EventArgs e)
         {
-            dtpDepartureDate.CustomFormat = "dd.MM.yyyy";
+            Trip trip = GetTrip();
+            if (trip is null) return;
+            ChooseTicketWnd chooseTicket = new ChooseTicketWnd
+                (trip.Tickets.Where(x => x.State == TicketState.New).ToList(), client);
+            chooseTicket.ShowDialog();
         }
     }
 }

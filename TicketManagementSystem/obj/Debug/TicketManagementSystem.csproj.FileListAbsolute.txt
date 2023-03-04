@@ -27,3 +27,5 @@ E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem
 E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.ApplicationInfoWnd.resources
 E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.ClientViewWnd.resources
 E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.ChooseTripWnd.resources
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.ChooseTicketWnd.resources
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.TicketWnd.resources

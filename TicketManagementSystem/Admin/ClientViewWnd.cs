@@ -26,7 +26,7 @@ namespace TicketManagementSystem
             lbEmail.Text = $"Email: {client.Email}";
             lbBalance.Text = $"Balance: {client.Balance}";            
             Tickets = dataBase.GetTickets(client.Username);
-            lbTickets.Items.AddRange(Tickets.Select(x => x.Signature).ToArray());
+            lbTickets.Items.AddRange(Tickets.Select(x => x.SignatureState).ToArray());
         }
 
         private void btnSellTicket_Click(object sender, EventArgs e)

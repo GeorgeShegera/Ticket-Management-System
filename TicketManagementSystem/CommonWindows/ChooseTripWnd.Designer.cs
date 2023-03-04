@@ -32,15 +32,15 @@
             this.gbTripFilters = new System.Windows.Forms.GroupBox();
             this.tbArrivalPlace = new System.Windows.Forms.TextBox();
             this.ArrivalPlace = new System.Windows.Forms.Label();
-            this.tbDeparturePlace = new System.Windows.Forms.TextBox();
             this.lbDeparturePlace = new System.Windows.Forms.Label();
             this.dtpDepartureDate = new System.Windows.Forms.DateTimePicker();
+            this.tbDeparturePlace = new System.Windows.Forms.TextBox();
             this.lDepartureDate = new System.Windows.Forms.Label();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btnApply = new System.Windows.Forms.Button();
             this.lTrips = new System.Windows.Forms.Label();
             this.btnView = new System.Windows.Forms.Button();
             this.btnBuyTicket = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
             this.gbTripFilters.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,13 +89,6 @@
             this.ArrivalPlace.Text = "Arrival Place:";
             this.ArrivalPlace.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tbDeparturePlace
-            // 
-            this.tbDeparturePlace.Location = new System.Drawing.Point(170, 28);
-            this.tbDeparturePlace.Name = "tbDeparturePlace";
-            this.tbDeparturePlace.Size = new System.Drawing.Size(190, 28);
-            this.tbDeparturePlace.TabIndex = 1;
-            // 
             // lbDeparturePlace
             // 
             this.lbDeparturePlace.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -117,6 +110,13 @@
             this.dtpDepartureDate.TabIndex = 2;
             this.dtpDepartureDate.ValueChanged += new System.EventHandler(this.dtpDepartureDate_ValueChanged);
             // 
+            // tbDeparturePlace
+            // 
+            this.tbDeparturePlace.Location = new System.Drawing.Point(170, 28);
+            this.tbDeparturePlace.Name = "tbDeparturePlace";
+            this.tbDeparturePlace.Size = new System.Drawing.Size(190, 28);
+            this.tbDeparturePlace.TabIndex = 1;
+            // 
             // lDepartureDate
             // 
             this.lDepartureDate.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -127,6 +127,16 @@
             this.lDepartureDate.TabIndex = 0;
             this.lDepartureDate.Text = "Departure Date:";
             this.lDepartureDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(6, 195);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(89, 34);
+            this.btnClear.TabIndex = 3;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnApply
             // 
@@ -168,16 +178,7 @@
             this.btnBuyTicket.TabIndex = 3;
             this.btnBuyTicket.Text = "Buy ticket";
             this.btnBuyTicket.UseVisualStyleBackColor = true;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(6, 195);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(89, 34);
-            this.btnClear.TabIndex = 3;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.btnBuyTicket.Click += new System.EventHandler(this.btnBuyTicket_Click);
             // 
             // ChooseTripWnd
             // 

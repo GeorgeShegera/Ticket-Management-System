@@ -15,9 +15,9 @@ namespace ManagementSystemLibrary
         public List<Trip> Trips { get; set; } = new List<Trip>();
         public string Name { get; set; }
         public string Model { get; set; }
-        public int BusCapacity { get; }
-        public int MidCapacity { get; }
-        public int EconCapacity { get; }
+        public int BusCapacity { get; } = 343;
+        public int MidCapacity { get; set; }
+        public int EconCapacity { get; set; }
         public TrainState State { get; set; } = TrainState.Available;
         public string Signature
         {

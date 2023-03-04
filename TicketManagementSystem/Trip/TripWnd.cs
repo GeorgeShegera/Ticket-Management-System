@@ -33,7 +33,7 @@ namespace TicketManagementSystem
             lbMiddlePrice.Text = $"Middle class price: {trip.MiddlePrice}";
             lbBusinessPrice.Text = $"Business class price:  {trip.BusinessPrice}";
             lbTickets.Items.Clear();
-            lbTickets.Items.AddRange(trip.Tickets.Select(x => x.Signature).ToArray());
+            lbTickets.Items.AddRange(trip.Tickets.Select(x => x.SignatureState).ToArray());
         }
         private void btnTripSettings_Click(object sender, EventArgs e)
         {

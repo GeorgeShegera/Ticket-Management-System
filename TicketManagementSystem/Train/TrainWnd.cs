@@ -31,6 +31,8 @@ namespace TicketManagementSystem
             lbName.Text = $"Name: {train.Name}";
             lbModel.Text = $"Model: {train.Model}";
             lbState.Text = $"Status: {train.GetState()}";
+            btnAddTrip.Visible = train.State == TrainState.Available;
+            btnViewTrip.Visible = train.State == TrainState.Available;
         }
 
         public void RefreshTrips()

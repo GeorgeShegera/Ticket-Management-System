@@ -61,10 +61,16 @@
     <Compile Include="Admin\ClientViewWnd.Designer.cs">
       <DependentUpon>ClientViewWnd.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChooseTripWnd.cs">
+    <Compile Include="CommonWindows\ChooseTicketWnd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChooseTripWnd.Designer.cs">
+    <Compile Include="CommonWindows\ChooseTicketWnd.Designer.cs">
+      <DependentUpon>ChooseTicketWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonWindows\ChooseTripWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonWindows\ChooseTripWnd.Designer.cs">
       <DependentUpon>ChooseTripWnd.cs</DependentUpon>
     </Compile>
     <Compile Include="CommonWindows\ApplicationInfoWnd.cs">
@@ -99,6 +105,12 @@
     </Compile>
     <Compile Include="CommonWindows\SettingsWnd.Designer.cs">
       <DependentUpon>SettingsWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketWnd.Designer.cs">
+      <DependentUpon>TicketWnd.cs</DependentUpon>
     </Compile>
     <Compile Include="Train\TrainSettingsWnd.cs">
       <SubType>Form</SubType>
@@ -142,7 +154,10 @@
     <EmbeddedResource Include="Admin\ClientViewWnd.resx">
       <DependentUpon>ClientViewWnd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChooseTripWnd.resx">
+    <EmbeddedResource Include="CommonWindows\ChooseTicketWnd.resx">
+      <DependentUpon>ChooseTicketWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonWindows\ChooseTripWnd.resx">
       <DependentUpon>ChooseTripWnd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CommonWindows\ApplicationInfoWnd.resx">
@@ -169,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CommonWindows\SettingsWnd.resx">
       <DependentUpon>SettingsWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketWnd.resx">
+      <DependentUpon>TicketWnd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Train\TrainSettingsWnd.resx">
       <DependentUpon>TrainSettingsWnd.cs</DependentUpon>
@@ -234,6 +252,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Client.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ticket.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

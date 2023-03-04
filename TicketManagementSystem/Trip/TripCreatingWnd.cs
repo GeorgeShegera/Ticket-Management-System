@@ -59,6 +59,11 @@ namespace TicketManagementSystem
                 errorProvider.SetError(dtpDepartureTime, "Departure time must be less than arrival");
                 return;
             }
+            else if (dataBase.IsTakenTripName(tbName.Text))
+            {
+                errorProvider.SetError(tbName, "This name is already taken");
+                return;
+            }
             bool error = false;
             foreach (TextBox textBox in textBoxes)
             {
@@ -75,12 +80,17 @@ namespace TicketManagementSystem
             }
             if (error) return;
             List<Ticket> tickets = new List<Ticket>();
-            TicketType ticketType = TicketType.Economy;
+            TicketType ticketType = TicketType.Economy;            
             for (int i = 0; i < train.EconCapacity + train.BusCapacity + train.MidCapacity; i++)
             {
+                int newId;
+                do
+                {
+                    newId = new Random().Next(100000, 1000000);
+                } while (tickets.Any(x => x.Id == newId));
                 if (i >= train.EconCapacity) ticketType = TicketType.Middle;
-                else if (i >= train.EconCapacity + train.EconCapacity) ticketType = TicketType.Business;
-                tickets.Add(new Ticket(ticketType, GetPrice(ticketType)));
+                if (i >= train.EconCapacity + train.MidCapacity) ticketType = TicketType.Business;
+                tickets.Add(new Ticket(newId, ticketType, GetPrice(ticketType)));
             }
             Trip trip = new Trip(tbName.Text, dtpDepartureTime.Value, tbDepaturePlace.Text,
                                 dtpArrivalDate.Value, tbArrivalPlace.Text, (double)numEconomyPrice.Value,

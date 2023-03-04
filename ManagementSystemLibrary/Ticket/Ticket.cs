@@ -9,14 +9,28 @@ namespace ManagementSystemLibrary
 {
     public class Ticket
     {
-        public DateTime? DateOfPurchase { get; private set; }
-        public TicketType TypeOfTicket { get; private set; }
-        public double Price { get; private set; }
-        public string OwnerName { get; set; } = null;
+        public int Id { get; set; }
+        public TicketType Type { get; set; }
+        public double Price { get; set; }
         public TicketState State { get; set; } = TicketState.New;
-        public string Signature
+        public string OwnerName { get; set; } = null;
+        public DateTime? DateOfPurchase { get; set; }
+        public string SignatureState
         {
             get => $"Ticket ({GetState()})";
+        }
+        public string SignatureId
+        {
+            get => $"Ticket#{Id}";
+        }
+
+        public Ticket(int id = 0, TicketType ticketType = new TicketType(), double price = 0)
+        {
+            Id = id;
+            Type = ticketType;
+            DateOfPurchase = null;
+            Price = price;
+            OwnerName = null;
         }
 
         public void ChangeState(TripState tripState)
@@ -40,17 +54,33 @@ namespace ManagementSystemLibrary
                 default: return "";
             }
         }
-        public Ticket(TicketType ticketType, double price)
+
+        public string GetTicketType()
         {
-            TypeOfTicket = ticketType;
-            DateOfPurchase = null;
-            Price = price;
-            OwnerName = null;
+            switch (Type)
+            {
+                case TicketType.Economy: return "Economy";
+                case TicketType.Middle: return "Middle";
+                case TicketType.Business: return "Business";
+                default: return "";
+            }
         }
+
+
+        public bool IsPurchased() => OwnerName != null;
+
         public bool CheckOwner(string ownerName)
         {
-            if (OwnerName != null) return ownerName == OwnerName;
+            if (IsPurchased()) return ownerName == OwnerName;
             else return false;
+        }
+
+        public void Purchase(Client cliet)
+        {
+            cliet.Balance -= Price;
+            State = TicketState.Purchased;
+            OwnerName = cliet.Username;
+            DateOfPurchase = DateTime.Now;
         }
     }
 }
