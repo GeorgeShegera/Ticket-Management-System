@@ -39,11 +39,11 @@
             this.btnViewCompletedTrips = new System.Windows.Forms.Button();
             this.lbClients = new System.Windows.Forms.ListBox();
             this.gbClients = new System.Windows.Forms.GroupBox();
-            this.btnEditClient = new System.Windows.Forms.Button();
+            this.btnViewClient = new System.Windows.Forms.Button();
             this.btnAddClient = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.gbTrains = new System.Windows.Forms.GroupBox();
-            this.btnEditTrain = new System.Windows.Forms.Button();
+            this.btnViewTrain = new System.Windows.Forms.Button();
             this.tbnAddTrain = new System.Windows.Forms.Button();
             this.lbTrains = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -153,7 +153,7 @@
             // gbClients
             // 
             this.gbClients.BackColor = System.Drawing.Color.Transparent;
-            this.gbClients.Controls.Add(this.btnEditClient);
+            this.gbClients.Controls.Add(this.btnViewClient);
             this.gbClients.Controls.Add(this.btnAddClient);
             this.gbClients.Controls.Add(this.lbClients);
             this.gbClients.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -164,16 +164,16 @@
             this.gbClients.TabStop = false;
             this.gbClients.Text = "Clients";
             // 
-            // btnEditClient
+            // btnViewClient
             // 
-            this.btnEditClient.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditClient.Location = new System.Drawing.Point(6, 222);
-            this.btnEditClient.Name = "btnEditClient";
-            this.btnEditClient.Size = new System.Drawing.Size(102, 37);
-            this.btnEditClient.TabIndex = 7;
-            this.btnEditClient.Text = "Edit";
-            this.btnEditClient.UseVisualStyleBackColor = true;
-            this.btnEditClient.Click += new System.EventHandler(this.btnEditClient_Click);
+            this.btnViewClient.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewClient.Location = new System.Drawing.Point(6, 222);
+            this.btnViewClient.Name = "btnViewClient";
+            this.btnViewClient.Size = new System.Drawing.Size(102, 37);
+            this.btnViewClient.TabIndex = 7;
+            this.btnViewClient.Text = "View";
+            this.btnViewClient.UseVisualStyleBackColor = true;
+            this.btnViewClient.Click += new System.EventHandler(this.BtnViewClient_Click);
             // 
             // btnAddClient
             // 
@@ -200,7 +200,7 @@
             // gbTrains
             // 
             this.gbTrains.BackColor = System.Drawing.Color.Transparent;
-            this.gbTrains.Controls.Add(this.btnEditTrain);
+            this.gbTrains.Controls.Add(this.btnViewTrain);
             this.gbTrains.Controls.Add(this.tbnAddTrain);
             this.gbTrains.Controls.Add(this.lbTrains);
             this.gbTrains.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -211,16 +211,16 @@
             this.gbTrains.TabStop = false;
             this.gbTrains.Text = "Trains";
             // 
-            // btnEditTrain
+            // btnViewTrain
             // 
-            this.btnEditTrain.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditTrain.Location = new System.Drawing.Point(7, 222);
-            this.btnEditTrain.Name = "btnEditTrain";
-            this.btnEditTrain.Size = new System.Drawing.Size(102, 37);
-            this.btnEditTrain.TabIndex = 7;
-            this.btnEditTrain.Text = "Edit";
-            this.btnEditTrain.UseVisualStyleBackColor = true;
-            this.btnEditTrain.Click += new System.EventHandler(this.btnEditTrain_Click);
+            this.btnViewTrain.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewTrain.Location = new System.Drawing.Point(7, 222);
+            this.btnViewTrain.Name = "btnViewTrain";
+            this.btnViewTrain.Size = new System.Drawing.Size(102, 37);
+            this.btnViewTrain.TabIndex = 7;
+            this.btnViewTrain.Text = "View";
+            this.btnViewTrain.UseVisualStyleBackColor = true;
+            this.btnViewTrain.Click += new System.EventHandler(this.btnEditTrain_Click);
             // 
             // tbnAddTrain
             // 
@@ -293,9 +293,9 @@
         private System.Windows.Forms.GroupBox gbClients;
         private System.Windows.Forms.Button btnAddClient;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnEditClient;
+        private System.Windows.Forms.Button btnViewClient;
         private System.Windows.Forms.GroupBox gbTrains;
-        private System.Windows.Forms.Button btnEditTrain;
+        private System.Windows.Forms.Button btnViewTrain;
         private System.Windows.Forms.Button tbnAddTrain;
         private System.Windows.Forms.ListBox lbTrains;
     }

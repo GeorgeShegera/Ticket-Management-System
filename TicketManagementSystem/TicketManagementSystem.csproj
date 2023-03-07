@@ -106,10 +106,10 @@
     <Compile Include="CommonWindows\SettingsWnd.Designer.cs">
       <DependentUpon>SettingsWnd.cs</DependentUpon>
     </Compile>
-    <Compile Include="TicketWnd.cs">
+    <Compile Include="Ticket\TicketWnd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TicketWnd.Designer.cs">
+    <Compile Include="Ticket\TicketWnd.Designer.cs">
       <DependentUpon>TicketWnd.cs</DependentUpon>
     </Compile>
     <Compile Include="Train\TrainSettingsWnd.cs">
@@ -185,7 +185,7 @@
     <EmbeddedResource Include="CommonWindows\SettingsWnd.resx">
       <DependentUpon>SettingsWnd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TicketWnd.resx">
+    <EmbeddedResource Include="Ticket\TicketWnd.resx">
       <DependentUpon>TicketWnd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Train\TrainSettingsWnd.resx">

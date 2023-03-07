@@ -30,12 +30,12 @@
         {
             this.pbTicket = new System.Windows.Forms.PictureBox();
             this.gbTicketData = new System.Windows.Forms.GroupBox();
-            this.lbDateOfPurchase = new System.Windows.Forms.Label();
-            this.lbOwnerName = new System.Windows.Forms.Label();
-            this.lbPrice = new System.Windows.Forms.Label();
+            this.lbId = new System.Windows.Forms.Label();
             this.lbStatus = new System.Windows.Forms.Label();
             this.lbType = new System.Windows.Forms.Label();
-            this.lbId = new System.Windows.Forms.Label();
+            this.lbPrice = new System.Windows.Forms.Label();
+            this.lbOwnerName = new System.Windows.Forms.Label();
+            this.lbDateOfPurchase = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbTicket)).BeginInit();
             this.gbTicketData.SuspendLayout();
             this.SuspendLayout();
@@ -62,40 +62,20 @@
             this.gbTicketData.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTicketData.Location = new System.Drawing.Point(283, 12);
             this.gbTicketData.Name = "gbTicketData";
-            this.gbTicketData.Size = new System.Drawing.Size(291, 222);
+            this.gbTicketData.Size = new System.Drawing.Size(324, 222);
             this.gbTicketData.TabIndex = 1;
             this.gbTicketData.TabStop = false;
             this.gbTicketData.Text = "Ticket Data";
             // 
-            // lbDateOfPurchase
+            // lbId
             // 
-            this.lbDateOfPurchase.AutoSize = true;
-            this.lbDateOfPurchase.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDateOfPurchase.Location = new System.Drawing.Point(6, 196);
-            this.lbDateOfPurchase.Name = "lbDateOfPurchase";
-            this.lbDateOfPurchase.Size = new System.Drawing.Size(157, 23);
-            this.lbDateOfPurchase.TabIndex = 0;
-            this.lbDateOfPurchase.Text = "Date of purchase:";
-            // 
-            // lbOwnerName
-            // 
-            this.lbOwnerName.AutoSize = true;
-            this.lbOwnerName.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbOwnerName.Location = new System.Drawing.Point(6, 163);
-            this.lbOwnerName.Name = "lbOwnerName";
-            this.lbOwnerName.Size = new System.Drawing.Size(158, 23);
-            this.lbOwnerName.TabIndex = 0;
-            this.lbOwnerName.Text = "Owner username:";
-            // 
-            // lbPrice
-            // 
-            this.lbPrice.AutoSize = true;
-            this.lbPrice.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrice.Location = new System.Drawing.Point(6, 96);
-            this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(56, 23);
-            this.lbPrice.TabIndex = 0;
-            this.lbPrice.Text = "Price:";
+            this.lbId.AutoSize = true;
+            this.lbId.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbId.Location = new System.Drawing.Point(6, 35);
+            this.lbId.Name = "lbId";
+            this.lbId.Size = new System.Drawing.Size(30, 23);
+            this.lbId.TabIndex = 0;
+            this.lbId.Text = "Id:";
             // 
             // lbStatus
             // 
@@ -117,21 +97,41 @@
             this.lbType.TabIndex = 0;
             this.lbType.Text = "Type:";
             // 
-            // lbId
+            // lbPrice
             // 
-            this.lbId.AutoSize = true;
-            this.lbId.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbId.Location = new System.Drawing.Point(6, 35);
-            this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(30, 23);
-            this.lbId.TabIndex = 0;
-            this.lbId.Text = "Id:";
+            this.lbPrice.AutoSize = true;
+            this.lbPrice.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPrice.Location = new System.Drawing.Point(6, 96);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(56, 23);
+            this.lbPrice.TabIndex = 0;
+            this.lbPrice.Text = "Price:";
+            // 
+            // lbOwnerName
+            // 
+            this.lbOwnerName.AutoSize = true;
+            this.lbOwnerName.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbOwnerName.Location = new System.Drawing.Point(6, 163);
+            this.lbOwnerName.Name = "lbOwnerName";
+            this.lbOwnerName.Size = new System.Drawing.Size(158, 23);
+            this.lbOwnerName.TabIndex = 0;
+            this.lbOwnerName.Text = "Owner username:";
+            // 
+            // lbDateOfPurchase
+            // 
+            this.lbDateOfPurchase.AutoSize = true;
+            this.lbDateOfPurchase.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDateOfPurchase.Location = new System.Drawing.Point(6, 196);
+            this.lbDateOfPurchase.Name = "lbDateOfPurchase";
+            this.lbDateOfPurchase.Size = new System.Drawing.Size(157, 23);
+            this.lbDateOfPurchase.TabIndex = 0;
+            this.lbDateOfPurchase.Text = "Date of purchase:";
             // 
             // TicketWnd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 239);
+            this.ClientSize = new System.Drawing.Size(619, 239);
             this.Controls.Add(this.gbTicketData);
             this.Controls.Add(this.pbTicket);
             this.Font = new System.Drawing.Font("Microsoft Tai Le", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

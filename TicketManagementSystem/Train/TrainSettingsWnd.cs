@@ -86,7 +86,7 @@ namespace TicketManagementSystem
                             train.Name = control.Text;
                         }
                         else if (pictureBox.Tag == tbModel.Tag) train.Model = control.Text;
-                        else train.ChangeState(GetState());
+                        else dataBase.ChangeTrainState(train, GetState());
                         dataBase.Save();
                     }
                     break;

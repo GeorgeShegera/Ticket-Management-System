@@ -100,7 +100,7 @@ namespace TicketManagementSystem
             RefreshClients();
         }
 
-        private void btnEditClient_Click(object sender, EventArgs e)
+        private void BtnViewClient_Click(object sender, EventArgs e)
         {
             int index = lbClients.SelectedIndex;
             if (index == -1)
@@ -112,6 +112,7 @@ namespace TicketManagementSystem
             ClientViewWnd clientViewWnd = new ClientViewWnd((Client)dataBase.GetUser(username));
             Hide();
             clientViewWnd.ShowDialog();
+            lbClients.SelectedIndex = -1;
             Show();
         }
     }

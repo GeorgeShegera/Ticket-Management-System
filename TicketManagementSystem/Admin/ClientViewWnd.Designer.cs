@@ -149,6 +149,7 @@
             this.btnViewTicket.TabIndex = 3;
             this.btnViewTicket.Text = "View Ticket";
             this.btnViewTicket.UseVisualStyleBackColor = true;
+            this.btnViewTicket.Click += new System.EventHandler(this.btnViewTicket_Click);
             // 
             // btnSellTicket
             // 
@@ -170,6 +171,7 @@
             this.btnCancelTcket.TabIndex = 3;
             this.btnCancelTcket.Text = "Cancel ticket";
             this.btnCancelTcket.UseVisualStyleBackColor = true;
+            this.btnCancelTcket.Click += new System.EventHandler(this.btnCancelTcket_Click);
             // 
             // ClientViewWnd
             // 

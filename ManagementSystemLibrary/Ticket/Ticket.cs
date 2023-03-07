@@ -15,14 +15,7 @@ namespace ManagementSystemLibrary
         public TicketState State { get; set; } = TicketState.New;
         public string OwnerName { get; set; } = null;
         public DateTime? DateOfPurchase { get; set; }
-        public string SignatureState
-        {
-            get => $"Ticket ({GetState()})";
-        }
-        public string SignatureId
-        {
-            get => $"Ticket#{Id}";
-        }
+        public string Signature { get => $"Ticket#{Id} ({GetState()})"; }
 
         public Ticket(int id = 0, TicketType ticketType = new TicketType(), double price = 0)
         {
@@ -33,15 +26,7 @@ namespace ManagementSystemLibrary
             OwnerName = null;
         }
 
-        public void ChangeState(TripState tripState)
-        {
-            switch (tripState)
-            {
-                case TripState.Canceled: State = TicketState.Canceled; break;
-                case TripState.Complete: State = TicketState.Closed; break;
-                default: State = TicketState.New; break;
-            }
-        }
+
 
         public string GetState()
         {
@@ -75,11 +60,11 @@ namespace ManagementSystemLibrary
             else return false;
         }
 
-        public void Purchase(Client cliet)
+        public void Purchase(Client client)
         {
-            cliet.Balance -= Price;
+            client.Balance -= Price;
             State = TicketState.Purchased;
-            OwnerName = cliet.Username;
+            OwnerName = client.Username;
             DateOfPurchase = DateTime.Now;
         }
     }

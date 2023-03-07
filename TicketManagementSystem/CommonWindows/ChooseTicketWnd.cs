@@ -37,7 +37,7 @@ namespace TicketManagementSystem
         private void RefreshTickets()
         {
             lbTickets.Items.Clear();
-            lbTickets.Items.AddRange(FilteredTickets.Select(x => x.SignatureId).ToArray());
+            lbTickets.Items.AddRange(FilteredTickets.Select(x => x.Signature).ToArray());
         }
 
         private void btnClear_Click(object sender, EventArgs e)

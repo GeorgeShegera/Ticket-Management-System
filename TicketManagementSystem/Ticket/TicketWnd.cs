@@ -19,10 +19,10 @@ namespace TicketManagementSystem
             lbStatus.Text = $"Status: {ticket.GetState()}";
             lbType.Text = $"Type: {ticket.GetTicketType()}";
             lbPrice.Text = $"Price: {ticket.Price}";
-            lbId.Text = $"Id: {ticket.Id}";
+            lbId.Text = $"Id: #{ticket.Id}";
             if (ticket.IsPurchased())
             {
-                lbDateOfPurchase.Text = $"Date of Purchased: {ticket.DateOfPurchase}";
+                lbDateOfPurchase.Text = $"Date of Purchased: {ticket.DateOfPurchase:HH:mm dd.MM.yyyy}";
                 lbOwnerName.Text = $"Owner Name: {ticket.OwnerName}";
             }
             else

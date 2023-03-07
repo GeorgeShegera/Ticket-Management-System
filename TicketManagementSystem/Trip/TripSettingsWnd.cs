@@ -109,7 +109,7 @@ namespace TicketManagementSystem
                             }
                             trip.Name = control.Text;
                         }
-                        else if (pictureBox.Tag == cbState.Tag) trip.ChangeState(tripState);
+                        else if (pictureBox.Tag == cbState.Tag) dataBase.ChangeTripState(trip, tripState);
                         else if (pictureBox.Tag == tbDeparturePlace.Tag) trip.DeparturePlace = control.Text;
                         else if (pictureBox.Tag == dtpDepartureDateTime.Tag)
                         {

@@ -16,6 +16,7 @@ namespace TicketManagementSystem
     {
         public Client client;
         public List<Ticket> Tickets { get; set; }
+
         public ClientViewWnd(Client client)
         {
             this.client = client;
@@ -24,15 +25,58 @@ namespace TicketManagementSystem
             lbSurname.Text = $"Surmane: {client.Surname}";
             lbBirthDate.Text = $"Birth Date: {client.DateBirth:dd.MM.yyyy}";
             lbEmail.Text = $"Email: {client.Email}";
-            lbBalance.Text = $"Balance: {client.Balance}";            
+            RefreshData();
+        }
+
+
+
+        private void RefreshData()
+        {
+            lbBalance.Text = $"Balance: {client.Balance}";
             Tickets = dataBase.GetTickets(client.Username);
-            lbTickets.Items.AddRange(Tickets.Select(x => x.SignatureState).ToArray());
+            lbTickets.Items.Clear();
+            lbTickets.Items.AddRange(Tickets.Select(x => x.Signature).ToArray());
         }
 
         private void btnSellTicket_Click(object sender, EventArgs e)
         {
             ChooseTripWnd chooseTrip = new ChooseTripWnd(client);
+            Hide();
             chooseTrip.ShowDialog();
+            Show();
+            RefreshData();
+        }
+
+        private void btnViewTicket_Click(object sender, EventArgs e)
+        {
+            int index = lbTickets.SelectedIndex;
+            if (index == -1)
+            {
+                ErrorMessage("You must select a ticket");
+                return;
+            }
+            TicketWnd ticketWnd = new TicketWnd(Tickets[index]);
+            ticketWnd.ShowDialog();
+        }
+
+        private void btnCancelTcket_Click(object sender, EventArgs e)
+        {
+            int index = lbTickets.SelectedIndex;
+            if (index == -1)
+            {
+                ErrorMessage("You must select a ticket");
+                return;
+            }
+            else if (Tickets[index].State != TicketState.Purchased)
+            {
+                ErrorMessage("This ticket can't be canceled");
+                return;
+            }
+            MessageBox.Show("Ticket has been successfully canceled", "Info",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dataBase.ChangeTicketState(Tickets[index], TicketState.Canceled);
+            dataBase.Save();
+            RefreshData();
         }
     }
 }

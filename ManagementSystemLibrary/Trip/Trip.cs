@@ -24,12 +24,7 @@ namespace ManagementSystemLibrary
         public List<Ticket> Tickets { get; set; }
         public TripState State { get; set; } = TripState.Upcoming;
 
-        public void ChangeState(TripState state)
-        {
-            State = state;
-            foreach (Ticket ticket in Tickets)
-                ticket.ChangeState(state);
-        }
+
 
         public string Signature
         {

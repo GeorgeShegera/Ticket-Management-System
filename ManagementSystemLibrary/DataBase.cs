@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.AxHost;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 
 namespace ManagementSystemLibrary
 {
@@ -79,8 +81,69 @@ namespace ManagementSystemLibrary
             return tickets;
         }
 
+        public List<Ticket> GetTickets()
+        {
+            List<Trip> trips = GetTrips();
+            List<Ticket> tickets = new List<Ticket>();
+            foreach (Trip trip in trips)
+                tickets.AddRange(trip.Tickets);
+            return tickets;
+        }
+
+        public int CreateTicketId()
+        {
+            List<Ticket> tickets = GetTickets();
+            int newId;
+            do
+            {
+                newId = new Random().Next(100000, 1000000);
+            } while (tickets.Any(x => x.Id == newId));
+            return newId;
+        }
+
         public bool IsTakenUsername(string username) => Users.Any(x => x.Username == username);
         public bool IsTakenTrainName(string name) => Trains.Any(x => x.Name == name);
         public bool IsTakenTripName(string name) => GetTrips().Any(x => x.Name == name);
+
+        public void ChangeTicketState(Ticket ticket, TicketState newState)
+        {
+            if (ticket.State == TicketState.Closed) return;
+            else if (ticket.State == TicketState.Purchased)
+            {
+                Client client = (Client)Users.FirstOrDefault(x => x.Username == ticket.OwnerName);
+                client.Balance += ticket.Price;
+            }
+            ticket.State = newState;            
+        }
+
+        public void ChangeTripState(Trip trip, TripState tripState)
+        {
+            trip.State = tripState;
+            foreach (Ticket ticket in trip.Tickets)
+            {
+                TicketState ticketState = new TicketState();
+                switch (tripState)
+                {
+                    case TripState.Canceled:
+                        ticketState = TicketState.Canceled;
+                        break;
+                    case TripState.Complete:
+                        ticketState = TicketState.Closed;
+                        break;
+                    case TripState.Upcoming:
+                        ticketState = TicketState.New;
+                        break;
+                }
+                ChangeTicketState(ticket, ticketState);
+            }
+        }
+
+        public void ChangeTrainState(Train train, TrainState trainState)
+        {
+            train.State = trainState;
+            if (trainState == TrainState.Available) return;
+            foreach (Trip trip in train.Trips)
+                ChangeTripState(trip, TripState.Canceled);
+        }
     }
 }

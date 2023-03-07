@@ -24,8 +24,9 @@ namespace TicketManagementSystem
             if (dataBase.Users.Count == 0)
                 dataBase.AddUser(new Administrator("AdminEmail@gmail.com", "admin",
                                                    "admin", "Admin", "Admin", DateTime.Now));
-            User client = dataBase.Users.FirstOrDefault(x => x is Client);
-            (client as Client).Balance = 1000;
+            List<User> clients = dataBase.Users.Where(x => x is Client y && y.Balance == 0).ToList();
+            foreach (Client client in clients)
+                client.Balance = 1000;
             InitializeComponent();
         }
         private void btnSignIn_Click(object sender, EventArgs e)
