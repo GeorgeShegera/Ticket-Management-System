@@ -61,10 +61,16 @@
     <Compile Include="Admin\ClientViewWnd.Designer.cs">
       <DependentUpon>ClientViewWnd.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClientWnd.cs">
+    <Compile Include="Client\BalanceReplenishmentWnd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientWnd.Designer.cs">
+    <Compile Include="Client\BalanceReplenishmentWnd.Designer.cs">
+      <DependentUpon>BalanceReplenishmentWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client\ClientWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client\ClientWnd.Designer.cs">
       <DependentUpon>ClientWnd.cs</DependentUpon>
     </Compile>
     <Compile Include="CommonWindows\ChooseTicketWnd.cs">
@@ -160,7 +166,10 @@
     <EmbeddedResource Include="Admin\ClientViewWnd.resx">
       <DependentUpon>ClientViewWnd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientWnd.resx">
+    <EmbeddedResource Include="Client\BalanceReplenishmentWnd.resx">
+      <DependentUpon>BalanceReplenishmentWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client\ClientWnd.resx">
       <DependentUpon>ClientWnd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CommonWindows\ChooseTicketWnd.resx">

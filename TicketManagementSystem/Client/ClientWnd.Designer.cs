@@ -44,6 +44,7 @@
             this.lbSurname = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.BtnCancelTicket = new System.Windows.Forms.Button();
+            this.BtnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbClient)).BeginInit();
             this.gbClientData.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +69,7 @@
             this.BtnApplicationInfo.TabIndex = 1;
             this.BtnApplicationInfo.Text = "Application Information ";
             this.BtnApplicationInfo.UseVisualStyleBackColor = true;
+            this.BtnApplicationInfo.Click += new System.EventHandler(this.BtnApplicationInfo_Click);
             // 
             // BtnSettings
             // 
@@ -118,6 +120,7 @@
             this.BtnBalanceReplenishment.TabIndex = 1;
             this.BtnBalanceReplenishment.Text = "Balance Replenishment";
             this.BtnBalanceReplenishment.UseVisualStyleBackColor = true;
+            this.BtnBalanceReplenishment.Click += new System.EventHandler(this.BtnBalanceReplenishment_Click);
             // 
             // BtnViewTicket
             // 
@@ -204,6 +207,16 @@
             this.BtnCancelTicket.Text = "Cancel Ticket";
             this.BtnCancelTicket.UseVisualStyleBackColor = true;
             // 
+            // BtnExit
+            // 
+            this.BtnExit.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnExit.Location = new System.Drawing.Point(559, 168);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(230, 43);
+            this.BtnExit.TabIndex = 1;
+            this.BtnExit.Text = "Exit";
+            this.BtnExit.UseVisualStyleBackColor = true;
+            // 
             // ClientWnd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -216,6 +229,7 @@
             this.Controls.Add(this.BtnViewTicket);
             this.Controls.Add(this.BtnBalanceReplenishment);
             this.Controls.Add(this.BtnViewAllTickets);
+            this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.BtnSettings);
             this.Controls.Add(this.BtnApplicationInfo);
             this.Controls.Add(this.pbClient);
@@ -248,5 +262,6 @@
         private System.Windows.Forms.Label lbSurname;
         private System.Windows.Forms.Label lbBalance;
         private System.Windows.Forms.Label lbEmail;
+        private System.Windows.Forms.Button BtnExit;
     }
 }

@@ -41,5 +41,18 @@ namespace TicketManagementSystem
             lbActiveTickets.Items.AddRange(Tickets.Where(x => x.State == TicketState.Purchased)
                                                   .Select(x => x.Signature).ToArray());
         }
+
+        private void BtnApplicationInfo_Click(object sender, EventArgs e)
+        {
+            ApplicationInfoWnd applicationInfo = new ApplicationInfoWnd();
+            applicationInfo.ShowDialog();
+        }
+
+        private void BtnBalanceReplenishment_Click(object sender, EventArgs e)
+        {
+            BalanceReplenishmentWnd balanceReplenishment = new BalanceReplenishmentWnd(client);
+            balanceReplenishment.ShowDialog();
+            RefreshData();
+        }
     }
 }
