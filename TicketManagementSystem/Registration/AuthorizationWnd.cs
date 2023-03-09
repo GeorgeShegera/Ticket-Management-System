@@ -56,12 +56,7 @@ namespace TicketManagementSystem
             Hide();
             Form userForm;
             if (curUser is Administrator admin) userForm = new AdminWnd(admin);
-            else
-            {
-                ErrorMessage("Error");
-                return;
-                // userForm = new AdminWnd(CurUser);
-            }
+            else userForm = new ClientWnd(curUser as Client);
             userForm.ShowDialog();
             curUser = null;
             tbUsername.Text = "";
