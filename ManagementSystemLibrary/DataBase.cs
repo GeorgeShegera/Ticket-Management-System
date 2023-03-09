@@ -90,17 +90,6 @@ namespace ManagementSystemLibrary
             return tickets;
         }
 
-        public int CreateTicketId()
-        {
-            List<Ticket> tickets = GetTickets();
-            int newId;
-            do
-            {
-                newId = new Random().Next(100000, 1000000);
-            } while (tickets.Any(x => x.Id == newId));
-            return newId;
-        }
-
         public bool IsTakenUsername(string username) => Users.Any(x => x.Username == username);
         public bool IsTakenTrainName(string name) => Trains.Any(x => x.Name == name);
         public bool IsTakenTripName(string name) => GetTrips().Any(x => x.Name == name);
@@ -113,7 +102,7 @@ namespace ManagementSystemLibrary
                 Client client = (Client)Users.FirstOrDefault(x => x.Username == ticket.OwnerName);
                 client.Balance += ticket.Price;
             }
-            ticket.State = newState;            
+            ticket.State = newState;
         }
 
         public void ChangeTripState(Trip trip, TripState tripState)

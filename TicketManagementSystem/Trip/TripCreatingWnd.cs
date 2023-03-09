@@ -80,12 +80,18 @@ namespace TicketManagementSystem
             }
             if (error) return;
             List<Ticket> tickets = new List<Ticket>();
+            List<Ticket> allTickets = dataBase.GetTickets();
             TicketType ticketType = TicketType.Economy;
             for (int i = 0; i < train.EconCapacity + train.BusCapacity + train.MidCapacity; i++)
             {
+                int newId;
+                do
+                {
+                    newId = new Random().Next(100000, 1000000);
+                } while (tickets.Any(x => x.Id == newId) || allTickets.Any(x => x.Id == newId));
                 if (i >= train.EconCapacity) ticketType = TicketType.Middle;
                 if (i >= train.EconCapacity + train.MidCapacity) ticketType = TicketType.Business;
-                tickets.Add(new Ticket(dataBase.CreateTicketId(), ticketType, GetPrice(ticketType)));
+                tickets.Add(new Ticket(newId, ticketType, GetPrice(ticketType)));
             }
             Trip trip = new Trip(tbName.Text, dtpDepartureTime.Value, tbDepaturePlace.Text,
                                 dtpArrivalDate.Value, tbArrivalPlace.Text, (double)numEconomyPrice.Value,

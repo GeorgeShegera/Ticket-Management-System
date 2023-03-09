@@ -83,17 +83,18 @@ namespace TicketManagementSystem
             RefreshTickets();
         }
 
-        private int GetId(int index)
-        {
-            bool afterSharp = false;
-            string str = lbTickets.Items[index].ToString();
-            for (int i = 0; i < str.Length; i++)
-            {
-                if (afterSharp) return Convert.ToInt32(str.Substring(i, str.Length - i));
-                else afterSharp = str[i] == '#';
-            }
-            return 0;
-        }
+        //private int GetId(int index)
+        //{
+        //    Ticket ticket = FilteredTickets[index];
+        //    bool afterSharp = false;
+        //    string str = lbTickets.Items[index].ToString();
+        //    for (int i = 0; i < str.Length; i++)
+        //    {
+        //        if (afterSharp) return Convert.ToInt32(str.Substring(i, str.Length - i));
+        //        else afterSharp = str[i] == '#';
+        //    }
+        //    return 0;
+        //}
 
         private Ticket GetSelectedTicket()
         {
@@ -102,9 +103,8 @@ namespace TicketManagementSystem
             {
                 ErrorMessage("You must select a ticket");
                 return null;
-            }
-            int id = GetId(index);
-            return FilteredTickets.FirstOrDefault(x => x.Id == id);
+            }            
+            return FilteredTickets[index];
         }
 
         private void btnView_Click(object sender, EventArgs e)

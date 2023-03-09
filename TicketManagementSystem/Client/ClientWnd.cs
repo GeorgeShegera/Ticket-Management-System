@@ -15,7 +15,7 @@ namespace TicketManagementSystem
     public partial class ClientWnd : Form
     {
         private Client client;
-        private List<Ticket> Tickets { get; set; }
+        private List<Ticket> ActiveTickets { get; set; }
         public ClientWnd(Client client)
         {
             this.client = client;
@@ -31,14 +31,13 @@ namespace TicketManagementSystem
             lbEmail.Text = $"Email: {client.Email}";
             lbDataOfBirth.Text = $"Date of Birth: {client.DateBirth:dd.MM.yyyy}";
             lbBalance.Text = $"Balance: {client.Balance}";
-            lbBalance.Text = $"Balance: {client.Balance}";
         }
 
         private void RefreshTickets()
         {
-            Tickets = dataBase.GetTickets(client.Username);
+            ActiveTickets = dataBase.GetTickets(client.Username);
             lbActiveTickets.Items.Clear();
-            lbActiveTickets.Items.AddRange(Tickets.Where(x => x.State == TicketState.Purchased)
+            lbActiveTickets.Items.AddRange(ActiveTickets.Where(x => x.State == TicketState.Purchased)
                                                   .Select(x => x.Signature).ToArray());
         }
 
@@ -53,6 +52,54 @@ namespace TicketManagementSystem
             BalanceReplenishmentWnd balanceReplenishment = new BalanceReplenishmentWnd(client);
             balanceReplenishment.ShowDialog();
             RefreshData();
+        }
+
+        private void BtnSettings_Click(object sender, EventArgs e)
+        {
+            Hide();
+            SettingsWnd settingsWnd = new SettingsWnd(client);
+            settingsWnd.ShowDialog();
+            RefreshData();
+            Show();
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void BtnViewTicket_Click(object sender, EventArgs e)
+        {
+            int index = lbActiveTickets.SelectedIndex;
+            if (index == -1)
+            {
+                ErrorMessage("You must select a ticket");
+                return;
+            }
+            TicketWnd ticketWnd = new TicketWnd(ActiveTickets[index]);
+            ticketWnd.ShowDialog();
+        }
+
+        private void BtnBuyTicket_Click(object sender, EventArgs e)
+        {
+            Hide();
+            ChooseTripWnd chooseTrip = new ChooseTripWnd(client);
+            chooseTrip.ShowDialog();
+            Show();
+            RefreshTickets();
+        }
+
+        private void BtnCancelTicket_Click(object sender, EventArgs e)
+        {
+            int index = lbActiveTickets.SelectedIndex;
+            if (index == -1)
+            {
+                ErrorMessage("You must select a ticket");
+                return;
+            }
+            dataBase.ChangeTicketState(ActiveTickets[index], TicketState.Canceled);
+            RefreshTickets();
+            MessageBox.Show("Ticket has been canceled", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
