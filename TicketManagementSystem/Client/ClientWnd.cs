@@ -101,5 +101,12 @@ namespace TicketManagementSystem
             RefreshTickets();
             MessageBox.Show("Ticket has been canceled", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void BtnViewAllTickets_Click(object sender, EventArgs e)
+        {
+            List<Ticket> tickets = dataBase.GetTickets(client.Username).Where(x => x.State != TicketState.Purchased).ToList();
+            ClosedTicketsWnd closedTicketsWnd = new ClosedTicketsWnd(tickets);
+            closedTicketsWnd.ShowDialog();
+        }
     }
 }

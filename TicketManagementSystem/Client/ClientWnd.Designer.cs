@@ -112,6 +112,7 @@
             this.BtnViewAllTickets.TabIndex = 1;
             this.BtnViewAllTickets.Text = "View all Tickets";
             this.BtnViewAllTickets.UseVisualStyleBackColor = true;
+            this.BtnViewAllTickets.Click += new System.EventHandler(this.BtnViewAllTickets_Click);
             // 
             // BtnBalanceReplenishment
             // 

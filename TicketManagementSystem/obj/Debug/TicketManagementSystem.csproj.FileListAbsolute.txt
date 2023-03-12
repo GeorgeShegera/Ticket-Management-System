@@ -31,3 +31,4 @@ E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem
 E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.TicketWnd.resources
 E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.ClientWnd.resources
 E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.BalanceReplenishmentWnd.resources
+E:\Programming\WinForms Projects\Ticket-Management-System\TicketManagementSystem\obj\Debug\TicketManagementSystem.ClosedTicketsWnd.resources
