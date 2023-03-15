@@ -34,7 +34,7 @@
             this.BtnSettings = new System.Windows.Forms.Button();
             this.LActive = new System.Windows.Forms.Label();
             this.lbActiveTickets = new System.Windows.Forms.ListBox();
-            this.BtnViewAllTickets = new System.Windows.Forms.Button();
+            this.BtnViewClosedTickets = new System.Windows.Forms.Button();
             this.BtnBalanceReplenishment = new System.Windows.Forms.Button();
             this.BtnViewTicket = new System.Windows.Forms.Button();
             this.gbClientData = new System.Windows.Forms.GroupBox();
@@ -103,16 +103,16 @@
             this.lbActiveTickets.Size = new System.Drawing.Size(547, 130);
             this.lbActiveTickets.TabIndex = 3;
             // 
-            // BtnViewAllTickets
+            // BtnViewClosedTickets
             // 
-            this.BtnViewAllTickets.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnViewAllTickets.Location = new System.Drawing.Point(565, 155);
-            this.BtnViewAllTickets.Name = "BtnViewAllTickets";
-            this.BtnViewAllTickets.Size = new System.Drawing.Size(230, 39);
-            this.BtnViewAllTickets.TabIndex = 1;
-            this.BtnViewAllTickets.Text = "View all Tickets";
-            this.BtnViewAllTickets.UseVisualStyleBackColor = true;
-            this.BtnViewAllTickets.Click += new System.EventHandler(this.BtnViewAllTickets_Click);
+            this.BtnViewClosedTickets.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnViewClosedTickets.Location = new System.Drawing.Point(565, 155);
+            this.BtnViewClosedTickets.Name = "BtnViewClosedTickets";
+            this.BtnViewClosedTickets.Size = new System.Drawing.Size(230, 39);
+            this.BtnViewClosedTickets.TabIndex = 1;
+            this.BtnViewClosedTickets.Text = "View closed Tickets";
+            this.BtnViewClosedTickets.UseVisualStyleBackColor = true;
+            this.BtnViewClosedTickets.Click += new System.EventHandler(this.BtnViewAllTickets_Click);
             // 
             // BtnBalanceReplenishment
             // 
@@ -246,7 +246,7 @@
             this.Controls.Add(this.BtnViewTicket);
             this.Controls.Add(this.BtnBalanceReplenishment);
             this.Controls.Add(this.BtnBuyTicket);
-            this.Controls.Add(this.BtnViewAllTickets);
+            this.Controls.Add(this.BtnViewClosedTickets);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.BtnSettings);
             this.Controls.Add(this.BtnApplicationInfo);
@@ -270,7 +270,7 @@
         private System.Windows.Forms.Button BtnSettings;
         private System.Windows.Forms.Label LActive;
         private System.Windows.Forms.ListBox lbActiveTickets;
-        private System.Windows.Forms.Button BtnViewAllTickets;
+        private System.Windows.Forms.Button BtnViewClosedTickets;
         private System.Windows.Forms.Button BtnBalanceReplenishment;
         private System.Windows.Forms.Button BtnViewTicket;
         private System.Windows.Forms.GroupBox gbClientData;

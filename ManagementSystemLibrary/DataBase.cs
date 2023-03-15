@@ -51,8 +51,8 @@ namespace ManagementSystemLibrary
             Save();
         }
 
-        public List<Trip> GetTrips(string trainName)
-            => Trains.Where(x => x.Name == trainName).FirstOrDefault().Trips;
+        public List<Trip> GetUpcomingTrips(string trainName)
+            => Trains.Where(x => x.Name == trainName).FirstOrDefault().Trips.Where(x => x.State == TripState.Upcoming).ToList();
 
         public List<Trip> GetTrips()
         {
@@ -91,13 +91,14 @@ namespace ManagementSystemLibrary
         }
 
         public bool IsTakenUsername(string username) => Users.Any(x => x.Username == username);
+        public bool IsTakenEmail(string email) => Users.Any(x => x.Email == email);
         public bool IsTakenTrainName(string name) => Trains.Any(x => x.Name == name);
         public bool IsTakenTripName(string name) => GetTrips().Any(x => x.Name == name);
 
         public void ChangeTicketState(Ticket ticket, TicketState newState)
         {
-            if (ticket.State == TicketState.Closed) return;
-            else if (ticket.State == TicketState.Purchased)
+            if (ticket.State == TicketState.Closed || ticket.State == TicketState.Canceled) return;
+            else if (ticket.State == TicketState.Purchased && newState == TicketState.Canceled)
             {
                 Client client = (Client)Users.FirstOrDefault(x => x.Username == ticket.OwnerName);
                 client.Balance += ticket.Price;
@@ -133,6 +134,16 @@ namespace ManagementSystemLibrary
             if (trainState == TrainState.Available) return;
             foreach (Trip trip in train.Trips)
                 ChangeTripState(trip, TripState.Canceled);
+        }
+
+        public void RefreshTrips()
+        {
+            List<Trip> trips = GetTrips();
+            foreach (Trip trip in trips)
+            {
+                if (trip.ArrivalDate <= DateTime.Now)
+                    ChangeTripState(trip, TripState.Complete);
+            }
         }
     }
 }

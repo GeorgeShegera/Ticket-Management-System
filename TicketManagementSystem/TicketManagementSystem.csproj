@@ -73,10 +73,10 @@
     <Compile Include="Client\ClientWnd.Designer.cs">
       <DependentUpon>ClientWnd.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClosedTicketsWnd.cs">
+    <Compile Include="Client\ClosedTicketsWnd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClosedTicketsWnd.Designer.cs">
+    <Compile Include="Client\ClosedTicketsWnd.Designer.cs">
       <DependentUpon>ClosedTicketsWnd.cs</DependentUpon>
     </Compile>
     <Compile Include="CommonWindows\ChooseTicketWnd.cs">
@@ -178,7 +178,7 @@
     <EmbeddedResource Include="Client\ClientWnd.resx">
       <DependentUpon>ClientWnd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClosedTicketsWnd.resx">
+    <EmbeddedResource Include="Client\ClosedTicketsWnd.resx">
       <DependentUpon>ClosedTicketsWnd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CommonWindows\ChooseTicketWnd.resx">

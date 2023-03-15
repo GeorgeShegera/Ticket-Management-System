@@ -64,7 +64,8 @@ namespace TicketManagementSystem
                 ErrorMessage("You must select a trip");
                 return;
             }
-            TripWnd tripWnd = new TripWnd(dataBase.GetTrips(train.Name)[index]);
+            dataBase.RefreshTrips();
+            TripWnd tripWnd = new TripWnd(dataBase.GetUpcomingTrips(train.Name)[index]);
             Hide();
             tripWnd.ShowDialog();
             RefreshTrips();

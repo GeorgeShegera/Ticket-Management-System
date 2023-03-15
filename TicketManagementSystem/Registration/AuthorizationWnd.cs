@@ -27,6 +27,7 @@ namespace TicketManagementSystem
             List<User> clients = dataBase.Users.Where(x => x is Client y && y.Balance == 0).ToList();
             foreach (Client client in clients)
                 client.Balance = 1000;
+            dataBase.RefreshTrips();
             InitializeComponent();
         }
         private void btnSignIn_Click(object sender, EventArgs e)

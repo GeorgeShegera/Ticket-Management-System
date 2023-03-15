@@ -42,6 +42,7 @@ namespace TicketManagementSystem
         {
             ChooseTripWnd chooseTrip = new ChooseTripWnd(client);
             Hide();
+            dataBase.RefreshTrips();
             chooseTrip.ShowDialog();
             Show();
             RefreshData();

@@ -83,33 +83,22 @@ namespace TicketManagementSystem
             RefreshTickets();
         }
 
-        //private int GetId(int index)
-        //{
-        //    Ticket ticket = FilteredTickets[index];
-        //    bool afterSharp = false;
-        //    string str = lbTickets.Items[index].ToString();
-        //    for (int i = 0; i < str.Length; i++)
-        //    {
-        //        if (afterSharp) return Convert.ToInt32(str.Substring(i, str.Length - i));
-        //        else afterSharp = str[i] == '#';
-        //    }
-        //    return 0;
-        //}
-
         private Ticket GetSelectedTicket()
         {
             int index = lbTickets.SelectedIndex;
-            if (index == -1)
-            {
-                ErrorMessage("You must select a ticket");
-                return null;
-            }            
+            if (index == -1) return null;
             return FilteredTickets[index];
         }
 
         private void btnView_Click(object sender, EventArgs e)
         {
-            TicketWnd ticketWnd = new TicketWnd(GetSelectedTicket());
+            Ticket ticket = GetSelectedTicket();
+            if (ticket is null)
+            {
+                ErrorMessage("You must select a ticket");
+                return;
+            }
+            TicketWnd ticketWnd = new TicketWnd(ticket);
             if (ticketWnd is null) return;
             ticketWnd.ShowDialog();
         }
@@ -117,8 +106,12 @@ namespace TicketManagementSystem
         private void btnBuy_Click(object sender, EventArgs e)
         {
             Ticket ticket = GetSelectedTicket();
-            if (ticket is null) return;
-            if (client.Balance < ticket.Price)
+            if (ticket is null)
+            {
+                ErrorMessage("You must select a ticket");
+                return;
+            }
+            else if (client.Balance < ticket.Price)
             {
                 ErrorMessage("You don't have enough money");
                 return;
@@ -128,6 +121,7 @@ namespace TicketManagementSystem
             RemoveFilters();
             RefreshTickets();
             dataBase.Save();
+            MessageBox.Show($"Ticket#{ticket.Id} has been bought", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -32,8 +32,13 @@ namespace TicketManagementSystem
                 ErrorMessage("This username is already taken");
                 return;
             }
+            else if(dataBase.IsTakenEmail(tbEmail.Text))
+            {
+                ErrorMessage("This email is already taken");
+                return;
+            }
             dataBase.AddUser(new Client(tbEmail.Text, tbUsername.Text, tbPassword.Text,
-                                       tbName.Text, tbSurname.Text, dateTimePicker.Value));
+                                        tbName.Text, tbSurname.Text, dateTimePicker.Value));
             Close();
         }
 

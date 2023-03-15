@@ -72,6 +72,7 @@ namespace TicketManagementSystem
                 return;
             }
             Hide();
+            dataBase.RefreshTrips();
             TrainWnd trainWnd = new TrainWnd(dataBase.Trains[lbTrains.SelectedIndex]);
             trainWnd.ShowDialog();
             Show();

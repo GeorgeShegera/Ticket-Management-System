@@ -22,6 +22,7 @@ namespace TicketManagementSystem
             InitializeComponent();
             RefreshData();
             RefreshTickets();
+            RefreshBalance();
         }
 
         private void RefreshData()
@@ -30,15 +31,16 @@ namespace TicketManagementSystem
             lbSurname.Text = $"Surname: {client.Surname}";
             lbEmail.Text = $"Email: {client.Email}";
             lbDataOfBirth.Text = $"Date of Birth: {client.DateBirth:dd.MM.yyyy}";
-            lbBalance.Text = $"Balance: {client.Balance}";
+            
         }
+
+        private void RefreshBalance() => lbBalance.Text = $"Balance: {client.Balance}";
 
         private void RefreshTickets()
         {
-            ActiveTickets = dataBase.GetTickets(client.Username);
+            ActiveTickets = dataBase.GetTickets(client.Username).Where(x => x.State == TicketState.Purchased).ToList();
             lbActiveTickets.Items.Clear();
-            lbActiveTickets.Items.AddRange(ActiveTickets.Where(x => x.State == TicketState.Purchased)
-                                                  .Select(x => x.Signature).ToArray());
+            lbActiveTickets.Items.AddRange(ActiveTickets.Select(x => x.Signature).ToArray());
         }
 
         private void BtnApplicationInfo_Click(object sender, EventArgs e)
@@ -51,7 +53,7 @@ namespace TicketManagementSystem
         {
             BalanceReplenishmentWnd balanceReplenishment = new BalanceReplenishmentWnd(client);
             balanceReplenishment.ShowDialog();
-            RefreshData();
+            RefreshBalance();
         }
 
         private void BtnSettings_Click(object sender, EventArgs e)
@@ -87,6 +89,7 @@ namespace TicketManagementSystem
             chooseTrip.ShowDialog();
             Show();
             RefreshTickets();
+            RefreshBalance();
         }
 
         private void BtnCancelTicket_Click(object sender, EventArgs e)
@@ -99,7 +102,9 @@ namespace TicketManagementSystem
             }
             dataBase.ChangeTicketState(ActiveTickets[index], TicketState.Canceled);
             RefreshTickets();
+            RefreshBalance();
             MessageBox.Show("Ticket has been canceled", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dataBase.Save();
         }
 
         private void BtnViewAllTickets_Click(object sender, EventArgs e)
